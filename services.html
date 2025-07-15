@@ -11,21 +11,27 @@
   <header>
     <div class="nav-container">
       <img src="logo.png" alt="Twty Consulting Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li class="dropdown">
-          <a href="services.html">Services</a>
-          <ul class="dropdown-menu">
-            <li><a href="project-management.html">Project Management</a></li>
-            <li><a href="payment-expertise.html">Payment Systems Expertise</a></li>
-            <li><a href="leadership.html">Leadership & Strategy</a></li>
-            <li><a href="training.html">University & Corporate Training</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="active">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="project-management.html">Project Management</a></li>
+              <li><a href="payment-expertise.html">Payment Systems Expertise</a></li>
+              <li><a href="leadership.html">Leadership & Strategy</a></li>
+              <li><a href="training.html">University & Corporate Training</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-contact">
+        <a href="mailto:Nacim.twty@gmail.com" class="cta-button small">Contact</a>
+      </div>
+    </div> <!-- ✅ Close nav-container properly -->
   </header>
 
   <section class="services">
@@ -40,11 +46,11 @@
         <p>Deep experience in EMV, POS, online banking, and modern fintech tools.</p>
       </div>
       <div class="service-card">
-        <h3><a href="leadership-strategy.html">Leadership & Strategy</a></h3>
+        <h3><a href="leadership.html">Leadership & Strategy</a></h3>
         <p>We guide organizations through smart decision-making and impact-driven leadership.</p>
       </div>
       <div class="service-card">
-        <h3><a href="university-training.html">University & Corporate Training</a></h3>
+        <h3><a href="training.html">University & Corporate Training</a></h3>
         <p>Soft skills, leadership, and technical education tailored to your audience.</p>
       </div>
     </div>
@@ -53,10 +59,11 @@
   <footer>
     <p>&copy; 2025 Twty Consulting — All rights reserved.</p>
   </footer>
+
   <script>
     const header = document.querySelector("header");
     const logo = document.querySelector(".logo");
-  
+
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
         header.classList.add("shrink");
