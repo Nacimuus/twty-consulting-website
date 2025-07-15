@@ -65,6 +65,41 @@ nav a.active,
 nav a:hover {
   color: #222;
 }
+/* Dropdown Styles */
+nav .dropdown {
+  position: relative;
+}
+
+nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(118, 201, 214);
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  min-width: 200px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav .dropdown-menu li a {
+  padding: 12px 20px;
+  display: block;
+  text-align: left;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+nav .dropdown-menu li a:hover {
+  background-color: #0e98aa;
+}
+
+nav .dropdown:hover .dropdown-menu {
+  display: flex;
+}
 
 .hero {
   padding: 100px 40px;
