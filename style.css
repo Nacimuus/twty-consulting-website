@@ -204,3 +204,70 @@ header.shrink {
   height: 35px;
   transition: all 0.3s ease;
 }
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: rgb(118, 201, 214);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #222;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  padding: 8px 20px;
+}
+
+.dropdown-content li a {
+  color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.lang-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cta-button.small {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+}
