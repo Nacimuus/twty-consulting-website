@@ -271,9 +271,6 @@ header.shrink {
 }
 
 /* Dropdown */
-.dropdown {
-  position: relative;
-}
 .dropdown-content {
   display: none;
   position: absolute;

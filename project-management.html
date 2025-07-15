@@ -9,7 +9,8 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Twty Consulting Logo" class="logo" />
+    <div class="nav-container">
+      <img src="logo.png" alt="Twty Consulting Logo" class="logo" />
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -25,6 +26,10 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-contact">
+      <a href="mailto:Nacim.twty@gmail.com" class="cta-button small">Contact</a>
+    </div>
+  </div>
   </header>
   <section class="hero">
     <h1>Project Management & Direction</h1>
@@ -44,5 +49,19 @@
   <footer>
     <p>&copy; 2025 Twty Consulting — All rights reserved.</p>
   </footer>
+  <script>
+    const header = document.querySelector("header");
+    const logo = document.querySelector(".logo");
+  
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("shrink");
+        logo.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+        logo.classList.remove("shrink");
+      }
+    });
+  </script>  
 </body>
 </html>
