@@ -2,68 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Explore our consulting services: project management, payment systems, leadership strategy, and corporate training.">
+  <meta name="description" content="Explore the professional services offered by Twty Consulting: project management, payment systems, leadership, and training.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <img src="logo.png" alt="Twty Consulting Logo" class="logo" />
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="navbar">
+      <nav>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="services.html">Services</a>
+            <a href="services.html" class="active">Services</a>
             <ul class="dropdown-menu">
               <li><a href="project-management.html">Project Management</a></li>
-              <li><a href="payment-systems.html">Payment Systems Expertise</a></li>
+              <li><a href="payment-expertise.html">Payment Systems Expertise</a></li>
               <li><a href="leadership.html">Leadership & Strategy</a></li>
               <li><a href="training.html">University & Corporate Training</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>      
-      <div class="lang-contact">
-        <a href="mailto:Nacim.twty@gmail.com" class="cta-button small">Contact</a>
-      </div>
-    </div> 
+      </nav>
+    </div>
   </header>
 
-  <section class="services">
-    <h2>What We Do</h2>
-    <div class="service-list">
+  <main>
+    <section class="hero">
+      <h1>Our Services</h1>
+      <p>Empowering your growth with expert guidance, strategic leadership, and technical excellence.</p>
+    </section>
+
+    <section class="services-grid">
       <div class="service-card">
         <h3><a href="project-management.html">Project Management & Direction</a></h3>
-        <p>We drive results across teams and timelines, from vision to delivery.</p>
+        <p>We drive projects from concept to delivery with precision, speed, and stakeholder alignment.</p>
       </div>
       <div class="service-card">
-        <h3><a href="payment-systems.html">Payment Systems Expertise</a></h3>
-        <p>Deep experience in EMV, POS, online banking, and modern fintech tools.</p>
+        <h3><a href="payment-expertise.html">Payment Systems Expertise</a></h3>
+        <p>From EMV to mobile wallets, we master payment technologies and streamline your deployment.</p>
       </div>
       <div class="service-card">
         <h3><a href="leadership.html">Leadership & Strategy</a></h3>
-        <p>We guide organizations through smart decision-making and impact-driven leadership.</p>
+        <p>We shape future-ready leaders and define strategies that fuel innovation and growth.</p>
       </div>
       <div class="service-card">
         <h3><a href="training.html">University & Corporate Training</a></h3>
-        <p>Soft skills, leadership, and technical education tailored to your audience.</p>
+        <p>Customized training programs to strengthen soft skills, technical know-how, and leadership capacity.</p>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <h2>Why Work With Us</h2>
+      <ul>
+        <li>✅ 10+ years of industry experience</li>
+        <li>✅ Strong track record with international clients</li>
+        <li>✅ Human-centered, tech-driven approach</li>
+        <li>✅ Deep African and European market insights</li>
+      </ul>
+    </section>
+
+    <section class="cta-section">
+      <h2>Ready to Elevate Your Business?</h2>
+      <p>Let’s partner to unlock the next level of impact and innovation.</p>
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Twty Consulting Logo" class="footer-logo" />
+        <p>Empowering human-centered innovation through expert consulting.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><a href="mailto:Nacim.twty@gmail.com">Nacim.twty@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/nacimuus/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://wa.me/33698563366" target="_blank">WhatsApp</a></p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Twty Consulting — All rights reserved.</p>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Twty Consulting — All rights reserved.</p>
+    </div>
   </footer>
-
-  <script src="scripts.js" defer></script>
+  
 </body>
 </html>
