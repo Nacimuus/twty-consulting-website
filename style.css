@@ -104,11 +104,11 @@ nav .dropdown:hover .dropdown-menu {
 .hero {
   padding: 100px 40px;
   text-align: center;
-  background: linear-gradient(to right, rgb(118, 201, 214), gold);
+  background: linear-gradient(to right, rgba(118, 201, 214, 0.8), rgba(255, 215, 0, 0.8)),
+              url("hero-bg.jpg") center/cover no-repeat;
   color: #fff;
   animation: fadeInUp 1.2s ease-out;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -601,5 +601,117 @@ nav a:hover {
   .footer-links,
   .footer-contact {
     text-align: center;
+  }
+}
+/* ====== ABOUT SECTION ====== */
+.about {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ====== HIGHLIGHTS SECTION ====== */
+.highlights {
+  padding: 60px 40px;
+  background-color: #f8fbfc;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.highlight-card {
+  background: #ffffff;
+  border-left: 5px solid rgb(118, 201, 214);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== VALUES SECTION ====== */
+.values {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.values h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.values li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+/* ====== CTA SECTION ====== */
+.cta {
+  padding: 60px 40px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(118, 201, 214), gold);
+  color: #fff;
+  animation: fadeInUp 1s ease-out;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about h2,
+  .highlights h2,
+  .values h2,
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
   }
 }
