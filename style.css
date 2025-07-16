@@ -804,3 +804,21 @@ nav ul {
     text-align: center;
   }
 }
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+.highlight-card {
+  background: white;
+  border-left: 5px solid gold;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
