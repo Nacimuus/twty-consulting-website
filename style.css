@@ -715,3 +715,35 @@ nav a:hover {
     font-size: 1rem;
   }
 }
+/* Hide nav on mobile initially */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(118, 201, 214);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}

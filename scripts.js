@@ -38,3 +38,28 @@ window.addEventListener("scroll", () => {
     logo.classList.remove("shrink");
   }
 });
+// scripts.js
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+  
+    if (toggleButton && navMenu) {
+      toggleButton.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
+    }
+  
+    // Sticky shrink effect
+    const header = document.querySelector("header");
+    const logo = document.querySelector(".logo");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("shrink");
+        logo.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+        logo.classList.remove("shrink");
+      }
+    });
+  });
+  
