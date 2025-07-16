@@ -329,7 +329,6 @@ header.shrink {
   }
 
   nav {
-    display: none;
     width: 100%;
     background: rgb(118, 201, 214);
     flex-direction: column;
@@ -497,7 +496,6 @@ nav a:hover {
   }
 
   nav {
-    display: none;
     width: 100%;
   }
 
@@ -777,5 +775,32 @@ nav ul {
 
   nav ul.open {
     display: flex;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+    background-color: rgb(118, 201, 214);
+    flex-direction: column;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
   }
 }
