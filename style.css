@@ -483,3 +483,40 @@ nav a:hover {
     margin-top: 15px;
   }
 }
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile Nav Toggle */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(118, 201, 214);
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    background-color: #fff;
+    position: relative;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+}
