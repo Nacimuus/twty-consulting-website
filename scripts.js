@@ -22,4 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+  
+    if (toggleButton && navMenu) {
+      toggleButton.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
+    }
+  });
   
