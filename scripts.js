@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const logo = document.querySelector(".logo");
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
+    const nav = document.getElementById("navbar");
   
-    // Shrink header on scroll
+    // Sticky shrink header
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
         header.classList.add("shrink");
@@ -16,20 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     // Toggle mobile nav
-    if (hamburger && navMenu) {
+    if (hamburger && nav) {
       hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
+        nav.classList.toggle("active");
       });
     }
-  });
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
-  
-    if (toggleButton && navMenu) {
-      toggleButton.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-      });
-    }
-  });
-  
+  });  
