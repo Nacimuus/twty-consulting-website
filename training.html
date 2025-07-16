@@ -3,44 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>University & Corporate Training - Twty Consulting</title>
+  <title>Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 40px;
+      animation: fadeIn 1s ease-in;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: floatIn 1.2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      animation: textFadeIn 1.4s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes textFadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .cta-button {
+      padding: 12px 24px;
+      background-color: #fff;
+      color: #222;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: #eee;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <img src="logo.png" alt="Twty Consulting Logo" class="logo" />
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="navbar">
+      <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li class="dropdown">
             <a href="services.html">Services</a>
             <ul class="dropdown-menu">
               <li><a href="project-management.html">Project Management</a></li>
-              <li><a href="payment-systems.html">Payment Systems Expertise</a></li>
+              <li><a href="payment-expertise.html">Payment Systems Expertise</a></li>
               <li><a href="leadership-strategy.html">Leadership & Strategy</a></li>
               <li><a href="training.html">University & Corporate Training</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>      
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="services.html">Services</a>
-            <ul class="dropdown-menu">
-              <li><a href="project-management.html">Project Management</a></li>
-              <li><a href="payment-systems.html">Payment Systems Expertise</a></li>
-              <li><a href="leadership-strategy.html">Leadership & Strategy</a></li>
-              <li><a href="training.html" class="active">University & Corporate Training</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -53,19 +95,11 @@
   </header>
 
   <section class="hero">
-    <h1>University & Corporate Training</h1>
-    <p>Train for tomorrow: leadership, soft skills, and technical mastery.</p>
-  </section>
-
-  <section class="services">
-    <h2>University & Corporate Training</h2>
-    <p>We deliver powerful soft skills and tech courses to students, teams, and organizations — online or onsite.</p>
-    <ul>
-      <li>Soft skills: communication, leadership, negotiation</li>
-      <li>Technical training for developers and engineers</li>
-      <li>Workshops for job seekers and entrepreneurs</li>
-      <li>Custom training programs for companies</li>
-    </ul>
+    <div class="hero-content">
+      <h1>Tech-Driven Consulting for a Human-Centered World.</h1>
+      <p>We help you manage complex projects and payment systems with clarity, speed, and confidence.</p>
+      <a href="contact.html" class="cta-button">Let’s Work Together</a>
+    </div>
   </section>
 
   <footer>
@@ -85,14 +119,6 @@
         logo.classList.remove("shrink");
       }
     });
-  </script>  
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navbar = document.getElementById('navbar');
-  
-    hamburger.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-    });
-  </script>  
+  </script>
 </body>
 </html>

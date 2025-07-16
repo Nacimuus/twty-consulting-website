@@ -351,3 +351,135 @@ header.shrink {
     box-shadow: none;
   }
 }
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Sticky Header */
+header {
+  background-color: rgb(118, 201, 214);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+header.shrink {
+  padding: 10px 0;
+  background-color: rgb(90, 160, 172);
+}
+
+.logo {
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.logo.shrink {
+  height: 35px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: #222;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  min-width: 220px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #222;
+  font-weight: 500;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Contact button */
+.lang-contact .cta-button {
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.lang-contact .cta-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Navigation (Optional for mobile – step 2) */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+
+  .lang-contact {
+    margin-top: 15px;
+  }
+}
