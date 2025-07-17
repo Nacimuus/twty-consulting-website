@@ -1095,3 +1095,81 @@ nav ul {
     grid-template-columns: 1fr;
   }
 }
+.values-alt {
+  position: relative;
+  padding: 80px 40px;
+  background: linear-gradient(to bottom right, rgba(255, 215, 0, 0.1), rgba(118, 201, 214, 0.1));
+  text-align: center;
+  overflow: hidden;
+}
+
+.values-alt h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+.values-table {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  z-index: 2;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.values-table .column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.value-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.value-box .emoji {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.value-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.value-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 🌍 Planet Background */
+.values-alt::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: url('planet.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .values-table {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
