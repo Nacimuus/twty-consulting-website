@@ -948,3 +948,83 @@ nav ul {
   line-height: 1.6;
   color: #333;
 }
+/* What Drives Us (Philosophy) Section */
+.philosophy {
+  position: relative;
+  padding: 80px 40px;
+  background-color: #f1f9f9;
+  background-image: url('images/planet.png'); /* Replace with your image path */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: lighten;
+}
+
+.philosophy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/planet.png'); /* same image path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* 50% transparency visually */
+  z-index: 0;
+}
+
+.philosophy h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.left-values,
+.right-values {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.value-block {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-left: 4px solid gold;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.value-block h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.value-block p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .philosophy-grid {
+    flex-direction: column;
+  }
+
+  .left-values,
+  .right-values {
+    flex: 1 1 100%;
+  }
+}
