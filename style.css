@@ -1028,3 +1028,70 @@ nav ul {
     flex: 1 1 100%;
   }
 }
+.values-alt {
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(255, 215, 0, 0.15), rgba(118, 201, 214, 0.15));
+  padding: 80px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.values-alt h2 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-item .emoji {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.value-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Background Planet */
+.values-alt::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background-image: url('planet.png'); /* replace with your image file */
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
