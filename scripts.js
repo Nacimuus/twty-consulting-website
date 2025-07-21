@@ -116,4 +116,19 @@ document.addEventListener("DOMContentLoaded", () => {
       initNavigation();
     });
   });
+  function initPhilosophyCards() {
+    const cards = document.querySelectorAll('.philosophy-card');
+  
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('open'); // allows multiple cards to be open at once
+      });
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    includeHTML().then(() => {
+      initNavigation();
+      initPhilosophyCards(); // ✅ Call it here
+    });
+  });
   

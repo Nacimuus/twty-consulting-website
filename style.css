@@ -1370,3 +1370,58 @@ nav ul {
     grid-template-columns: 1fr;
   }
 }
+.philosophy-section {
+  padding: 60px 40px;
+  background: url("planet.jpg") center/cover no-repeat;
+  background-color: rgba(255, 215, 0, 0.1);
+  background-blend-mode: multiply;
+  text-align: center;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.philosophy-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.card-body {
+  display: none;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.philosophy-card.open .card-body {
+  display: block;
+}
