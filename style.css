@@ -1416,12 +1416,22 @@ nav ul {
 }
 
 .card-body {
-  display: none;
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #333;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
 
 .philosophy-card.open .card-body {
-  display: block;
+  max-height: 300px; /* Adjust based on content size */
+  opacity: 1;
 }
+.philosophy-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.philosophy-card.open {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
