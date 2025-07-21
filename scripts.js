@@ -131,4 +131,19 @@ document.addEventListener("DOMContentLoaded", () => {
       initPhilosophyCards(); // ✅ Call it here
     });
   });
+  function initValueBoxes() {
+    const boxes = document.querySelectorAll('.value-box');
+  
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('open');
+      });
+    });
+  }
+  
+  // After header/footer injected
+  includeHTML().then(() => {
+    initNavigation();
+    initValueBoxes();
+  });
   
