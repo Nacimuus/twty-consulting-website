@@ -27,18 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   function includeHTML() {
-    const elements = document.querySelectorAll('[w3-include-html]');
+    const elements = document.querySelectorAll("[w3-include-html]");
     elements.forEach(el => {
-      const file = el.getAttribute('w3-include-html');
+      const file = el.getAttribute("w3-include-html");
       if (file) {
         fetch(file)
-          .then(response => response.text())
+          .then(response => {
+            if (!response.ok) throw new Error("Failed to load " + file);
+            return response.text();
+          })
           .then(data => {
             el.innerHTML = data;
-            el.removeAttribute('w3-include-html');
-            includeHTML(); // Recursively load nested includes
+            el.removeAttribute("w3-include-html");
+            includeHTML(); // Handle nested includes if needed
+          })
+          .catch(err => {
+            el.innerHTML = "Page not found.";
+            console.error(err);
           });
       }
     });
   }
+  
+  document.addEventListener("DOMContentLoaded", includeHTML);
   
