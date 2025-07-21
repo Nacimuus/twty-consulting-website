@@ -1485,10 +1485,30 @@ nav ul {
   z-index: 999;
   display: flex;
   flex-direction: column;
+  visibility: hidden;
 }
 
 #navbar.active {
   right: 0;
+  visibility: visible;
+}
+
+/* Close button for mobile menu */
+.close-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-menu.active {
+  display: block;
 }
 
 /* Fade-in nav links */
@@ -1532,6 +1552,9 @@ nav ul {
   }
 
   .hamburger {
+    display: none;
+  }
+  .close-menu {
     display: none;
   }
 }

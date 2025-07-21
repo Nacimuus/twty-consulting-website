@@ -148,11 +148,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector(".hamburger");
+    const closeMenu = document.querySelector(".close-menu");
     const navbar = document.getElementById("navbar");
   
     if (hamburger && navbar) {
       hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("active");
+        const isActive = navbar.classList.toggle("active");
+        if (closeMenu) {
+          closeMenu.classList.toggle("active", isActive);
+        }
+      });
+    }
+  
+    if (closeMenu && navbar) {
+      closeMenu.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        closeMenu.classList.remove("active");
       });
     }
   });
