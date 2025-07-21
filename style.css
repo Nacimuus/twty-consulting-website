@@ -1292,3 +1292,20 @@ nav ul {
     cursor: pointer;
   }
 }
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(118, 201, 214);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+}
