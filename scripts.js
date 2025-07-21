@@ -65,4 +65,23 @@ function includeHTML(callback) {
       setupShrinkHeader();
     });
   });
+  // Expand/collapse for value cards
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.value-card').forEach(card => {
+      card.addEventListener('click', function() {
+        // Collapse others if you want only one open at a time:
+        document.querySelectorAll('.value-card').forEach(c => {
+          if (c !== this) c.classList.remove('active');
+        });
+        // Toggle this one
+        this.classList.toggle('active');
+      });
+      // Optional: keyboard accessibility
+      card.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          this.click();
+        }
+      });
+    });
+  });
   
