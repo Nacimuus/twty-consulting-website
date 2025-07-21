@@ -180,4 +180,46 @@ document.addEventListener("DOMContentLoaded", () => {
   
     items.forEach(item => observer.observe(item));
   });
+  function animateCounters() {
+    const counters = document.querySelectorAll(".counter");
+    const speed = 20; // Lower = faster
+  
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let current = 0;
+  
+      const update = () => {
+        const increment = Math.ceil(target / speed);
+        current += increment;
+  
+        if (current < target) {
+          counter.innerText = "+" + current;
+          setTimeout(update, 30);
+        } else {
+          counter.innerText = "+" + target;
+        }
+      };
+  
+      update();
+    });
+  }
+  
+  function observeImpactSection() {
+    const section = document.getElementById("impact");
+  
+    if (!section) return;
+  
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounters();
+        observer.unobserve(section); // run once
+      }
+    }, { threshold: 0.3 });
+  
+    observer.observe(section);
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    observeImpactSection();
+  });
   

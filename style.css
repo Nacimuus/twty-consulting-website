@@ -1570,7 +1570,7 @@ nav ul {
   z-index: 1001;
 }
 .impact-section {
-  background: linear-gradient(to bottom right, #f0f4ff, #f8f9fc);
+  background: linear-gradient(to bottom right, #e0f8fb, #fff9e5);
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -1578,7 +1578,7 @@ nav ul {
 
 .impact-section h2 {
   font-size: 2.4rem;
-  color: #111;
+  color: #222;
   margin-bottom: 60px;
   font-weight: 700;
 }
@@ -1587,13 +1587,13 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .impact-item h3 {
   font-size: 3.5rem;
-  color: #6a1b9a;
+  color: #76c9d6;
   margin: 0;
   font-weight: 900;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
@@ -1630,4 +1630,10 @@ nav ul {
 .impact-item.show {
   opacity: 1;
   transform: translateY(0);
+}
+.counter {
+  font-size: 3.8rem;
+  color: #76c9d6;
+  font-weight: 900;
+  transition: all 0.4s ease-in-out;
 }
