@@ -1535,3 +1535,76 @@ nav ul {
     display: none;
   }
 }
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+.impact-section {
+  background: linear-gradient(to bottom right, #f0f4ff, #f8f9fc);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.impact-section h2 {
+  font-size: 2.4rem;
+  color: #111;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.impact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.impact-item h3 {
+  font-size: 3.5rem;
+  color: #6a1b9a;
+  margin: 0;
+  font-weight: 900;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.impact-item p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 8px;
+}
+
+.underline {
+  height: 4px;
+  width: 80px;
+  background-color: #fbc02d;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Responsive: turn into rows on desktop */
+@media (min-width: 768px) {
+  .impact-grid {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+.impact-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.impact-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
