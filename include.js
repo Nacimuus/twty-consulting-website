@@ -1,16 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Load header
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      });
+window.addEventListener("DOMContentLoaded", () => {
+    const loadHTML = async (selector, file) => {
+      try {
+        const response = await fetch(file);
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (error) {
+        console.error(`Failed to load ${file}:`, error);
+      }
+    };
   
-    // Load footer
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
+    loadHTML("#header", "header.html");
+    loadHTML("#footer", "footer.html");
   });
   
