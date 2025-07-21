@@ -22,3 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });  
+ // Load external HTML files (header/footer)
+ includeHTML();
+});
+
+function includeHTML() {
+  const elements = document.querySelectorAll('[w3-include-html]');
+  elements.forEach(el => {
+    const file = el.getAttribute('w3-include-html');
+    if (file) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          el.innerHTML = data;
+          el.removeAttribute('w3-include-html');
+          includeHTML(); // Recursively load nested includes
+        });
+    }
+  });
+}

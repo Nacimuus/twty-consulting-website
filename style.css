@@ -1266,3 +1266,29 @@ nav ul {
   margin-bottom: 20px;
   color: #333;
 }
+@media (max-width: 768px) {
+  #navbar {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(118, 201, 214);
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+    padding: 20px;
+  }
+
+  #navbar.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
