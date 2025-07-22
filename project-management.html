@@ -2,40 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Twty Consulting delivers expert project management services to ensure your vision becomes reality with clarity, speed, and success." />
+  <meta name="description" content="Project management services by Twty Consulting: agile, effective, and globally proven execution support.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Management - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="include.js" defer></script>
   <script src="scripts.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 </head>
 <body>
   <div w3-include-html="header.html"></div>
+
   <main>
-    <section class="hero">
-      <h1>Project Management & Direction</h1>
-      <p>Delivering projects with precision, speed, and stakeholder confidence.</p>
+    <!-- HERO -->
+    <section class="service-hero hero-bg" data-aos="fade-up">
+      <div class="overlay">
+        <h1>Project Management & Direction</h1>
+        <p>From chaos to clarity — we lead your projects with structure, speed, and strategic alignment.</p>
+      </div>
     </section>
 
-    <section class="content">
+    <!-- CONTENT -->
+    <section class="service-content" data-aos="fade-up" data-aos-delay="100">
+      <h2>Delivering Projects That Deliver Results</h2>
       <p>
-        Whether launching a new system or transforming operations, we manage your project lifecycle from start to finish.
-        With experience in over 500 global projects, we bring structure, clarity, and momentum to every initiative.
+        At Twty Consulting, project management isn’t just about timelines and task lists — it’s about making things happen. 
+        Whether you’re launching a new fintech product, scaling a cross-border platform, or managing complex stakeholder demands, 
+        we bring clarity and confidence to your execution.
       </p>
+      <p>
+        With over a decade of global experience, we’ve led more than <strong>500 projects</strong> across Africa, Europe, and the Middle East. 
+        From strategic roadmaps to last-mile delivery, our approach is agile, transparent, and impact-driven. We speak the language of developers, 
+        executives, and end-users — and bring them all to the same table.
+      </p>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="service-pillars" data-aos="fade-up" data-aos-delay="200">
+      <h3>What We Offer</h3>
       <ul>
-        <li>✔ Agile & hybrid methodologies</li>
-        <li>✔ Risk & timeline management</li>
-        <li>✔ International, multi-stakeholder coordination</li>
+        <li>✔️ Project recovery & turnaround leadership</li>
+        <li>✔️ Agile & hybrid project frameworks</li>
+        <li>✔️ Cross-functional team coordination</li>
+        <li>✔️ Scope control & stakeholder alignment</li>
+        <li>✔️ Tools setup (Jira, Trello, ClickUp, Notion…)</li>
+        <li>✔️ Reporting that speaks to decision-makers</li>
       </ul>
     </section>
 
-    <section class="cta">
-      <h2>Let’s Bring Your Vision to Life</h2>
-      <a href="contact.html" class="cta-button">Talk to Us</a>
+    <!-- TESTIMONIAL -->
+    <section class="testimonial-block" style="background: #f8fbfc; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+      <blockquote>
+        <p><em>“Working with Twty Consulting transformed our delivery speed. We finally felt like someone was driving the ship.”</em></p>
+        <footer>— COO, Fintech Startup (France & Morocco)</footer>
+      </blockquote>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" data-aos="fade-up" data-aos-delay="400">
+      <h2>Let’s Make It Happen</h2>
+      <p>Whether you're stuck or just getting started — we’re here to lead, coach, and drive your projects forward.</p>
+      <a href="contact.html" class="cta-button">Book a Free Discovery Call</a>
     </section>
   </main>
 
   <div id="footer"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+    });
+  </script>
 </body>
 </html>

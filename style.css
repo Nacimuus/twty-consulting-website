@@ -1765,3 +1765,51 @@ nav ul {
     padding: 25px 20px;
   }
 }
+.service-hero.hero-bg {
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+              url('images/project-hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.service-hero.hero-bg .overlay {
+  max-width: 900px;
+  margin: auto;
+}
+
+.service-hero.hero-bg h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.service-hero.hero-bg p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.service-content,
+.service-pillars {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 40px;
+}
+
+.service-pillars ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-pillars li {
+  margin: 15px 0;
+  font-size: 1.05rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-pillars li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  color: gold;
+}
