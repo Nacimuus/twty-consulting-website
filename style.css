@@ -1681,3 +1681,23 @@ nav ul {
   font-weight: 900;
   transition: all 0.4s ease-in-out;
 }
+.services-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+}
+
+.services-showcase .service-card {
+  background: linear-gradient(to bottom right, #f5fcff, #e1f3f9);
+  padding: 25px;
+  border-left: 5px solid rgb(118, 201, 214);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-showcase .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
