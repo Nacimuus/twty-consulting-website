@@ -1701,3 +1701,67 @@ nav ul {
   transform: translateY(-6px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
+.why-us-modern {
+  background: linear-gradient(to right, #f8fbfc, #e8f6ff);
+  padding: 80px 40px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.why-us-modern h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.why-card {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.why-card .emoji {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #007a94;
+}
+
+.why-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-us-modern h2 {
+    font-size: 2rem;
+  }
+
+  .why-card {
+    padding: 25px 20px;
+  }
+}
