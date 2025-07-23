@@ -13,28 +13,65 @@
 <body>
   <div w3-include-html="header.html"></div>
   <main>
-    <section class="hero">
-      <h1>Fintech & Payment Systems</h1>
-      <p>Mastering EMV, online payments, POS, and next-gen fintech with confidence.</p>
+    <!-- HERO -->
+    <section class="service-hero hero-bg-payment" data-aos="fade-up">
+      <div class="overlay">
+        <h1>Payment Systems Expertise</h1>
+        <p>EMV, SoftPOS, wallets, tokenization — we build payment solutions for today and tomorrow.</p>
+      </div>
     </section>
 
-    <section class="content">
+    <!-- CONTENT -->
+    <section class="service-content" data-aos="fade-up" data-aos-delay="100">
+      <h2>We Speak Payment Fluently</h2>
       <p>
-        With over 10 years in the payment ecosystem, we help businesses integrate, certify, and scale their payment infrastructure.
-        From software architecture to EMV certification, we guide each step.
+        Payments are more than transactions — they’re trust, technology, and timing.
+        At Twty Consulting, we understand the moving parts behind every tap, swipe, or scan. 
+        We’ve worked with acquirers, banks, fintechs, and terminal vendors to ensure seamless integration and global compliance.
       </p>
+      <p>
+        Whether you're launching a neobank, rolling out EMV terminals across regions, or building a next-gen SoftPOS, we bring experience that’s both technical and strategic. 
+        We’ve managed deployments across 15+ countries and supported certifications with Mastercard, Visa, and local schemes.
+      </p>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="service-pillars" data-aos="fade-up" data-aos-delay="200">
+      <h3>We Help You With</h3>
       <ul>
-        <li>✔ EMV & contactless technologies</li>
-        <li>✔ Terminal & acquirer integrations</li>
-        <li>✔ Mobile wallets & QR-based payments</li>
+        <li>✔️ EMV implementation & certification (L2/L3)</li>
+        <li>✔️ Terminal estate management & TMS setup</li>
+        <li>✔️ SoftPOS, contactless & QR-based solutions</li>
+        <li>✔️ Payment APIs, token vaults & gateway integration</li>
+        <li>✔️ Security audits, PCI DSS guidance</li>
+        <li>✔️ Agile coordination across tech + product + ops</li>
       </ul>
     </section>
 
-    <section class="cta">
-      <h2>Let’s Build the Future of Payments</h2>
-      <a href="contact.html" class="cta-button">Work With Us</a>
+    <!-- TESTIMONIAL -->
+    <section class="testimonial-block" style="background: #f2faff; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+      <blockquote>
+        <p><em>“They helped us go live in multiple markets, faster than we expected — with zero certification delays.”</em></p>
+        <footer>— Product Lead, European Acquirer</footer>
+      </blockquote>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" data-aos="fade-up" data-aos-delay="400">
+      <h2>Let’s Launch Smarter Payments</h2>
+      <p>Need help with EMV, SoftPOS, or just getting your fintech stack under control? Let’s talk.</p>
+      <a href="contact.html" class="cta-button">Talk to a Payment Expert</a>
     </section>
   </main>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+    });
+  </script>
+</body>
+</html>
 
   <div id="footer"></div>
 </body>
