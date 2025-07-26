@@ -1867,7 +1867,7 @@ nav ul {
 }
 .service-hero.hero-bg-training {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-              url('images/training-hero.jpg') center/cover no-repeat;
+              url('training-hero.jpg') center/cover no-repeat;
   color: white;
   padding: 120px 40px;
   text-align: center;
