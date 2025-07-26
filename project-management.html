@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Management - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="include.js" defer></script>
@@ -17,7 +18,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="service-hero hero-bg" data-aos="fade-up">
+    <section class="service-hero hero-bg" data-aos="flip-left">
       <div class="overlay">
         <h1>Project Management & Direction</h1>
         <p>From chaos to clarity — we lead your projects with structure, speed, and strategic alignment.</p>
@@ -25,7 +26,7 @@
     </section>
 
     <!-- CONTENT -->
-    <section class="service-content" data-aos="fade-up" data-aos-delay="100">
+    <section class="service-content" data-aos="fade-down" data-aos-delay="100">
       <h2>Delivering Projects That Deliver Results</h2>
       <p>
         At Twty Consulting, project management isn’t just about timelines and task lists — it’s about making things happen. 
@@ -40,7 +41,7 @@
     </section>
 
     <!-- PILLARS -->
-    <section class="service-pillars" data-aos="fade-up" data-aos-delay="200">
+    <section class="service-pillars" data-aos="fade-down" data-aos-delay="200">
       <h3>What We Offer</h3>
       <ul>
         <li>✔️ Project recovery & turnaround leadership</li>
@@ -74,5 +75,10 @@
       AOS.init();
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
 </body>
 </html>

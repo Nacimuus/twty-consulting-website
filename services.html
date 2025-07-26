@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="include.js" defer></script>
   <script src="scripts.js" defer></script>
@@ -18,7 +19,7 @@
       <p>We don't just consult — we build, guide, and deliver impact where it matters most.</p>
     </section>
   
-    <section class="services-showcase">
+    <section class="services-showcase" data-aos="fade-up">
       <div class="service-card">
         <h3><a href="project-management.html">📊 Project Management & Direction</a></h3>
         <p>We turn vision into results. From kickoff to delivery, we plan, lead, and solve with precision — even under pressure.</p>
@@ -37,7 +38,7 @@
       </div>
     </section>
   
-    <section class="why-us-modern">
+    <section class="why-us-modern"data-aos="slide-right">
       <h2>Why Work With Us</h2>
       <div class="why-grid">
         <div class="why-card">
@@ -64,7 +65,7 @@
     </section>
     
   
-    <section class="cta">
+    <section class="cta"data-aos="zoom-in">
       <h2>Need Results Fast?</h2>
       <p>We’re not just advisors — we’re doers, builders, and partners. Let’s go.</p>
       <a href="contact.html" class="cta-button">Start a Conversation</a>
@@ -73,5 +74,10 @@
   
 
   <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
