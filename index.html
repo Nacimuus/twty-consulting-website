@@ -6,6 +6,7 @@
   <meta name="description" content="Twty Consulting empowers teams with expert project management, fintech innovation, and leadership training." />
   <title>Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="include.js" defer></script>
   <script src="scripts.js" defer></script>
@@ -19,7 +20,7 @@
       <a href="contact.html" class="cta-button">Work With Us</a>
     </section>
 
-<section class="about-section">
+<section class="about-section" data-aos="fade-up">
   <div class="section-divider top-divider"></div>
   <h2 class="section-title">Who We Are</h2>
   <div class="about-content">
@@ -44,7 +45,7 @@
   <div class="section-divider bottom-divider"></div>
 </section>
 
-<section class="expertise-alt">
+<section class="expertise-alt" data-aos="zoom-in">
   <h2>Our Expertise</h2>
   <div class="expertise-grid">
     <div class="expertise-card">
@@ -72,7 +73,7 @@
     </div>
   </div>
 </section>
-<section class="impact-section">
+<section class="impact-section" data-aos="fade-up">
   <h2>Our Impact</h2>
   <div class="impact-grid">
     <div class="impact-item">
@@ -102,5 +103,10 @@
   </main>
 
   <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
