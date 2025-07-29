@@ -181,28 +181,24 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach(item => observer.observe(item));
   });
   function animateCounters() {
-    const counters = document.querySelectorAll(".counter");
-    const speed = 20; // Lower = faster
-  
+    const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let current = 0;
-  
+      counter.innerText = '0';
       const update = () => {
-        const increment = Math.ceil(target / speed);
-        current += increment;
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = Math.ceil(target / 200);
   
         if (current < target) {
-          counter.innerText = "+" + current;
-          setTimeout(update, 30);
+          counter.innerText = `${current + increment}`;
+          setTimeout(update, 20);
         } else {
-          counter.innerText = "+" + target;
+          counter.innerText = target;
         }
       };
-  
       update();
     });
-  }
+  }  
   
   function observeImpactSection() {
     const section = document.getElementById("impact");
