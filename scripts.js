@@ -1,231 +1,164 @@
-// 1. Include HTML (for header/footer)
+// Include HTML (header/footer)
 function includeHTML() {
-    return new Promise((resolve, reject) => {
-      const elements = document.querySelectorAll("[w3-include-html]");
-      let total = elements.length;
-      let loaded = 0;
-  
-      if (total === 0) resolve(); // nothing to load
-  
-      elements.forEach(el => {
-        const file = el.getAttribute("w3-include-html");
-        if (file) {
-          fetch(file)
-            .then(response => {
-              if (!response.ok) throw new Error("Failed to load " + file);
-              return response.text();
-            })
-            .then(data => {
-              el.innerHTML = data;
-              el.removeAttribute("w3-include-html");
-              loaded++;
-              if (loaded === total) resolve();
-            })
-            .catch(err => {
-              el.innerHTML = "Page not found.";
-              console.error(err);
-              reject(err);
-            });
-        }
-      });
+  return new Promise((resolve, reject) => {
+    const elements = document.querySelectorAll("[w3-include-html]");
+    let total = elements.length;
+    let loaded = 0;
+
+    if (total === 0) resolve(); // nothing to load
+
+    elements.forEach(el => {
+      const file = el.getAttribute("w3-include-html");
+      if (file) {
+        fetch(file)
+          .then(response => {
+            if (!response.ok) throw new Error("Failed to load " + file);
+            return response.text();
+          })
+          .then(data => {
+            el.innerHTML = data;
+            el.removeAttribute("w3-include-html");
+            loaded++;
+            if (loaded === total) resolve();
+          })
+          .catch(err => {
+            el.innerHTML = "Page not found.";
+            console.error(err);
+            reject(err);
+          });
+      }
+    });
+  });
+}
+
+// Mobile menu toggle
+function setupMobileMenu() {
+  const hamburger = document.querySelector(".hamburger");
+  const closeMenu = document.querySelector(".close-menu");
+  const navbar = document.getElementById("navbar");
+
+  if (hamburger && navbar) {
+    hamburger.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+      closeMenu?.classList.toggle("active", navbar.classList.contains("active"));
     });
   }
-  
-  // 2. Setup mobile menu toggle
-  function setupMobileMenu() {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
-  
-    if (hamburger && navMenu) {
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
-      });
-    }
+
+  if (closeMenu && navbar) {
+    closeMenu.addEventListener("click", () => {
+      navbar.classList.remove("active");
+      closeMenu.classList.remove("active");
+    });
   }
-  
-  // 3. Setup shrink on scroll
-  function setupShrinkHeader() {
-    const header = document.querySelector("header");
-    const logo = document.querySelector(".logo");
-  
-    if (!header) return;
-  
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("shrink");
-        logo?.classList.add("shrink");
+}
+
+// Header shrink on scroll
+function setupShrinkHeader() {
+  const header = document.querySelector("header");
+  const logo = document.querySelector(".logo");
+
+  if (!header) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+      logo?.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+      logo?.classList.remove("shrink");
+    }
+  });
+}
+
+// Animate counters
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const update = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / 200);
+      if (current < target) {
+        counter.innerText = `${current + increment}`;
+        setTimeout(update, 20);
       } else {
-        header.classList.remove("shrink");
-        logo?.classList.remove("shrink");
+        counter.innerText = target;
       }
-    });
-  }
-  
-  // 4. Run once DOM is loaded
-  document.addEventListener("DOMContentLoaded", () => {
-    includeHTML(() => {
-      setupMobileMenu();
-      setupShrinkHeader();
-    });
+    };
+    update();
   });
-  // Expand/collapse for value cards
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.value-card').forEach(card => {
-      card.addEventListener('click', function() {
-        // Collapse others if you want only one open at a time:
-        document.querySelectorAll('.value-card').forEach(c => {
-          if (c !== this) c.classList.remove('active');
-        });
-        // Toggle this one
-        this.classList.toggle('active');
-      });
-      // Optional: keyboard accessibility
-      card.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          this.click();
-        }
-      });
-    });
-  });
-  function initNavigation() {
-    const header = document.querySelector("header");
-    const logo = document.querySelector(".logo");
-    const hamburger = document.querySelector(".hamburger");
-    const navbar = document.getElementById("navbar");
-  
-    // Shrink header on scroll
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header?.classList.add("shrink");
-        logo?.classList.add("shrink");
-      } else {
-        header?.classList.remove("shrink");
-        logo?.classList.remove("shrink");
-      }
-    });
-  
-    // Toggle mobile menu
-    if (hamburger && navbar) {
-      hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      });
+}
+
+function observeImpactSection() {
+  const section = document.getElementById("impact");
+  if (!section) return;
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.unobserve(section);
     }
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    includeHTML().then(() => {
-      initNavigation();
-    });
-  });
-  function initPhilosophyCards() {
-    const cards = document.querySelectorAll('.philosophy-card');
-  
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('open'); // allows multiple cards to be open at once
-      });
-    });
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    includeHTML().then(() => {
-      initNavigation();
-      initPhilosophyCards(); // ✅ Call it here
-    });
-  });
-  function initValueBoxes() {
-    const boxes = document.querySelectorAll('.value-box');
-  
-    boxes.forEach(box => {
-      box.addEventListener('click', () => {
-        box.classList.toggle('open');
-      });
-    });
-  }
-  
-  // After header/footer injected
-  includeHTML().then(() => {
-    initNavigation();
-    initValueBoxes();
-  });
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const closeMenu = document.querySelector(".close-menu");
-    const navbar = document.getElementById("navbar");
-  
-    if (hamburger && navbar) {
-      hamburger.addEventListener("click", () => {
-        const isActive = navbar.classList.toggle("active");
-        if (closeMenu) {
-          closeMenu.classList.toggle("active", isActive);
-        }
-      });
-    }
-  
-    if (closeMenu && navbar) {
-      closeMenu.addEventListener("click", () => {
-        navbar.classList.remove("active");
-        closeMenu.classList.remove("active");
-      });
-    }
-  });
-  document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".impact-item");
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.3 });
-  
-    items.forEach(item => observer.observe(item));
-  });
-  function animateCounters() {
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-      counter.innerText = '0';
-      const update = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
-        const increment = Math.ceil(target / 200);
-  
-        if (current < target) {
-          counter.innerText = `${current + increment}`;
-          setTimeout(update, 20);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      update();
-    });
-  }  
-  
-  function observeImpactSection() {
-    const section = document.getElementById("impact");
-  
-    if (!section) return;
-  
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        animateCounters();
-        observer.unobserve(section); // run once
-      }
-    }, { threshold: 0.3 });
-  
-    observer.observe(section);
-  }
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    observeImpactSection();
-  });
-  // Inside scripts.js
-const observer = new IntersectionObserver(entries => {
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+}
+
+// Scroll animation observer
+function initScrollAnimations() {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
       }
     });
   }, { threshold: 0.1 });
-  
+
   document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-  
+}
+
+// Expand value cards
+function initValueCards() {
+  document.querySelectorAll('.value-card').forEach(card => {
+    card.addEventListener('click', function () {
+      document.querySelectorAll('.value-card').forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+      this.classList.toggle('active');
+    });
+    card.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') this.click();
+    });
+  });
+}
+
+// Expand philosophy cards
+function initPhilosophyCards() {
+  document.querySelectorAll('.philosophy-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+  });
+}
+
+// Expand value boxes
+function initValueBoxes() {
+  document.querySelectorAll('.value-box').forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.toggle('open');
+    });
+  });
+}
+
+// Global init
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML().then(() => {
+    setupMobileMenu();
+    setupShrinkHeader();
+    initScrollAnimations();
+    initPhilosophyCards();
+    initValueBoxes();
+    initValueCards();
+    observeImpactSection(); // ← only runs once when visible
+  });
+});
