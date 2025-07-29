@@ -1966,3 +1966,15 @@ nav ul {
 .mobile-nav .has-dropdown.open > a::after {
   transform: rotate(90deg);
 }
+.impact-section {
+  display: block;
+  padding: 80px 20px;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.impact-item {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+}
