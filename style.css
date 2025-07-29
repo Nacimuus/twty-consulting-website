@@ -1887,3 +1887,11 @@ nav ul {
   font-size: 1.2rem;
   font-weight: 400;
 }
+.footer-contact a i {
+  margin-right: 8px;
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.footer-contact a[href*="wa.me"] i {
+  color: #25D366; /* WhatsApp green */
+}
