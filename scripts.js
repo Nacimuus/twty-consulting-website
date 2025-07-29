@@ -1,11 +1,11 @@
-// 1. Include HTML
+// Include HTML (header/footer)
 function includeHTML() {
   return new Promise((resolve, reject) => {
     const elements = document.querySelectorAll("[w3-include-html]");
     let total = elements.length;
     let loaded = 0;
 
-    if (total === 0) resolve();
+    if (total === 0) resolve(); // nothing to load
 
     elements.forEach(el => {
       const file = el.getAttribute("w3-include-html");
@@ -31,7 +31,7 @@ function includeHTML() {
   });
 }
 
-// 2. Mobile menu toggle
+// Mobile menu toggle
 function setupMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
@@ -39,8 +39,8 @@ function setupMobileMenu() {
 
   if (hamburger && navbar) {
     hamburger.addEventListener("click", () => {
-      const isActive = navbar.classList.toggle("active");
-      if (closeMenu) closeMenu.classList.toggle("active", isActive);
+      navbar.classList.toggle("active");
+      closeMenu?.classList.toggle("active", navbar.classList.contains("active"));
     });
   }
 
@@ -52,7 +52,7 @@ function setupMobileMenu() {
   }
 }
 
-// 3. Shrink header on scroll
+// Header shrink on scroll
 function setupShrinkHeader() {
   const header = document.querySelector("header");
   const logo = document.querySelector(".logo");
@@ -70,8 +70,112 @@ function setupShrinkHeader() {
   });
 }
 
-// 4. Dropdown toggle (for nav menus)
-function setupDropdownMenus() {
+// Animate counters
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const update = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / 200);
+      if (current < target) {
+        counter.innerText = `${current + increment}`;
+        setTimeout(update, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+}
+
+function observeImpactSection() {
+  const section = document.getElementById("impact");
+  if (!section) return;
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.unobserve(section);
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+}
+
+// Scroll animation observer
+function initScrollAnimations() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+}
+
+// Expand value cards
+function initValueCards() {
+  document.querySelectorAll('.value-card').forEach(card => {
+    card.addEventListener('click', function () {
+      document.querySelectorAll('.value-card').forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+      this.classList.toggle('active');
+    });
+    card.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') this.click();
+    });
+  });
+}
+
+// Expand philosophy cards
+function initPhilosophyCards() {
+  document.querySelectorAll('.philosophy-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+  });
+}
+
+// Expand value boxes
+function initValueBoxes() {
+  document.querySelectorAll('.value-box').forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.toggle('open');
+    });
+  });
+}
+
+// Global init
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML().then(() => {
+    setupMobileMenu();
+    setupShrinkHeader();
+    initScrollAnimations();
+    initPhilosophyCards();
+    initValueBoxes();
+    initValueCards();
+    observeImpactSection(); // ← only runs once when visible
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
+  }
+
+  acceptBtn?.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.has-dropdown > a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -79,9 +183,28 @@ function setupDropdownMenus() {
       parent.classList.toggle('open');
     });
   });
-}
+});
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML().then(() => {
+    initNavigation();     // if you use it
+    initValueBoxes();     // if you're using expandable cards
+    initPhilosophyCards(); // optional
+    observeImpactSection(); // 👈 ensure this is called here
+  });
+});
+function observeImpactSection() {
+  const section = document.getElementById("impact");
+  if (!section) return;
 
-// 5. Counter animation
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters(); // ✅ Trigger animation
+      observer.unobserve(section); // only once
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+}
 function animateCounters() {
   const counters = document.querySelectorAll('.counter');
   counters.forEach(counter => {
@@ -101,90 +224,3 @@ function animateCounters() {
     update();
   });
 }
-
-// 6. Observe impact section for counters
-function observeImpactSection() {
-  const section = document.getElementById("impact");
-  if (!section) return;
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-      animateCounters();
-      observer.unobserve(section);
-    }
-  }, { threshold: 0.3 });
-
-  observer.observe(section);
-}
-
-// 7. Scroll fade-in
-function initScrollAnimations() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-}
-
-// 8. Expandable card handlers
-function initValueCards() {
-  document.querySelectorAll('.value-card').forEach(card => {
-    card.addEventListener('click', function () {
-      document.querySelectorAll('.value-card').forEach(c => {
-        if (c !== this) c.classList.remove('active');
-      });
-      this.classList.toggle('active');
-    });
-    card.addEventListener('keypress', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') this.click();
-    });
-  });
-}
-
-function initPhilosophyCards() {
-  document.querySelectorAll('.philosophy-card').forEach(card => {
-    card.addEventListener('click', () => card.classList.toggle('open'));
-  });
-}
-
-function initValueBoxes() {
-  document.querySelectorAll('.value-box').forEach(box => {
-    box.addEventListener('click', () => box.classList.toggle('open'));
-  });
-}
-
-// 9. Cookie banner
-function initCookieBanner() {
-  const banner = document.getElementById("cookie-banner");
-  const acceptBtn = document.getElementById("accept-cookies");
-
-  if (!banner) return;
-
-  if (!localStorage.getItem("cookiesAccepted")) {
-    banner.style.display = "block";
-  }
-
-  acceptBtn?.addEventListener("click", () => {
-    localStorage.setItem("cookiesAccepted", "true");
-    banner.style.display = "none";
-  });
-}
-
-// MAIN INIT
-document.addEventListener("DOMContentLoaded", () => {
-  includeHTML().then(() => {
-    setupMobileMenu();
-    setupShrinkHeader();
-    setupDropdownMenus();
-    initScrollAnimations();
-    initPhilosophyCards();
-    initValueBoxes();
-    initValueCards();
-    observeImpactSection();
-    initCookieBanner();
-  });
-});
