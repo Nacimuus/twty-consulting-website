@@ -175,3 +175,12 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.style.display = "none";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle('open');
+    });
+  });
+});

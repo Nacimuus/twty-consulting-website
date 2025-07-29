@@ -1931,3 +1931,38 @@ nav ul {
   font-weight: bold;
   border-radius: 5px;
 }
+/* Basic mobile nav setup */
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+/* Dropdown submenu */
+.mobile-nav .has-dropdown > .dropdown {
+  display: none;
+  padding-left: 15px;
+  background: #e0f5f5;
+  border-left: 3px solid #007b8f;
+}
+
+.mobile-nav .has-dropdown.open > .dropdown {
+  display: block;
+}
+
+.mobile-nav .has-dropdown > a::after {
+  content: "▸";
+  float: right;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav .has-dropdown.open > a::after {
+  transform: rotate(90deg);
+}
