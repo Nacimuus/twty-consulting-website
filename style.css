@@ -1895,3 +1895,39 @@ nav ul {
 .footer-contact a[href*="wa.me"] i {
   color: #25D366; /* WhatsApp green */
 }
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1;
+}
+
+.cookie-banner a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
