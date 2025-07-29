@@ -1,19 +1,19 @@
-// 1. Include Header & Footer HTML
+// Include HTML for header and footer
 function includeHTML() {
   return new Promise((resolve, reject) => {
     const elements = document.querySelectorAll("[w3-include-html]");
     let total = elements.length;
     let loaded = 0;
 
-    if (total === 0) resolve();
+    if (total === 0) return resolve();
 
     elements.forEach(el => {
       const file = el.getAttribute("w3-include-html");
       if (file) {
         fetch(file)
-          .then(response => {
-            if (!response.ok) throw new Error("Failed to load " + file);
-            return response.text();
+          .then(res => {
+            if (!res.ok) throw new Error("Failed to load " + file);
+            return res.text();
           })
           .then(data => {
             el.innerHTML = data;
@@ -22,6 +22,7 @@ function includeHTML() {
             if (loaded === total) resolve();
           })
           .catch(err => {
+            el.innerHTML = "Page not found.";
             console.error(err);
             reject(err);
           });
@@ -30,24 +31,7 @@ function includeHTML() {
   });
 }
 
-// 2. Shrink Header on Scroll
-function setupShrinkHeader() {
-  const header = document.querySelector("header");
-  const logo = document.querySelector(".logo");
-  if (!header) return;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("shrink");
-      logo?.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-      logo?.classList.remove("shrink");
-    }
-  });
-}
-
-// 3. Mobile Menu Toggle
+// Mobile menu toggle
 function setupMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
@@ -68,7 +52,25 @@ function setupMobileMenu() {
   }
 }
 
-// 4. Animate Counters
+// Shrink header on scroll
+function setupShrinkHeader() {
+  const header = document.querySelector("header");
+  const logo = document.querySelector(".logo");
+
+  if (!header) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+      logo?.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+      logo?.classList.remove("shrink");
+    }
+  });
+}
+
+// Animate counters
 function animateCounters() {
   const counters = document.querySelectorAll('.counter');
   counters.forEach(counter => {
@@ -89,7 +91,7 @@ function animateCounters() {
   });
 }
 
-// 5. Trigger Counter Animation Once in View
+// Observe impact section for counter animation
 function observeImpactSection() {
   const section = document.getElementById("impact");
   if (!section) return;
@@ -97,23 +99,14 @@ function observeImpactSection() {
   const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
       animateCounters();
-      observer.unobserve(section);
+      observer.unobserve(section); // Only once
     }
   }, { threshold: 0.3 });
 
   observer.observe(section);
 }
 
-// 6. Expand Cards for Philosophy or Values
-function initExpandableCards() {
-  document.querySelectorAll('.value-card, .value-box, .philosophy-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('open');
-    });
-  });
-}
-
-// 7. Scroll Animation (optional fade-in)
+// Scroll animations
 function initScrollAnimations() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -126,42 +119,42 @@ function initScrollAnimations() {
   document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 }
 
-// 8. Cookie Consent
+// Cookie consent
 function setupCookieBanner() {
   const banner = document.getElementById("cookie-banner");
   const acceptBtn = document.getElementById("accept-cookies");
 
-  if (!banner || !acceptBtn) return;
+  if (!banner) return;
 
   if (!localStorage.getItem("cookiesAccepted")) {
     banner.style.display = "block";
   }
 
-  acceptBtn.addEventListener("click", () => {
+  acceptBtn?.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
     banner.style.display = "none";
   });
 }
 
-// 9. Navigation Dropdowns
+// Dropdown for desktop nav
 function setupDropdowns() {
   document.querySelectorAll('.has-dropdown > a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      link.parentElement.classList.toggle('open');
+      const parent = link.parentElement;
+      parent.classList.toggle('open');
     });
   });
 }
 
-// 🔁 INIT ALL AFTER DOM LOADED & HEADER INCLUDED
+// Init
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML().then(() => {
     setupMobileMenu();
     setupShrinkHeader();
     observeImpactSection();
-    initExpandableCards();
     initScrollAnimations();
-    setupDropdowns();
     setupCookieBanner();
+    setupDropdowns();
   });
 });
