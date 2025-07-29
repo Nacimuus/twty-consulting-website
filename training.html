@@ -6,6 +6,7 @@
   <meta name="description" content="Twty Consulting offers expert-led training programs in soft skills, technical topics, and leadership for universities and companies." />
   <title>University & Corporate Training - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="include.js" defer></script>
   <script src="scripts.js" defer></script>
@@ -13,14 +14,14 @@
 <body>
   <div w3-include-html="header.html"></div>
   <main>
-    <section class="service-hero hero-bg-training">
+    <section class="service-hero hero-bg-training" data-aos="flip-left">
       <div class="overlay">
         <h1>University & Corporate Training</h1>
         <p>Empowering teams and individuals with practical skills, mindset growth, and future-ready leadership.</p>
       </div>
     </section>
 
-    <section class="service-content">
+    <section class="service-content" data-aos="fade-up">
       <div class="container">
         <h2>Training That Transforms</h2>
         <p>At Twty Consulting, we design and deliver high-impact training programs for both academic and corporate environments. Whether you need to boost your team’s soft skills, onboard future leaders, or build a culture of innovation, our programs are tailored, hands-on, and transformational.</p>
@@ -42,5 +43,9 @@
   </main>
 
   <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
