@@ -375,7 +375,7 @@ footer {
   cursor: pointer;
   z-index: 1000;
 }
-..mobile-nav {
+.mobile-nav {
   position: fixed;
   top: 0;
   right: -100%;
