@@ -324,6 +324,7 @@ lang-contact .cta-button {
   padding: 6px 14px;
   font-size: 0.9rem;
 }
+}
 
 /* === Mobile Navigation === */
 .hamburger,
@@ -394,87 +395,30 @@ lang-contact .cta-button {
 .mobile-nav .has-dropdown.open > a::after {
   transform: rotate(90deg);
 }
-.close-menu {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 250px;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: right 0.4s ease-in-out;
-  z-index: 999;
+
+nav ul.show,
+nav ul.open {
   display: flex;
-  flex-direction: column;
-}
-.mobile-nav.active {
-  right: 0;
-}
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.mobile-nav li {
-  padding: 12px 20px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-.mobile-nav .has-dropdown > .dropdown {
-  display: none;
-  padding-left: 15px;
-  background: #e0f5f5;
-  border-left: 3px solid #007b8f;
-}
-.mobile-nav .has-dropdown.open > .dropdown {
-  display: block;
-}
-.mobile-nav .has-dropdown > a::after {
-  content: "\25B8";
-  float: right;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-.mobile-nav .has-dropdown.open > a::after {
-  transform: rotate(90deg);
-  nav ul.show,
-  nav ul.open {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-    background: none;
-    box-shadow: none;
-    padding-left: 10px;
-  }
-
-  .lang-contact {
-    margin-top: 15px;
-  }
+  
 }
 
+.dropdown-menu {
+  position: static;
+  background: none;
+  box-shadow: none;
+  padding-left: 10px;
 }
 
-.hamburger { display: block; }
-.close-menu.active { display: block; }
+.lang-contact {
+  margin-top: 15px;
+}
 
-@media (min-width: 769px) 
-{}
-.hamburger { display: block; }
-.close-menu.active { display: block; }
-.mobile-nav {
+
+
+@media (min-width: 769px) {
+  .hamburger { display: block; }
+  .close-menu.active { display: block; }
+  .mobile-nav {
   position: static;
   right: auto;
   width: auto;
@@ -483,6 +427,8 @@ lang-contact .cta-button {
   background: none;
   padding: 0;
   }
+}
+
 
   
 
