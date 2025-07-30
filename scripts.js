@@ -39,18 +39,18 @@ function setupMobileMenu() {
 
   if (hamburger && navbar) {
     hamburger.addEventListener("click", () => {
-      navbar.classList.toggle("active");
-      closeMenu?.classList.toggle("active", navbar.classList.contains("active"));
+      navbar.classList.add("active");
     });
+    };
   }
 
   if (closeMenu && navbar) {
     closeMenu.addEventListener("click", () => {
       navbar.classList.remove("active");
-      closeMenu.classList.remove("active");
+      
     });
   }
-}
+
 
 // Shrink header on scroll
 function setupShrinkHeader() {
