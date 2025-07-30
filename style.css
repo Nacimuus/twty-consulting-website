@@ -361,10 +361,11 @@ footer {
   color: var(--text-color);
 }
 .hamburger {
-  font-size: 28px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
   cursor: pointer;
-
-  z-index: 1001;
+  z-index: 1000;
 }
 .close-menu {
   position: fixed;
@@ -374,21 +375,20 @@ footer {
   cursor: pointer;
   z-index: 1000;
 }
-.mobile-nav {
+..mobile-nav {
   position: fixed;
   top: 0;
   right: -100%;
   width: 75%;
   max-width: 300px;
-  background-color: var(--white);
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
   padding: 20px;
-  transition: right 0.4s ease-in-out;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding-top: 100px;
 }
 .mobile-nav.active {
   right: 0;
@@ -401,15 +401,12 @@ footer {
   cursor: pointer;
 }
 .mobile-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
 }
 .mobile-nav li {
-  padding: 12px 20px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+  margin-bottom: 20px;
 }
 .mobile-nav .has-dropdown > .dropdown {
   display: none;
