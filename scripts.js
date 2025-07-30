@@ -140,11 +140,26 @@ function setupCookieBanner() {
 
 // Dropdown for desktop nav
 function setupDropdowns() {
-  document.querySelectorAll('.has-dropdown > a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const parent = link.parentElement;
-      parent.classList.toggle('open');
+  document.querySelectorAll('.has-dropdown').forEach(item => {
+    const link = item.querySelector('a');
+
+    if (link) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Only toggle on click for mobile screens
+        if (window.innerWidth <= 768) {
+          item.classList.toggle('open');
+        }
+      });
+    }
+
+    item.addEventListener('mouseenter', () => {
+      item.classList.add('open');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.classList.remove('open');
     });
   });
 }
