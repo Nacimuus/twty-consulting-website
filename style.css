@@ -1,9 +1,19 @@
-/* ===== Base Layout & Navigation Styles ===== */
+/* ===== Base Styles ===== */
+:root {
+  --primary-color: rgb(118, 201, 214);
+  --primary-dark: rgb(90, 160, 172);
+  --accent-color: gold;
+  --text-color: #222;
+  --bg-color: #fdfdfd;
+  --white: #fff;
+}
+
+/* ===== Layout ===== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
 }
@@ -12,7 +22,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  background-color: rgb(118, 201, 214);
+  background-color: var(--primary-color);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -33,7 +43,7 @@ header {
 
 header.shrink {
   padding: 10px 40px;
-  background-color: rgb(90, 160, 172);
+  background-color: var(--primary-dark);
   transition: all 0.3s ease;
 }
 
@@ -42,7 +52,7 @@ header.shrink {
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  background-color: rgb(118, 201, 214);
+  background-color: var(--primary-color);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   max-width: 1200px;
   margin: auto;
@@ -65,7 +75,7 @@ nav ul {
 nav a {
   font-size: 1.1rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
@@ -77,7 +87,7 @@ nav a::after {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #fff;
+  background-color: var(--white);
   transition: width 0.3s ease;
 }
 
@@ -87,7 +97,7 @@ nav a:hover::after {
 
 nav a.active,
 nav a:hover {
-  color: #222;
+  color: var(--text-color);
 }
 /* Dropdown Styles */
 nav .dropdown {
@@ -98,7 +108,7 @@ nav .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgb(118, 201, 214);
+  background-color: var(--primary-color);
   display: none;
   flex-direction: column;
   list-style: none;
@@ -113,7 +123,7 @@ nav .dropdown-menu li a {
   padding: 12px 20px;
   display: block;
   text-align: left;
-  color: white;
+  color: var(--white);
   transition: background-color 0.3s;
 }
 
@@ -124,13 +134,13 @@ nav .dropdown-menu li a:hover {
 nav .dropdown:hover .dropdown-menu {
   display: flex;
 }
-
+/* ===== Components ===== */
 .hero {
   padding: 100px 40px;
   text-align: center;
   background: linear-gradient(to right, rgba(118, 201, 214, 0.8), rgba(255, 215, 0, 0.8)),
               url("hero-bg.jpg") center/cover no-repeat;
-  color: #fff;
+              color: var(--white);
   animation: fadeInUp 1.2s ease-out;
 }
 .hero h1 {
@@ -142,8 +152,8 @@ nav .dropdown:hover .dropdown-menu {
   margin-top: 20px;
   display: inline-block;
   padding: 12px 24px;
-  background-color: #fff;
-  color: #222;
+  background-color: var(--white);
+  color: var(--text-color);
   font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
@@ -173,7 +183,7 @@ nav .dropdown:hover .dropdown-menu {
 .service-card {
   background-color: #f0f8f9;
   padding: 25px;
-  border-left: 5px solid gold;
+  border-left: 5px solid var(--accent-color);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: transform 0.2s;
@@ -194,7 +204,7 @@ form textarea {
 }
 
 form button {
-  background-color: gold;
+  background-color: var(--accent-color);
   border: none;
   padding: 12px 20px;
   color: black;
@@ -215,7 +225,7 @@ form button:hover {
 
 footer {
   background-color: #000;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 20px;
 }
@@ -265,14 +275,14 @@ footer {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-weight: 600;
   font-size: 1.05rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #222;
+  color: var(--text-color);
 }
 
 /* Dropdown */
@@ -281,7 +291,7 @@ footer {
   position: absolute;
   top: 30px;
   left: 0;
-  background-color: white;
+  background-color: var(--white);
   padding: 10px 0;
   border-radius: 5px;
   min-width: 180px;
@@ -307,8 +317,8 @@ footer {
   gap: 15px;
 }
 .lang-contact .cta-button {
-  background-color: #fff;
-  color: #222;
+  background-color: var(--white);
+  color: var(--text-color);
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 5px;
@@ -332,7 +342,7 @@ footer {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--white);
 }
 .hamburger {
   font-size: 28px;
@@ -353,7 +363,7 @@ footer {
   top: 0;
   right: -100%;
   width: 250px;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: -2px 0 10px rgba(0,0,0,0.1);
   padding: 20px;
   transition: right 0.4s ease-in-out;
@@ -477,7 +487,7 @@ nav ul.open {
 
 .footer-links a:hover,
 .footer-contact a:hover {
-  color: gold;
+  color: var(--accent-color);
 }
 
 .footer-bottom {
@@ -566,15 +576,15 @@ nav ul.open {
   content: '★';
   position: absolute;
   left: 0;
-  color: gold;
+  color: var(--accent-color);
 }
 
 /* ====== CTA SECTION ====== */
 .cta {
   padding: 60px 40px;
   text-align: center;
-  background: linear-gradient(to right, rgb(118, 201, 214), gold);
-  color: #fff;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: var(--white);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -729,74 +739,6 @@ nav ul.open {
 .value-box.open .value-content {
   display: block;
 }
-/* What Drives Us (Philosophy) Section */
-.philosophy {
-  position: relative;
-  padding: 80px 40px;
-  background-color: #f1f9f9;
-  background-image: url('images/planet.png'); /* Replace with your image path */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-blend-mode: lighten;
-}
-
-.philosophy::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('images/planet.png'); /* same image path */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15; /* 50% transparency visually */
-  z-index: 0;
-}
-
-.philosophy h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-  position: relative;
-  z-index: 1;
-}
-
-.philosophy-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  position: relative;
-  z-index: 1;
-  max-width: 1000px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.left-values,
-.right-values {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.value-block {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-left: 4px solid gold;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.value-block h3 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-  color: #333;
-}
-
-.value-block p {
-  font-size: 1rem;
-  color: #444;
-}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -900,7 +842,7 @@ nav ul.open {
 }
 
 .value-box {
-  background: #fff;
+  background: var(--white);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
@@ -967,7 +909,7 @@ nav ul.open {
 }
 
 .expertise-card {
-  background: #fff;
+  background: var(--white);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -993,7 +935,7 @@ nav ul.open {
 .card-content h3 {
   margin: 0 0 10px;
   font-size: 1.4rem;
-  color: #222;
+  color: var(--text-color);
 }
 
 .card-content p {
@@ -1020,8 +962,8 @@ nav ul.open {
   text-align: center;
   max-width: 900px;
   margin: auto;
-  border-top: 3px dashed gold;
-  border-bottom: 3px dashed gold;
+  border-top: 3px dashed var(--accent-color);
+  border-bottom: 3px dashed var(--accent-color);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -1041,7 +983,7 @@ nav ul.open {
   #navbar {
     display: none;
     flex-direction: column;
-    background-color: rgb(118, 201, 214);
+    background-color: var(--primary-color);
     width: 100%;
     position: absolute;
     top: 70px;
@@ -1099,7 +1041,7 @@ nav ul.open {
   display: block;
   font-weight: bold;
   font-size: 1.3rem;
-  color: rgb(118, 201, 214);
+  color: var(--primary-color);
   padding: 32px 0;
   transition: color 0.2s;
 }
@@ -1111,12 +1053,12 @@ nav ul.open {
   background: rgba(255,215,0,0.07);
 }
 .value-card.active {
-  background: linear-gradient(120deg, rgb(118, 201, 214) 0%, gold 100%);
+  background: linear-gradient(120deg, var(--primary-color) 0%, var(--accent-color) 100%);
   box-shadow: 0 8px 32px rgba(118, 201, 214, 0.18);
   transform: scale(1.04);
 }
 .value-card.active .value-title {
-  color: #fff;
+  color: var(--white);
   padding: 16px 0 0 0;
 }
 .value-card.active .value-content {
@@ -1125,14 +1067,7 @@ nav ul.open {
 }
 
 
-.philosophy-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.philosophy-card.open {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
 .values-section {
   padding: 80px 40px;
   background: linear-gradient(to right, rgba(118, 201, 214, 0.05), rgba(255, 215, 0, 0.1));
@@ -1143,7 +1078,7 @@ nav ul.open {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 60px;
-  color: #222;
+  color: var(--text-color);
 }
 
 .values-grid {
@@ -1155,21 +1090,6 @@ nav ul.open {
   perspective: 1000px;
 }
 
-.philosophy-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 4px solid rgb(118, 201, 214);
-  padding: 25px;
-  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  transform-style: preserve-3d;
-}
-
-.philosophy-card:hover {
-  transform: rotateY(5deg) rotateX(5deg);
-  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.15);
-}
 
 .card-title {
   font-size: 1.5rem;
@@ -1186,13 +1106,6 @@ nav ul.open {
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-.philosophy-card.open .card-body {
-  max-height: 300px;
-  opacity: 1;
-}
-.philosophy-card:hover {
-  box-shadow: 0 20px 30px rgba(0, 128, 128, 0.2), 0 0 10px rgba(255, 215, 0, 0.3);
-}
 .value-header {
   padding: 20px;
   font-weight: bold;
@@ -1230,7 +1143,7 @@ nav ul.open {
   opacity: 1;
 }
 .impact-section {
-  background: linear-gradient(to bottom right, #e0f8fb, #fff9e5);
+  background: linear-gradient(to bottom right, #e0f8fb, var(--white)9e5);
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -1238,7 +1151,7 @@ nav ul.open {
 
 .impact-section h2 {
   font-size: 2.4rem;
-  color: #222;
+  color: var(--text-color);
   margin-bottom: 60px;
   font-weight: 700;
 }
@@ -1307,7 +1220,7 @@ nav ul.open {
 .services-showcase .service-card {
   background: linear-gradient(to bottom right, #f5fcff, #e1f3f9);
   padding: 25px;
-  border-left: 5px solid rgb(118, 201, 214);
+  border-left: 5px solid var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1327,7 +1240,7 @@ nav ul.open {
 .why-us-modern h2 {
   font-size: 2.4rem;
   margin-bottom: 40px;
-  color: #222;
+  color: var(--text-color);
 }
 
 .why-grid {
@@ -1339,7 +1252,7 @@ nav ul.open {
 }
 
 .why-card {
-  background-color: white;
+  background-color: var(--white);
   padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -1384,7 +1297,7 @@ nav ul.open {
 .service-hero.hero-bg {
   background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
               url('project-hero.jpg') center/cover no-repeat;
-  color: white;
+              color: var(--white);
   padding: 120px 40px;
   text-align: center;
 }
@@ -1427,12 +1340,12 @@ nav ul.open {
   content: '✔️';
   position: absolute;
   left: 0;
-  color: gold;
+  color: var(--accent-color);
 }
 .service-hero.hero-bg-payment {
   background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
               url('payment-hero.jpg') center/cover no-repeat;
-  color: white;
+              color: var(--white);
   padding: 120px 40px;
   text-align: center;
 }
@@ -1454,7 +1367,7 @@ nav ul.open {
 .service-hero.hero-bg-leadership {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
               url('leadership-collab.jpg') center/cover no-repeat;
-  color: white;
+              color: var(--white);
   padding: 120px 40px;
   text-align: center;
 }
@@ -1485,7 +1398,7 @@ nav ul.open {
 .service-hero.hero-bg-training {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
               url('training-hero.jpg') center/cover no-repeat;
-  color: white;
+              color: var(--white);
   padding: 120px 40px;
   text-align: center;
 }
@@ -1512,13 +1425,15 @@ nav ul.open {
 .footer-contact a[href*="wa.me"] i {
   color: #25D366; /* WhatsApp green */
 }
+
+/* ===== Utilities ===== */
 .cookie-banner {
   display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #222;
-  color: white;
+  background: var(--text-color);
+  color: var(--white);
   padding: 15px 20px;
   font-size: 0.9rem;
   z-index: 9999;
@@ -1535,12 +1450,12 @@ nav ul.open {
 }
 
 .cookie-banner a {
-  color: #ffd700;
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
 .cookie-banner button {
-  background-color: #ffd700;
+  background-color: var(--accent-color);
   color: #000;
   border: none;
   padding: 8px 16px;
