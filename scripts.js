@@ -41,16 +41,14 @@ function setupMobileMenu() {
     hamburger.addEventListener("click", () => {
       navbar.classList.add("active");
     });
-    };
   }
 
   if (closeMenu && navbar) {
     closeMenu.addEventListener("click", () => {
       navbar.classList.remove("active");
-      
     });
   }
-
+}
 
 // Shrink header on scroll
 function setupShrinkHeader() {
