@@ -37,15 +37,17 @@ function setupMobileMenu() {
   const closeMenu = document.querySelector(".close-menu");
   const navbar = document.getElementById("navbar");
 
-  if (hamburger && navbar) {
+  if (hamburger && navbar && closeMenu) {
     hamburger.addEventListener("click", () => {
       navbar.classList.add("active");
+      closeMenu.classList.add("active");
     });
   }
 
   if (closeMenu && navbar) {
     closeMenu.addEventListener("click", () => {
       navbar.classList.remove("active");
+      closeMenu.classList.remove("active");
     });
   }
 }
