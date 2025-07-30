@@ -98,6 +98,8 @@ function observeImpactSection() {
 
   const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
+      const items = section.querySelectorAll('.impact-item');
+      items.forEach(item => item.classList.add('show'));
       animateCounters();
       observer.unobserve(section); // Only once
     }
