@@ -402,13 +402,6 @@ nav ul.open {
   
 }
 
-.dropdown-menu {
-  position: static;
-  background: none;
-  box-shadow: none;
-  padding-left: 10px;
-}
-
 .lang-contact {
   margin-top: 15px;
 }
@@ -540,14 +533,6 @@ nav ul.open {
   gap: 30px;
 }
 
-.highlight-card {
-  background: #ffffff;
-  border-left: 5px solid rgb(118, 201, 214);
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
 
 .highlight-card:hover {
   transform: translateY(-5px);
@@ -620,12 +605,6 @@ nav ul.open {
     font-size: 1rem;
   }
 }
-.section-title {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #222;
-}
 .highlight-card {
   background: white;
   border-left: 5px solid gold;
@@ -645,11 +624,6 @@ nav ul.open {
   position: relative;
 }
 
-.section-title {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-  color: #222;
-}
 
 .about-content {
   display: flex;
@@ -717,12 +691,6 @@ nav ul.open {
   padding: 80px 40px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 60px;
-  color: #0e4b5d;
-}
 
 .values-container {
   display: grid;
@@ -856,15 +824,6 @@ nav ul.open {
   z-index: 2;
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px 80px;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
 
 .value-item {
   text-align: center;
@@ -1095,14 +1054,6 @@ nav ul.open {
     display: flex;
   }
 
-  .hamburger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 26px;
-    color: #fff;
-    cursor: pointer;
-  }
 }
 @media (max-width: 768px) {
   nav ul {
@@ -1131,11 +1082,7 @@ nav ul.open {
   margin-bottom: 40px;
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
+
 
 .value-card {
   background: #f8fbfc;
@@ -1177,11 +1124,7 @@ nav ul.open {
   padding: 18px 20px 32px 20px;
 }
 
-@media (max-width: 700px) {
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 .philosophy-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1634,4 +1577,81 @@ nav ul.open {
 .impact-item.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.trusted-carousel {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.trusted-carousel h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #222;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  max-height: 50px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: 100px;
+  }
 }
