@@ -1655,3 +1655,34 @@ nav ul.open {
     width: 100px;
   }
 }
+.achievements-carousel {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.achievements-carousel h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #222;
+}
+
+.achievement-slide {
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  max-width: 320px;
+}
+
+.achievement-slide h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.achievement-slide p {
+  font-size: 0.95rem;
+  color: #555;
+}

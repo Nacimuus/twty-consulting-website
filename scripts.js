@@ -204,3 +204,52 @@ document.addEventListener("DOMContentLoaded", () => {
     isSwiping = false;
   });
 });
+function initCarousel(trackSelector, slideSelector) {
+  const track = document.querySelector(trackSelector);
+  const slides = track.querySelectorAll(slideSelector);
+  const wrapper = track.closest(".carousel-wrapper");
+  const leftBtn = wrapper.querySelector(".carousel-btn.left");
+  const rightBtn = wrapper.querySelector(".carousel-btn.right");
+
+  let index = 0;
+  const slideWidth = slides[0].offsetWidth + 40;
+
+  function moveCarousel(direction) {
+    if (direction === 'left') {
+      index = (index <= 0) ? slides.length - 1 : index - 1;
+    } else {
+      index = (index >= slides.length - 1) ? 0 : index + 1;
+    }
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  leftBtn.addEventListener("click", () => moveCarousel('left'));
+  rightBtn.addEventListener("click", () => moveCarousel('right'));
+
+  // Swipe support
+  let startX = 0;
+  let isSwiping = false;
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+
+  track.addEventListener('touchmove', e => {
+    if (!isSwiping) return;
+    const diffX = e.touches[0].clientX - startX;
+    if (Math.abs(diffX) > 50) {
+      moveCarousel(diffX > 0 ? 'left' : 'right');
+      isSwiping = false;
+    }
+  });
+
+  track.addEventListener('touchend', () => {
+    isSwiping = false;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initCarousel('.carousel-track', '.carousel-slide'); // logos
+  initCarousel('.achievements-track', '.achievement-slide'); // achievements
+});
