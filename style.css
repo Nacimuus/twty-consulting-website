@@ -113,11 +113,11 @@ nav a:hover {
   color: var(--text-color);
 }
 /* Dropdown Styles */
-nav .dropdown {
+nav .has-dropdown {
   position: relative;
 }
 
-nav .dropdown-menu {
+nav .has-dropdown > .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -132,7 +132,7 @@ nav .dropdown-menu {
   z-index: 1000;
 }
 
-nav .dropdown-menu li a {
+nav .has-dropdown > .dropdown li a {
   padding: 12px 20px;
   display: block;
   text-align: left;
@@ -140,11 +140,11 @@ nav .dropdown-menu li a {
   transition: background-color 0.3s;
 }
 
-nav .dropdown-menu li a:hover {
+nav .has-dropdown > .dropdown li a:hover {
   background-color: #0e98aa;
 }
 
-nav .dropdown:hover .dropdown-menu {
+nav .has-dropdown:hover > .dropdown {
   display: flex;
 }
 /* ===== Components ===== */
