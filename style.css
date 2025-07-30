@@ -306,7 +306,7 @@ footer {
   align-items: center;
   gap: 15px;
 }
-lang-contact .cta-button {
+.lang-contact .cta-button {
   background-color: #fff;
   color: #222;
   font-weight: bold;
