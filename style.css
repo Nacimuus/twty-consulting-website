@@ -360,13 +360,14 @@ footer {
   border: none;
   color: var(--text-color);
 }
-.hamburger {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 1000;
+
+.close-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
 }
+
 .close-menu {
   position: fixed;
   top: 20px;
@@ -437,21 +438,6 @@ nav ul.open {
   margin-top: 15px;
 }
 
-
-
-@media (max-width: 768px) {
-  .hamburger { display: block; }
-  .close-menu.active { display: block; }
-  .mobile-nav {
-  position: static;
-  right: auto;
-  width: auto;
-  box-shadow: none;
-  flex-direction: row;
-  background: none;
-  padding: 0;
-  }
-}
 
 
   
