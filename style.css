@@ -404,11 +404,11 @@ footer {
     margin: 0;
   }
 
-  .mobile-nav ul li {
+  .mobile-nav li {
     margin-bottom: 20px;
   }
 
-  .mobile-nav ul li a {
+  .mobile-nav a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.3rem;
