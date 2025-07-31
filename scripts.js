@@ -36,21 +36,28 @@ function setupMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
   const navbar = document.getElementById("navbar");
+  const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
 
-  if (hamburger && navbar && closeMenu) {
+  if (hamburger && closeMenu && navbar) {
     hamburger.addEventListener("click", () => {
       navbar.classList.add("active");
-      closeMenu.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      navbar.classList.remove("active");
     });
   }
 
-  if (closeMenu && navbar) {
-    closeMenu.addEventListener("click", () => {
-      navbar.classList.remove("active");
-      closeMenu.classList.remove("active");
+  dropdownToggles.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle("open");
     });
-  }
+  });
 }
+
+document.addEventListener("DOMContentLoaded", setupMobileMenu);
 
 // Shrink header on scroll
 function setupShrinkHeader() {
