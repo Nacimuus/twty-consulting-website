@@ -437,7 +437,7 @@ nav ul.open {
 @media (max-width: 768px) {
   .hamburger,
   .close-menu {
-    position: relative;
+    display: block;
     z-index: 1001;
   }
 
@@ -1632,17 +1632,6 @@ nav ul.open {
 }
 /* Reset basics */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-@media (min-width: 769px) {
-  nav {
-    display: block !important;
-  }
-
-  .mobile-nav,
-  .hamburger,
-  .close-menu {
-    display: none !important;
-  }
-}
 
 
 
