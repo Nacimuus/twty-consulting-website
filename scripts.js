@@ -32,30 +32,30 @@ function includeHTML() {
 
 // Setup mobile menu
 function setupMobileMenu() {
+<script>
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
-  const navbar = document.getElementById("navbar");
-  const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const dropdowns = document.querySelectorAll(".mobile-nav .has-dropdown");
 
-  if (hamburger && closeMenu && navbar) {
-    hamburger.addEventListener("click", () => {
-      navbar.classList.add("active");
-    });
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.add("active");
+  });
 
-    closeMenu.addEventListener("click", () => {
-      navbar.classList.remove("active");
-    });
+  closeMenu.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+  });
 
-    dropdownToggles.forEach(link => {
-      link.addEventListener("click", e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          link.parentElement.classList.toggle("open");
-        }
-      });
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", (e) => {
+      e.preventDefault();
+      drop.classList.toggle("open");
     });
+  });
+</script>
+
   }
-}
+
 
 // Shrink header on scroll
 function setupShrinkHeader() {
