@@ -356,77 +356,85 @@ footer {
 .close-menu {
   display: none;
   background: none;
-  border: none;
   font-size: 2rem;
+  border: none;
   cursor: pointer;
-  align-self: flex-end;
-  margin-bottom: 20px;
+  z-index: 1001;
 }
+
 
 
 /* === Mobile Nav Override === */
 @media (max-width: 768px) {
-  .hamburger,
-  .close-menu {
+  .hamburger {
     display: block;
-    z-index: 1001;
-  }
-
-  #navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background-color: #fff;
-    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    z-index: 1000;
-    transition: right 0.3s ease;
-    display: none; /* hidden by default */
-  }
-
-  #navbar.active {
-    right: 0;
-    display: flex;
-  }
-
-  #navbar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  #navbar a {
-    text-decoration: none;
-    font-size: 1.2rem;
+    margin-left: auto;
     color: var(--text-color);
   }
 
-  #navbar .has-dropdown > a::after {
-    content: "▸";
-    float: right;
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-color);
   }
 
-  #navbar .has-dropdown.open > a::after {
-    transform: rotate(90deg);
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 80px 30px 30px;
+    display: flex;
+    flex-direction: column;
   }
 
-  #navbar .dropdown {
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .mobile-nav .dropdown {
     display: none;
     flex-direction: column;
     padding-left: 15px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .has-dropdown.open .dropdown {
     display: flex;
+  }
+
+  .has-dropdown > a::after {
+    content: "▸";
+    float: right;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  .has-dropdown.open > a::after {
+    transform: rotate(90deg);
   }
 }
 

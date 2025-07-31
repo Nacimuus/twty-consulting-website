@@ -31,31 +31,30 @@ function includeHTML() {
 }
 
 // Setup mobile menu
-function setupMobileMenu() {
+document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
-  const navbar = document.getElementById("navbar");
+  const mobileNav = document.querySelector(".mobile-nav");
   const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
 
-  if (hamburger && closeMenu && navbar) {
-    hamburger.addEventListener("click", () => {
-      navbar.classList.add("active");
-    });
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.add("active");
+  });
 
-    closeMenu.addEventListener("click", () => {
-      navbar.classList.remove("active");
-    });
+  closeMenu.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+  });
 
-    dropdownToggles.forEach(link => {
-      link.addEventListener("click", e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          link.parentElement.classList.toggle("open");
-        }
-      });
+  dropdownToggles.forEach(link => {
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = link.parentElement;
+        parent.classList.toggle("open");
+      }
     });
-  }
-}
+  });
+});
 
 // Shrink header on scroll
 function setupShrinkHeader() {
