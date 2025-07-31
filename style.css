@@ -1603,3 +1603,70 @@ footer {
     flex-direction: column;
     padding-left: 10px;
   }}
+  /* Reset default list styling */
+.mobile-nav ul,
+.mobile-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile menu links */
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+}
+
+/* Dropdown fix */
+.mobile-nav .dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  border-left: 3px solid var(--accent-color);
+}
+
+.mobile-nav .has-dropdown.open > .dropdown {
+  display: flex;
+}
+
+/* Menu layout */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.hamburger,
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
