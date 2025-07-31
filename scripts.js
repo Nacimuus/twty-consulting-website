@@ -37,14 +37,22 @@ function setupMobileMenu() {
   const mobileNav = document.querySelector(".mobile-nav");
   const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
 
+    // Hide close icon initially
+    closeMenu.style.display = "none";
+
   if (!hamburger || !closeMenu || !mobileNav) return;
 
   hamburger.addEventListener("click", () => {
     mobileNav.classList.add("active");
+    hamburger.style.display = "none";
+    closeMenu.style.display = "block";
+    
   });
 
   closeMenu.addEventListener("click", () => {
     mobileNav.classList.remove("active");
+    closeMenu.style.display = "none";
+    hamburger.style.display = "block";
   });
 
   dropdownToggles.forEach(link => {
