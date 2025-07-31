@@ -363,75 +363,6 @@ footer {
   margin-bottom: 20px;
 }
 
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 75%;
-  max-width: 320px;
-  height: 100vh;
-  background: white;
-  box-shadow: -2px 0 12px rgba(0,0,0,0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s ease;
-  z-index: 999;
-}
-.mobile-nav.active {
-  right: 0;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.mobile-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--text-color);
-}
-
-.has-dropdown > a::after {
-  content: "▸";
-  float: right;
-  transition: transform 0.3s ease;
-}
-
-.has-dropdown.open > a::after {
-  transform: rotate(90deg);
-}
-.dropdown {
-  display: none;
-  padding-left: 15px;
-}
-
-.has-dropdown.open .dropdown {
-  display: block;
-}
-.mobile-nav li {
-  margin-bottom: 20px;
-}
-
-.mobile-nav .dropdown {
-  display: none;
-  padding-left: 15px;
-}
-
-nav ul.show,
-nav ul.open {
-  display: flex;
-
-}
-
-.lang-contact {
-  margin-top: 15px;
-}
 
 /* === Mobile Nav Override === */
 @media (max-width: 768px) {
@@ -441,12 +372,7 @@ nav ul.open {
     z-index: 1001;
   }
 
-  nav,
-  .mobile-nav {
-    display: none; /* hidden by default */
-  }
-
-  .mobile-nav {
+  #navbar {
     position: fixed;
     top: 0;
     right: -100%;
@@ -460,14 +386,15 @@ nav ul.open {
     padding: 20px;
     z-index: 1000;
     transition: right 0.3s ease;
+    display: none; /* hidden by default */
   }
 
-  .mobile-nav.active {
+  #navbar.active {
     right: 0;
     display: flex;
   }
 
-  .mobile-nav ul {
+  #navbar ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
@@ -476,22 +403,22 @@ nav ul.open {
     gap: 15px;
   }
 
-  .mobile-nav a {
+  #navbar a {
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--text-color);
   }
 
-  .mobile-nav .has-dropdown > a::after {
+  #navbar .has-dropdown > a::after {
     content: "▸";
     float: right;
   }
 
-  .mobile-nav .has-dropdown.open > a::after {
+  #navbar .has-dropdown.open > a::after {
     transform: rotate(90deg);
   }
 
-  .mobile-nav .dropdown {
+  #navbar .dropdown {
     display: none;
     flex-direction: column;
     padding-left: 15px;
@@ -1632,8 +1559,11 @@ nav ul.open {
 }
 /* Reset basics */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-
+@media (min-width: 769px) {
+  #navbar {
+    display: flex !important;
+    position: static !important;
+  }
 
 
 
@@ -1664,4 +1594,4 @@ nav ul.open {
     display: none;
     flex-direction: column;
     padding-left: 10px;
-  }
+  }}

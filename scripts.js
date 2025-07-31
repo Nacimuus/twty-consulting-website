@@ -195,28 +195,3 @@ document.addEventListener("DOMContentLoaded", () => {
     initCarousel('.achievements-track', '.achievement-slide'); // achievements
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.querySelector('.hamburger');
-  const closeBtn = document.querySelector('.close-menu');
-  const mobileNav = document.querySelector('.mobile-nav');
-
-  hamburger.addEventListener('click', () => {
-    mobileNav.classList.add('active');
-    hamburger.style.display = 'none';
-    closeBtn.style.display = 'block';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    mobileNav.classList.remove('active');
-    hamburger.style.display = 'block';
-    closeBtn.style.display = 'none';
-  });
-
-  // Dropdown toggle on mobile
-  document.querySelectorAll('.has-dropdown > a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault(); // prevent link jump
-      this.parentElement.classList.toggle('open');
-    });
-  });
-});
