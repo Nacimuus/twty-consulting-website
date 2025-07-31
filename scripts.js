@@ -1,10 +1,9 @@
-// Include HTML for header and footer
+// Include HTML for header/footer
 function includeHTML() {
   return new Promise((resolve, reject) => {
     const elements = document.querySelectorAll("[w3-include-html]");
     let total = elements.length;
     let loaded = 0;
-
     if (total === 0) return resolve();
 
     elements.forEach(el => {
@@ -31,7 +30,7 @@ function includeHTML() {
   });
 }
 
-// Mobile menu toggle
+// Setup mobile menu
 function setupMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
@@ -46,18 +45,17 @@ function setupMobileMenu() {
     closeMenu.addEventListener("click", () => {
       navbar.classList.remove("active");
     });
-  }
 
-  dropdownToggles.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const parent = link.parentElement;
-      parent.classList.toggle("open");
+    dropdownToggles.forEach(link => {
+      link.addEventListener("click", e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          link.parentElement.classList.toggle("open");
+        }
+      });
     });
-  });
+  }
 }
-
-document.addEventListener("DOMContentLoaded", setupMobileMenu);
 
 // Shrink header on scroll
 function setupShrinkHeader() {
@@ -86,7 +84,6 @@ function animateCounters() {
       const target = +counter.getAttribute('data-target');
       const current = +counter.innerText;
       const increment = Math.ceil(target / 200);
-
       if (current < target) {
         counter.innerText = `${current + increment}`;
         setTimeout(update, 20);
@@ -98,20 +95,17 @@ function animateCounters() {
   });
 }
 
-// Observe impact section for counter animation
+// Observe section for counters
 function observeImpactSection() {
   const section = document.getElementById("impact");
   if (!section) return;
-
   const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
-      const items = section.querySelectorAll('.impact-item');
-      items.forEach(item => item.classList.add('show'));
+      section.querySelectorAll('.impact-item').forEach(item => item.classList.add('show'));
       animateCounters();
-      observer.unobserve(section); // Only once
+      observer.unobserve(section);
     }
   }, { threshold: 0.3 });
-
   observer.observe(section);
 }
 
@@ -124,97 +118,28 @@ function initScrollAnimations() {
       }
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 }
 
-// Cookie consent
+// Cookie banner
 function setupCookieBanner() {
   const banner = document.getElementById("cookie-banner");
   const acceptBtn = document.getElementById("accept-cookies");
 
   if (!banner) return;
-
   if (!localStorage.getItem("cookiesAccepted")) {
     banner.style.display = "block";
   }
-
   acceptBtn?.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
     banner.style.display = "none";
   });
 }
 
-// Dropdown for desktop nav
-function setupDropdowns() {
-  document.querySelectorAll('.has-dropdown > a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const parent = link.parentElement;
-      parent.classList.toggle('open');
-    });
-  });
-}
-
-// Init
-document.addEventListener("DOMContentLoaded", () => {
-  includeHTML().then(() => {
-    setupMobileMenu();
-    setupShrinkHeader();
-    observeImpactSection();
-    initScrollAnimations();
-    setupCookieBanner();
-    setupDropdowns();
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const leftBtn = document.querySelector('.carousel-btn.left');
-  const rightBtn = document.querySelector('.carousel-btn.right');
-
-  let index = 0;
-  const slideWidth = slides[0].offsetWidth + 40;
-
-  function moveCarousel(direction) {
-    if (direction === 'left') {
-      index = (index <= 0) ? slides.length / 2 - 1 : index - 1;
-    } else {
-      index = (index >= slides.length / 2 - 1) ? 0 : index + 1;
-    }
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
-
-  rightBtn.addEventListener("click", () => moveCarousel('right'));
-  leftBtn.addEventListener("click", () => moveCarousel('left'));
-
-  // Auto-scroll
-  setInterval(() => moveCarousel('right'), 4000);
-
-  // Swipe support
-  let startX = 0;
-  let isSwiping = false;
-
-  track.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-    isSwiping = true;
-  });
-
-  track.addEventListener('touchmove', e => {
-    if (!isSwiping) return;
-    const diffX = e.touches[0].clientX - startX;
-    if (Math.abs(diffX) > 50) {
-      moveCarousel(diffX > 0 ? 'left' : 'right');
-      isSwiping = false;
-    }
-  });
-
-  track.addEventListener('touchend', () => {
-    isSwiping = false;
-  });
-});
+// Carousel logic
 function initCarousel(trackSelector, slideSelector) {
   const track = document.querySelector(trackSelector);
+  if (!track) return;
   const slides = track.querySelectorAll(slideSelector);
   const wrapper = track.closest(".carousel-wrapper");
   const leftBtn = wrapper.querySelector(".carousel-btn.left");
@@ -232,8 +157,10 @@ function initCarousel(trackSelector, slideSelector) {
     track.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
-  leftBtn.addEventListener("click", () => moveCarousel('left'));
-  rightBtn.addEventListener("click", () => moveCarousel('right'));
+  leftBtn?.addEventListener("click", () => moveCarousel('left'));
+  rightBtn?.addEventListener("click", () => moveCarousel('right'));
+
+  setInterval(() => moveCarousel('right'), 4000);
 
   // Swipe support
   let startX = 0;
@@ -243,7 +170,6 @@ function initCarousel(trackSelector, slideSelector) {
     startX = e.touches[0].clientX;
     isSwiping = true;
   });
-
   track.addEventListener('touchmove', e => {
     if (!isSwiping) return;
     const diffX = e.touches[0].clientX - startX;
@@ -252,40 +178,20 @@ function initCarousel(trackSelector, slideSelector) {
       isSwiping = false;
     }
   });
-
   track.addEventListener('touchend', () => {
     isSwiping = false;
   });
 }
 
+// 🔄 MAIN INIT FLOW
 document.addEventListener("DOMContentLoaded", () => {
-  initCarousel('.carousel-track', '.carousel-slide'); // logos
-  initCarousel('.achievements-track', '.achievement-slide'); // achievements
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const closeMenu = document.querySelector('.close-menu');
-  const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
-
-  // Open mobile menu
-  hamburger.addEventListener('click', () => {
-    mobileNav.classList.add('active');
-  });
-
-  // Close mobile menu
-  closeMenu.addEventListener('click', () => {
-    mobileNav.classList.remove('active');
-  });
-
-  // Toggle submenus on mobile
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault(); // Prevent navigation
-        const parent = toggle.parentElement;
-        parent.classList.toggle('open');
-      }
-    });
+  includeHTML().then(() => {
+    setupMobileMenu();
+    setupShrinkHeader();
+    observeImpactSection();
+    initScrollAnimations();
+    setupCookieBanner();
+    initCarousel('.carousel-track', '.carousel-slide'); // logos
+    initCarousel('.achievements-track', '.achievement-slide'); // achievements
   });
 });
