@@ -344,66 +344,59 @@ footer {
 }
 
 /* === Mobile Navigation === */
-.hamburger, .close-menu {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-  color: #333;
-}
 .hamburger {
-  margin-left: auto;
-}
-.close-menu {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
+  display: none;
+  background: none;
+  font-size: 1.8rem;
   cursor: pointer;
+  border: none;
+  color: var(--text-color);
 }
 
-/* Desktop default */
-.mobile-nav {
-  position: static;
-  right: auto;
-  width: auto;
-  height: auto;
-  padding: 0;
-  box-shadow: none;
-  display: flex;
-  flex-direction: row;
-}
-.mobile-nav .close-menu {
-  align-self: flex-end;
-  font-size: 1.8rem;
+.close-menu {
+  display: none;
   background: none;
   border: none;
+  font-size: 2rem;
   cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+.mobile-nav.active {
+  right: 0;
+}
+
 .mobile-nav ul {
   list-style: none;
   padding: 0;
-  margin-top: 40px;
-}
-.mobile-nav li {
-  margin-bottom: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .mobile-nav a {
-  color: #222;
   text-decoration: none;
+  font-weight: bold;
   font-size: 1.1rem;
-  font-weight: 600;
-}
-.mobile-nav .dropdown {
-  display: none;
-  padding-left: 15px;
+  color: var(--text-color);
 }
 
-.has-dropdown.open .dropdown {
-  display: block;
-}
 .has-dropdown > a::after {
   content: "▸";
   float: right;
@@ -412,6 +405,22 @@ footer {
 
 .has-dropdown.open > a::after {
   transform: rotate(90deg);
+}
+.dropdown {
+  display: none;
+  padding-left: 15px;
+}
+
+.has-dropdown.open .dropdown {
+  display: block;
+}
+.mobile-nav li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav .dropdown {
+  display: none;
+  padding-left: 15px;
 }
 
 nav ul.show,
@@ -424,87 +433,76 @@ nav ul.open {
   margin-top: 15px;
 }
 
+/* === Mobile Nav Override === */
 @media (max-width: 768px) {
   .hamburger,
   .close-menu {
     display: block;
+    z-index: 1001;
+  }
+
+  nav,
+  .mobile-nav {
+    display: none; /* hidden by default */
   }
 
   .mobile-nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
+    width: 80%;
     max-width: 320px;
     height: 100vh;
-    background: white;
-    box-shadow: -2px 0 12px rgba(0,0,0,0.1);
-    padding: 20px;
-    transition: right 0.3s ease;
+    background-color: #fff;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+    transition: right 0.3s ease;
   }
 
   .mobile-nav.active {
     right: 0;
+    display: flex;
   }
 
-  .mobile-nav .has-dropdown > .dropdown {
-    padding-left: 15px;
-    background: #e0f5f5;
-    border-left: 3px solid #007b8f;
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
   }
 
   .mobile-nav .has-dropdown > a::after {
-    content: "\25B8";
+    content: "▸";
     float: right;
   }
 
   .mobile-nav .has-dropdown.open > a::after {
     transform: rotate(90deg);
   }
-}
 
-@media (min-width: 769px) {
-  .mobile-nav .has-dropdown {
-    position: relative;
+  .mobile-nav .dropdown {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 5px;
   }
 
-  .mobile-nav .has-dropdown > .dropdown {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    padding: 10px 0;
-    margin: 0;
-    min-width: 200px;
-    background: var(--white);
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .mobile-nav .has-dropdown:hover > .dropdown,
-  .mobile-nav .has-dropdown.open > .dropdown {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .mobile-nav .has-dropdown > .dropdown li a {
-    display: block;
-    padding: 8px 20px;
-    color: var(--text-color);
-    white-space: nowrap;
-  }
-
-  .mobile-nav .has-dropdown > .dropdown li a:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+  .has-dropdown.open .dropdown {
+    display: flex;
   }
 }
+
 
 .footer-container {
   display: flex;
@@ -813,16 +811,7 @@ nav ul.open {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .philosophy-grid {
-    flex-direction: column;
-  }
 
-  .left-values,
-  .right-values {
-    flex: 1 1 100%;
-  }
-}
 .values-alt {
   position: relative;
   background: linear-gradient(to bottom right, rgba(255, 215, 0, 0.15), rgba(118, 201, 214, 0.15));
@@ -1649,28 +1638,13 @@ nav ul.open {
 
 
 
-.hamburger {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
 
 
 
 
 
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  list-style: none;
-  padding: 10px 0;
-}
+
+
 
 .has-dropdown:hover .dropdown {
   display: block;
@@ -1679,51 +1653,15 @@ nav ul.open {
 
 
 /* Mobile */
-@media (max-width: 768px) {
-  .hamburger, .close-menu {
-    display: block;
-  }
+
 
   nav {
     display: none; /* hide inline menu on small screens */
   }
-}
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    background: white;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -3px 0 10px rgba(0,0,0,0.2);
-  }
-  .mobile-nav.active {
-    right: 0;
-  }
-  .mobile-nav .close-menu {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    margin-left: auto;
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-  .mobile-nav ul {
-    flex-direction: column;
-    gap: 20px;
-  }
+
+
   .has-dropdown .dropdown {
     display: none;
     flex-direction: column;
     padding-left: 10px;
   }
-  .has-dropdown.open .dropdown {
-    display: flex;
-  }
-}
-
