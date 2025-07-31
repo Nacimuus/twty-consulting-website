@@ -34,7 +34,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: gold;;
+  background-color: rgb(90, 160, 172);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   padding: 5px 20px;
 }
@@ -386,9 +386,9 @@ footer {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
+    width: 50%;
     height: 100vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     transition: right 0.3s ease;
     z-index: 1000;
     padding: 80px 30px 30px;
@@ -680,7 +680,7 @@ footer {
 }
 
 .top-divider {
-  margin-bottom: -40px;
+  margin-bottom: 0;
 }
 
 .bottom-divider {
