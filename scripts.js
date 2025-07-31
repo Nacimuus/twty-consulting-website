@@ -31,11 +31,13 @@ function includeHTML() {
 }
 
 // Setup mobile menu
-document.addEventListener("DOMContentLoaded", () => {
+function setupMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const closeMenu = document.querySelector(".close-menu");
   const mobileNav = document.querySelector(".mobile-nav");
   const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
+
+  if (!hamburger || !closeMenu || !mobileNav) return;
 
   hamburger.addEventListener("click", () => {
     mobileNav.classList.add("active");
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
+}
 
 // Shrink header on scroll
 function setupShrinkHeader() {
