@@ -134,13 +134,18 @@ function initScrollAnimations() {
 function setupCookieBanner() {
   const banner = document.getElementById("cookie-banner");
   const acceptBtn = document.getElementById("accept-cookies");
+  const refuseBtn = document.getElementById("refuse-cookies");
 
   if (!banner) return;
-  if (!localStorage.getItem("cookiesAccepted")) {
+  if (!localStorage.getItem("cookiesAccepted") && !localStorage.getItem("cookiesRefused")) {
     banner.style.display = "block";
   }
   acceptBtn?.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+  refuseBtn?.addEventListener("click", () => {
+    localStorage.setItem("cookiesRefused", "true");
     banner.style.display = "none";
   });
 }
