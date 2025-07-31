@@ -61,8 +61,8 @@ header.shrink {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
 }
 
 nav {
@@ -437,7 +437,7 @@ nav ul.open {
 @media (max-width: 768px) {
   .hamburger,
   .close-menu {
-    display: block;
+    position: relative;
     z-index: 1001;
   }
 
