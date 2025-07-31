@@ -147,7 +147,7 @@ nav .has-dropdown > .dropdown li a:hover {
 .hero {
   padding: 100px 40px;
   text-align: center;
-  background: linear-gradient(to right, rgba(118, 201, 214, 0.8), rgba(255, 215, 0, 0.8)),
+  background: linear-gradient(to right, rgba(118, 201, 214, 0.5), rgba(255, 215, 0, 0.5)),
               url("hero-bg.jpg") center/cover no-repeat;
               color: var(--white);
   animation: fadeInUp 1.2s ease-out;
@@ -1542,19 +1542,61 @@ footer {
     position: static !important;
   }
 
-
-
-
-
-
-
-
-
-
-
-
 .has-dropdown:hover .dropdown {
   display: flex;
 }
 
+}
+.why-home {
+  background: linear-gradient(to right, #f7fcfd, #ecf7fa);
+  padding: 80px 40px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.why-home h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.why-home .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.why-home .why-card {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-home .why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.why-home .emoji {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.why-home .why-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #007a94;
+}
+
+.why-home .why-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
 }
