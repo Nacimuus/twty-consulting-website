@@ -1680,13 +1680,14 @@ footer {
   margin-bottom: 15px;
 }
 
-/* === Section Divider === */
-.section-divider {
+/* === Section Divider for Gantt sections === */
+.section-divider.gantt-divider {
   height: 30px;
   background-image: url('gantt_style_divider.png');
   background-repeat: repeat-x;
   background-position: center;
   background-size: contain;
+  clip-path: none;
 }
 .comic-bubbles-section {
   background: linear-gradient(to right, #fffce1, #fdf8c3);
