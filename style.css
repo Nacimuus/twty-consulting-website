@@ -1602,7 +1602,7 @@ footer {
 }
 /* === Project Management Page === */
 .project-intro {
-  background: linear-gradient(to right, #f5fafd, #eaf9fc);
+  background: linear-gradient(to right, #e8f9fb, #d1f3f7);
   padding: 80px 40px;
   text-align: center;
 }
@@ -1657,7 +1657,7 @@ footer {
 }
 
 .project-offer {
-  background: linear-gradient(to right, #fefcea, #f1f1f1);
+  background: linear-gradient(to right, #fff7e6, #fdf3cc);
   padding: 80px 40px;
   text-align: center;
 }
@@ -1687,4 +1687,57 @@ footer {
   background-repeat: repeat-x;
   background-position: center;
   background-size: contain;
+}
+.comic-bubbles-section {
+  background: linear-gradient(to right, #fffce1, #fdf8c3);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+.bubble {
+  background: #ffffff;
+  border: 3px solid var(--primary-color);
+  border-radius: 30px;
+  padding: 20px 25px;
+  font-size: 1rem;
+  color: #222;
+  font-weight: bold;
+  max-width: 300px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.bubble:hover {
+  transform: translateY(-6px);
+}
+
+/* Optional speech tail (bottom-left corner) */
+.bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--primary-color);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .bubble {
+    max-width: 100%;
+  }
 }
