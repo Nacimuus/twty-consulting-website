@@ -2173,3 +2173,98 @@ footer {
   margin-bottom: 10px;
   font-size: 1rem;
 }
+.section-learning {
+  background: linear-gradient(to right, #f7f9fc, #edf8ff);
+  padding: 60px 20px;
+  position: relative;
+}
+
+.section-learning .section-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.learning-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.learning-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #007b8f;
+}
+
+.learning-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.learning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.section-approach {
+  background: linear-gradient(to bottom, #e3f2fd, #f1fcff);
+  padding: 80px 20px;
+}
+
+.section-approach h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #005f7a;
+}
+
+.section-approach .section-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.15rem;
+  text-align: center;
+  color: #444;
+}
+
+.approach-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.approach-points .point {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+}
+
+.approach-points .point h3 {
+  font-size: 1.2rem;
+  color: #007b8f;
+  margin-bottom: 10px;
+}
+
+.approach-points .point p {
+  font-size: 0.98rem;
+  color: #333;
+}
+
+.approach-points .point:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
