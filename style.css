@@ -2040,3 +2040,73 @@ footer {
     gap: 30px;
   }
 }
+.training-section {
+  padding: 80px 20px;
+  color: #333;
+}
+
+.section-approach {
+  background: #f1f9f9;
+}
+
+.section-process {
+  background: #fff8f0;
+}
+
+.section-courses {
+  background: #f0f4ff;
+}
+
+.section-divider {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 10px 0;
+  background: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.course-card {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  background: #e6f7ff;
+}
+
+.process-steps {
+  list-style: decimal inside;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.approach-points {
+  list-style: none;
+  padding-left: 0;
+}
+
+.approach-points li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
