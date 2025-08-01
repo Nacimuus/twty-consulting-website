@@ -1724,18 +1724,6 @@ footer {
   transform: translateY(-6px);
 }
 
-/* Optional speech tail (bottom-left corner) */
-.bubble::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 30px;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top-color: var(--primary-color);
-}
-
 /* Responsive layout */
 @media (max-width: 768px) {
   .bubble {
@@ -1784,4 +1772,110 @@ footer {
   font-size: 1.3rem;
   color: var(--accent-color);
   min-width: 24px;
+}
+/* === Leadership Experience Section === */
+.leadership-experience {
+  background: linear-gradient(to right, #e8f8ff, #fdfdfd);
+  padding: 80px 40px;
+  text-align: center;
+}
+.leadership-experience h2 {
+  font-size: 2.5rem;
+  color: #0a4052;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.leadership-experience .tagline {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #555;
+}
+.leadership-experience .playful-line {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #0e98aa;
+}
+
+/* === Divider (Only for Leadership Page) === */
+.custom-divider {
+  width: 100%;
+  height: 4px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  margin: 40px 0;
+}
+
+/* === Coaching & Speak-Up Offers Section === */
+.leadership-offers .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.leadership-offers .coaching,
+.leadership-offers .speakup {
+  background-color: #fdfaf5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.leadership-offers .offer-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.leadership-offers .offer-text {
+  flex: 1;
+  min-width: 280px;
+}
+.leadership-offers h3 {
+  font-size: 1.8rem;
+  color: #0e4b5d;
+}
+.leadership-offers p {
+  font-size: 1.1rem;
+  color: #444;
+}
+.speakup {
+  flex-direction: row-reverse;
+}
+.strategy-banner {
+  background-color: #0e4b5d;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.banner-container span {
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.divider {
+  width: 3px;
+  height: 20px;
+  background-color: #fff;
+  display: inline-block;
 }
