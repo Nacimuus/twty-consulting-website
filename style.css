@@ -1850,9 +1850,7 @@ footer {
   font-size: 1.1rem;
   color: #444;
 }
-.speakup {
-  flex-direction: row-reverse;
-}
+
 .strategy-banner {
   background-color: #0e4b5d;
   color: white;
