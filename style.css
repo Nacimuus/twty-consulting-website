@@ -1829,12 +1829,17 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+.leadership-offers .offer-image {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
 .leadership-offers .offer-image img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 .leadership-offers .offer-text {
-  flex: 1;
+  flex: 2 1 400px;
   min-width: 280px;
 }
 .leadership-offers h3 {
