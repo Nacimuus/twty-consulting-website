@@ -1741,3 +1741,46 @@ footer {
     max-width: 100%;
   }
 }
+/* Floating effect */
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatLeftRight {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Assign different float animations randomly */
+.bubble:nth-child(odd) {
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.bubble:nth-child(even) {
+  animation: floatLeftRight 7s ease-in-out infinite;
+}
+.bubble {
+  will-change: transform;
+}
+.we-excel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.excel-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  color: #0e4b5d;
+}
+
+.excel-point i {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  min-width: 24px;
+}
