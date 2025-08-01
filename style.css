@@ -1941,7 +1941,9 @@ footer {
 }
 
 /* Divider – Payment Card Style */
-.section-divider {
+.payment-divider-top,
+.payment-divider-mid,
+.payment-divider-bottom {
   height: 6px;
   background-image: repeating-linear-gradient(
     to right,
@@ -2109,4 +2111,65 @@ footer {
 .approach-points li {
   margin-bottom: 12px;
   font-size: 1.1rem;
+}
+.arrow-timeline {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 40px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  position: relative;
+  scroll-snap-type: x mandatory;
+}
+
+.arrow-timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: #007b8f;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.step {
+  flex: 0 0 220px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.step::after {
+  content: '➤';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  font-size: 1.5rem;
+  color: #007b8f;
+  transform: translateY(-50%);
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step-number {
+  display: inline-block;
+  background: #007b8f;
+  color: #fff;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
