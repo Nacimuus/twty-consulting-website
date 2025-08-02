@@ -4,24 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="description" content="Get in touch with Twty Consulting for collaborations, inquiries, or custom consulting and training solutions.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <!-- FAVICON PACK -->
-<link rel="apple-touch-icon" sizes="57x57" href="faviecon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/faveicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/faviecon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/faveicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/faveicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/faveicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/faveicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/faveicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/faveicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/faveicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/faveicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/faveicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/faveicon/favicon-16x16.png">
-<link rel="manifest" href="/faveicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/faveicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  
   <title>Contact Us - Twty Consulting</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,20 +14,44 @@
 </head>
 <body>
   <div w3-include-html="header.html"></div>
-  <section class="contact">
-    <h2>Let’s Connect</h2>
-    <form action="https://formspree.io/f/xpzvynkj" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="contact-details">
-      <p>Email: <a href="mailto:Nacim.twty@gmail.com">Nacim.twty@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/nacimuus/" target="_blank">Connect</a></p>
-      <p>WhatsApp: <a href="https://wa.me/33698563366" target="_blank">Chat with us</a></p>
+  <section class="contact-hero" data-aos="fade-up">
+    <h1>Let's Connect</h1>
+    <p>We operate globally — but always with a human touch. Reach out, no matter where you are!</p>
+  </section>
+  
+  <section class="offices" data-aos="fade-up">
+    <div class="office-card">
+      <h3>🇫🇷 Paris – La Défense</h3>
+      <p>📍 Courbevoie, Business District</p>
+      <p>📧 par@twtyconsulting.com</p>
+      <p>📞 +33 1 23 45 67 89</p>
+    </div>
+    <div class="office-card">
+      <h3>🇨🇭 Zurich</h3>
+      <p>📍 Central Zurich, Switzerland</p>
+      <p>📧 zurich@twtyconsulting.com</p>
+      <p>📞 +41 76 123 45 67</p>
+    </div>
+    <div class="office-card">
+      <h3>🇲🇦 Tangier</h3>
+      <p>📍 Downtown Tangier, Morocco</p>
+      <p>📧 tangier@twtyconsulting.com</p>
+      <p>📞 +212 6 12 34 56 78</p>
     </div>
   </section>
+  
+  <div class="divider"></div>
+  
+  <section class="contact-form-section" data-aos="fade-up">
+    <h2>Send Us a Message</h2>
+    <form action="mailto:nacim.twty@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+  </section>
+  
   <div w3-include-html="footer.html"></div>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
