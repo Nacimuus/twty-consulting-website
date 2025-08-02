@@ -1427,76 +1427,62 @@ footer {
   transform: translateY(0);
 }
 
-.trusted-carousel {
-  padding: 80px 20px;
+.trust-carousel {
+  padding: 60px 20px;
   text-align: center;
-  background: #f8f9fa;
-  overflow: hidden;
+  background: #ffffff;
 }
 
-.trusted-carousel h2 {
+.trust-carousel h2 {
+  font-size: 2em;
   margin-bottom: 30px;
-  font-size: 2rem;
   color: #222;
 }
 
-.carousel-wrapper {
+.trust-wrapper {
   position: relative;
-  max-width: 100%;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.carousel-mask {
+.trust-mask {
   overflow: hidden;
   width: 100%;
 }
 
-.carousel-track {
+.trust-track {
   display: flex;
-  gap: 40px;
-  transition: transform 0.4s ease-in-out;
-  will-change: transform;
+  transition: transform 0.5s ease;
 }
 
-.carousel-slide {
-  flex: 0 0 auto;
-  width: 140px;
+.trust-slide {
+  min-width: 180px;
+  max-width: 180px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.carousel-slide img {
-  max-height: 50px;
+.trust-slide img {
+  max-width: 100%;
+  height: auto;
   filter: grayscale(100%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
-.carousel-slide img:hover {
+.trust-slide img:hover {
   filter: grayscale(0%);
-  transform: scale(1.05);
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border: none;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  z-index: 10;
+.trust-left {
+  left: -20px;
 }
 
-.carousel-btn.left {
-  left: 0;
+.trust-right {
+  right: -20px;
 }
 
-.carousel-btn.right {
-  right: 0;
-}
 
 @media (max-width: 768px) {
   .carousel-slide {
@@ -1504,36 +1490,80 @@ footer {
   }
 }
 .achievements-carousel {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
-  background: #fff;
-  overflow: hidden;
+  background: #f7f7f7;
 }
 
 .achievements-carousel h2 {
+  font-size: 2em;
   margin-bottom: 30px;
-  font-size: 2rem;
-  color: #222;
+  color: red;
+}
+
+.achievements-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievements-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.achievements-track {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .achievement-slide {
-  background: #f1f1f1;
+  min-width: 300px;
+  max-width: 300px;
+  background: white;
   border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: left;
-  max-width: 320px;
+  margin: 0 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
 
 .achievement-slide h3 {
-  font-size: 1.1rem;
+  color: #222;
   margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .achievement-slide p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 14px;
+  color: #444;
 }
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: white;
+  color: #333;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.achievements-left {
+  left: -20px;
+}
+
+.achievements-right {
+  right: -20px;
+}
+
 /* Reset basics */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 @media (min-width: 769px) {
