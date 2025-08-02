@@ -1457,8 +1457,9 @@ footer {
 }
 
 .trust-slide {
-  min-width: 100px;
-  max-width: 100px;
+  min-width: 180px;
+  max-width: 180px;
+  height: 100px;
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -1466,8 +1467,9 @@ footer {
 }
 
 .trust-slide img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
@@ -1727,7 +1729,7 @@ footer {
   overflow: hidden;
 }
 
-.bubbles-container {
+.comic-bubbles-section .bubbles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1737,7 +1739,7 @@ footer {
   position: relative;
 }
 
-.bubble {
+.comic-bubbles-section .bubble {
   background: #ffffff;
   border: 3px solid var(--primary-color);
   border-radius: 30px;
@@ -1751,13 +1753,13 @@ footer {
   transition: transform 0.3s;
 }
 
-.bubble:hover {
+.comic-bubbles-section .bubble:hover {
   transform: translateY(-6px);
 }
 
 /* Responsive layout */
 @media (max-width: 768px) {
-  .bubble {
+  .comic-bubbles-section .bubble {
     max-width: 100%;
   }
 }
@@ -1775,14 +1777,14 @@ footer {
 }
 
 /* Assign different float animations randomly */
-.bubble:nth-child(odd) {
+.comic-bubbles-section .bubble:nth-child(odd) {
   animation: floatUpDown 6s ease-in-out infinite;
 }
 
-.bubble:nth-child(even) {
+.comic-bubbles-section .bubble:nth-child(even) {
   animation: floatLeftRight 7s ease-in-out infinite;
 }
-.bubble {
+.comic-bubbles-section .bubble {
   will-change: transform;
 }
 .we-excel {
@@ -2164,14 +2166,14 @@ footer {
   color: #444;
 }
 
-.bubbles-container {
+.section-learning .bubbles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
 
-.bubble {
+.training-bubble {
   background: radial-gradient(circle at top left, #fdfdfd, #e6f7ff);
   border: 3px dashed #007b8f;
   padding: 25px 20px;
@@ -2183,18 +2185,18 @@ footer {
   font-family: 'Fredoka', 'Segoe UI', sans-serif;
 }
 
-.bubble h3 {
+.training-bubble h3 {
   font-size: 1.3rem;
   color: #007b8f;
   margin-bottom: 10px;
 }
 
-.bubble p {
+.training-bubble p {
   font-size: 0.95rem;
   color: #333;
 }
 
-.bubble:hover {
+.training-bubble:hover {
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
@@ -2524,7 +2526,7 @@ footer {
   gap: 40px;
 }
 
-.bubble {
+.expertise-section-bubbles .bubble {
   background: #ffe600;
   border: 3px solid #222;
   color: #222;
@@ -2544,7 +2546,7 @@ footer {
   z-index: 1;
 }
 
-.bubble:hover {
+.expertise-section-bubbles .bubble:hover {
   transform: scale(1.1);
 }
 .carousel-title {
