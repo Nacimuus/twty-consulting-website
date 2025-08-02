@@ -154,48 +154,93 @@ function setupCookieBanner() {
 function initCarousel(trackSelector, slideSelector) {
   const track = document.querySelector(trackSelector);
   if (!track) return;
-  const slides = track.querySelectorAll(slideSelector);
-  const wrapper = track.closest(".carousel-wrapper");
-  const leftBtn = wrapper.querySelector(".carousel-btn.left");
-  const rightBtn = wrapper.querySelector(".carousel-btn.right");
+   const achievementTrack = document.querySelector('.achievements-track');
+  const achievementSlides = document.querySelectorAll('.achievement-slide');
+  const achievementLeftBtn = document.querySelector('.achievements-carousel .carousel-btn.left');
+  const achievementRightBtn = document.querySelector('.achievements-carousel .carousel-btn.right');
 
-  let index = 0;
-  const slideWidth = slides[0].offsetWidth + 40;
+  let achievementIndex = 0;
+  const achievementSlideWidth = achievementSlides[0].offsetWidth + 40;
 
-  function moveCarousel(direction) {
+  function moveAchievementCarousel(direction) {
     if (direction === 'left') {
-      index = (index <= 0) ? slides.length - 1 : index - 1;
+      achievementIndex = (achievementIndex <= 0) ? achievementSlides.length - 1 : achievementIndex - 1;
     } else {
-      index = (index >= slides.length - 1) ? 0 : index + 1;
+      achievementIndex = (achievementIndex >= achievementSlides.length - 1) ? 0 : achievementIndex + 1;
     }
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    achievementTrack.style.transform = `translateX(-${achievementIndex * achievementSlideWidth}px)`;
   }
 
-  leftBtn?.addEventListener("click", () => moveCarousel('left'));
-  rightBtn?.addEventListener("click", () => moveCarousel('right'));
+  achievementRightBtn.addEventListener("click", () => moveAchievementCarousel('right'));
+  achievementLeftBtn.addEventListener("click", () => moveAchievementCarousel('left'));
 
-  setInterval(() => moveCarousel('right'), 4000);
+  setInterval(() => moveAchievementCarousel('right'), 6000);
 
-  // Swipe support
-  let startX = 0;
-  let isSwiping = false;
+  let achievementStartX = 0;
+  let achievementSwiping = false;
 
-  track.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-    isSwiping = true;
+  achievementTrack.addEventListener('touchstart', e => {
+    achievementStartX = e.touches[0].clientX;
+    achievementSwiping = true;
   });
-  track.addEventListener('touchmove', e => {
-    if (!isSwiping) return;
-    const diffX = e.touches[0].clientX - startX;
+
+  achievementTrack.addEventListener('touchmove', e => {
+    if (!achievementSwiping) return;
+    const diffX = e.touches[0].clientX - achievementStartX;
     if (Math.abs(diffX) > 50) {
-      moveCarousel(diffX > 0 ? 'left' : 'right');
-      isSwiping = false;
+      moveAchievementCarousel(diffX > 0 ? 'left' : 'right');
+      achievementSwiping = false;
     }
   });
-  track.addEventListener('touchend', () => {
-    isSwiping = false;
+
+  achievementTrack.addEventListener('touchend', () => {
+    achievementSwiping = false;
   });
-}
+
+  // === THEY TRUST US CAROUSEL ===
+  const trustTrack = document.querySelector('.trust-track');
+  const trustSlides = document.querySelectorAll('.trust-slide');
+  const trustLeftBtn = document.querySelector('.trust-carousel .carousel-btn.left');
+  const trustRightBtn = document.querySelector('.trust-carousel .carousel-btn.right');
+
+  let trustIndex = 0;
+  const trustSlideWidth = trustSlides[0].offsetWidth + 40;
+
+  function moveTrustCarousel(direction) {
+    if (direction === 'left') {
+      trustIndex = (trustIndex <= 0) ? trustSlides.length - 1 : trustIndex - 1;
+    } else {
+      trustIndex = (trustIndex >= trustSlides.length - 1) ? 0 : trustIndex + 1;
+    }
+    trustTrack.style.transform = `translateX(-${trustIndex * trustSlideWidth}px)`;
+  }
+
+  trustRightBtn.addEventListener("click", () => moveTrustCarousel('right'));
+  trustLeftBtn.addEventListener("click", () => moveTrustCarousel('left'));
+
+  setInterval(() => moveTrustCarousel('right'), 5000);
+
+  let trustStartX = 0;
+  let trustSwiping = false;
+
+  trustTrack.addEventListener('touchstart', e => {
+    trustStartX = e.touches[0].clientX;
+    trustSwiping = true;
+  });
+
+  trustTrack.addEventListener('touchmove', e => {
+    if (!trustSwiping) return;
+    const diffX = e.touches[0].clientX - trustStartX;
+    if (Math.abs(diffX) > 50) {
+      moveTrustCarousel(diffX > 0 ? 'left' : 'right');
+      trustSwiping = false;
+    }
+  });
+
+  trustTrack.addEventListener('touchend', () => {
+    trustSwiping = false;
+  });
+};
 
 // 🔄 MAIN INIT FLOW
 document.addEventListener("DOMContentLoaded", () => {

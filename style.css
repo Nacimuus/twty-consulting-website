@@ -1452,7 +1452,8 @@ footer {
 
 .trust-track {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .trust-slide {
