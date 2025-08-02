@@ -1457,8 +1457,8 @@ footer {
 }
 
 .trust-slide {
-  min-width: 180px;
-  max-width: 180px;
+  min-width: 100px;
+  max-width: 100px;
   margin: 0 10px;
   display: flex;
   align-items: center;

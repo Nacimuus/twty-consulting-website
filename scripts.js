@@ -204,7 +204,11 @@ function initCarousel(trackSelector, slideSelector) {
   const trustRightBtn = document.querySelector('.trust-carousel .carousel-btn.right');
 
   let trustIndex = 0;
-  const trustSlideWidth = trustSlides[0].offsetWidth + 40;
+  const trustSlideStyle = window.getComputedStyle(trustSlides[0]);
+  const trustSlideWidth =
+    trustSlides[0].offsetWidth +
+    parseFloat(trustSlideStyle.marginLeft) +
+    parseFloat(trustSlideStyle.marginRight);
 
   function moveTrustCarousel(direction) {
     if (direction === 'left') {
