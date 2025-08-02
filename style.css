@@ -2516,3 +2516,9 @@ footer {
 .bubble:hover {
   transform: scale(1.1);
 }
+.carousel-title {
+  color: #d92626; /* Bright red title */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
