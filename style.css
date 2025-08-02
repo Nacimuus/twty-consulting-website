@@ -1910,7 +1910,7 @@ footer {
   display: inline-block;
 }
 
-.divider {
+.strategy-banner .banner-divider {
   width: 3px;
   height: 20px;
   background-color: #fff;
@@ -1922,7 +1922,7 @@ footer {
     align-items: flex-start;
   }
 
-  .divider {
+  .strategy-banner .banner-divider {
     width: 100%;
     height: 2px;
     margin: 8px 0;
