@@ -258,3 +258,27 @@ document.addEventListener("DOMContentLoaded", () => {
     initCarousel('.achievements-track', '.achievement-slide'); // achievements
   });
 });
+
+// Dedicated NFC profile JS for Twty Consulting.
+// This file is isolated from your existing java.js.
+
+document.addEventListener("DOMContentLoaded", () => {
+  const intro = document.querySelector(".nfc-intro");
+
+  if (intro) {
+    setTimeout(() => {
+      intro.classList.add("nfc-intro-hidden");
+    }, 2800);
+  }
+
+    const nfcButtons = document.querySelectorAll("[data-action]");
+
+  nfcButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.add("nfc-click-glow");
+      setTimeout(() => button.classList.remove("nfc-click-glow"), 450);
+      const action = button.dataset.action;
+      console.log(`NFC profile action clicked: ${action}`);
+    });
+  });
+});
