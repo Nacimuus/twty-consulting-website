@@ -10,12 +10,11 @@ SITE = {
     # Lien de prise de rendez-vous (Calendly, Cal.com…). Laisser vide tant qu'il n'existe pas :
     # les boutons renvoient alors vers la page contact.
     "booking_url": "",
-    "job_title_fr": "Expert en monétique et paiement électronique, formateur et enseignant",
+    "job_title_fr": "Formateur, coach et enseignant, fondateur de Twty Consulting",
     "knows_about": [
-        "Monétique", "Paiement électronique", "EMV", "Certification EMV L1 L2 L3",
-        "PCI DSS", "SoftPOS", "Paiement sans contact", "Terminal Management System (TMS)",
-        "Certifications Visa, Mastercard, Amex, UPI", "Gestion de projet", "Formation professionnelle",
-        "Ingénierie pédagogique", "Étude de marché", "Accompagnement de startups", "Soft skills",
+        "Formation professionnelle", "Ingénierie pédagogique", "Coaching", "Leadership", "Soft skills",
+        "Gestion de projet", "Méthodes agiles", "Étude de marché", "Entrepreneuriat",
+        "Accompagnement de startups", "Management de projets internationaux", "Fintech", "Paiement électronique",
     ],
     # Ajouter ici chaque profil public (page enseignant, Malt, conférences…) : c'est ce qui
     # permet à Google et aux IA de relier ces sources à la même personne.
@@ -25,7 +24,9 @@ SITE = {
     # Anciennes URL -> nouvelles URL
     "redirects": {
         "services.html": "/",
-        "payment-systems.html": "/expertise-paiement.html",
+        "payment-systems.html": "/formations.html",
+        "expertise-paiement.html": "/formations.html",
+        "en/payment-expertise.html": "/en/training.html",
         "project-management.html": "/accompagnement-startup.html",
         "leadership.html": "/accompagnement-startup.html",
         "training.html": "/formations.html",

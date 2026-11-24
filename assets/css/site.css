@@ -110,40 +110,14 @@ p { margin: 0 0 1em; }
 .hero .lead { margin-top: 20px; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
-.card-stage { position: relative; display: flex; justify-content: center; padding: 24px 0; }
-.pay-card {
-  position: relative; width: min(400px, 100%); aspect-ratio: 85.6 / 53.98;
-  border-radius: 18px; padding: 7% 8%;
-  background:
-    radial-gradient(120% 140% at 100% 0%, #13627a 0%, transparent 60%),
-    linear-gradient(135deg, #0e4b5d 0%, #0a3442 100%);
-  color: #fff;
-  box-shadow: 0 30px 60px -24px rgba(12,47,58,.55), inset 0 0 0 1px rgba(255,255,255,.08);
-  transform: rotate(-6deg);
-  display: grid; grid-template-rows: auto 1fr auto; font-family: var(--sans);
-}
-.pay-card__top { display: flex; justify-content: space-between; align-items: flex-start; }
-.pay-card__brand { font-family: var(--serif); font-size: 1.35rem; color: var(--gold-soft); letter-spacing: .02em; }
-.pay-card__brand small { display: block; font-family: var(--sans); font-size: .62rem; letter-spacing: .28em; color: var(--gold); margin-top: 2px; }
-.pay-card__mid { display: flex; align-items: center; gap: 18px; }
-.chip { width: 52px; height: 40px; border-radius: 7px; background: linear-gradient(140deg, #e9d48d, #b89838 55%, #8f7424); position: relative; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); }
-.chip::before, .chip::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(80,60,10,.35); border-radius: 7px; }
-.chip::before { inset: 9px 15px; border-radius: 4px; }
-.chip::after { inset: 0; border-width: 0 0 0 0; background: linear-gradient(rgba(80,60,10,.35),rgba(80,60,10,.35)) 0 50%/100% 1px no-repeat, linear-gradient(rgba(80,60,10,.35),rgba(80,60,10,.35)) 50% 0/1px 100% no-repeat; }
-.contactless { width: 30px; height: 30px; color: var(--gold-soft); }
-.contactless path { fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
-.pay-card__name { font-size: clamp(1rem, 2.4vw, 1.3rem); letter-spacing: .14em; font-weight: 600; text-shadow: 0 1px 0 rgba(0,0,0,.35); }
-.pay-card__foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; margin-top: 6px; }
-.pay-card__meta { font-size: .72rem; color: #b9d6dc; line-height: 1.35; }
-.pay-card__meta b { display: block; color: #fff; font-weight: 600; font-size: .8rem; }
-
-/* Ondes sans contact : la seule animation du site */
-.waves { position: absolute; right: 2%; top: 4%; width: 120px; height: 120px; pointer-events: none; color: var(--gold); }
-.waves path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; opacity: 0; animation: wave 1.8s ease-out .6s 2 forwards; }
-.waves path:nth-child(2) { animation-delay: .8s; }
-.waves path:nth-child(3) { animation-delay: 1s; }
-@keyframes wave { 0% { opacity: 0; } 30% { opacity: .9; } 100% { opacity: .25; } }
-@media (prefers-reduced-motion: reduce) { .waves path { animation: none; opacity: .3; } }
+/* Visuel du hero : portrait + les trois métiers */
+.hero-visual { position: relative; width: 100%; max-width: 380px; justify-self: end; padding: 0 0 48px 0; }
+.portrait--hero { width: 100%; font-size: 6rem; box-shadow: 0 30px 60px -28px rgba(12,47,58,.55); }
+img.portrait { object-fit: cover; width: 100%; }
+.role-note { position: absolute; left: -48px; bottom: 0; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 18px 22px; box-shadow: 0 18px 40px -24px rgba(12,47,58,.45); min-width: 230px; }
+.role-note ul { list-style: none; margin: 0 0 8px; padding: 0; font-family: var(--serif); font-size: 1.2rem; line-height: 1.45; }
+.role-note p { margin: 0; font-size: .88rem; color: var(--muted); }
+@media (max-width: 900px) { .hero-visual { justify-self: center; margin-top: 8px; max-width: 300px; } .role-note { left: -16px; } }
 
 /* Bandeau de preuves */
 .proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
@@ -294,7 +268,5 @@ p { margin: 0 0 1em; }
 .center-404 { min-height: 50vh; display: grid; align-content: center; }
 
 @media (max-width: 600px) {
-  .card-stage { padding: 24px 18px; }
-  .pay-card { transform: rotate(-3deg); }
   .cta-band { background: var(--teal); }
 }

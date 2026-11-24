@@ -1,29 +1,18 @@
 """Blocs HTML réutilisés par content_fr.py et content_en.py."""
 from site_config import SITE
 
-CONTACTLESS = (
-    '<svg class="contactless" viewBox="0 0 30 30" aria-hidden="true">'
-    '<path d="M9 8c3 4 3 10 0 14"/><path d="M14 5c4.5 5.5 4.5 14.5 0 20"/>'
-    '<path d="M19 2c6 7 6 19 0 26"/></svg>'
-)
+def hero_portrait(alt, roles, caption):
+    """Portrait de Nacim (initiales tant que la photo n'est pas fournie) + ses trois métiers.
 
-
-def pay_card(role_label, role, presence_label, presence):
-    return f"""<div class="card-stage" aria-hidden="true">
-  <svg class="waves" viewBox="0 0 120 120"><path d="M40 40c12 12 12 28 0 40"/><path d="M58 28c18 18 18 46 0 64"/><path d="M76 16c24 24 24 64 0 88"/></svg>
-  <div class="pay-card">
-    <div class="pay-card__top">
-      <div class="pay-card__brand">Twty<small>CONSULTING</small></div>
-      {CONTACTLESS}
-    </div>
-    <div class="pay-card__mid"><span class="chip"></span></div>
-    <div>
-      <div class="pay-card__name">NACIM TOUENTI</div>
-      <div class="pay-card__foot">
-        <div class="pay-card__meta"><b>{role_label}</b>{role}</div>
-        <div class="pay-card__meta" style="text-align:right"><b>{presence_label}</b>{presence}</div>
-      </div>
-    </div>
+    Pour passer à la photo : déposer assets/img/nacim-touenti.webp et remplacer le bloc
+    <div class="portrait"> par <img class="portrait" src="/assets/img/nacim-touenti.webp" alt="...">.
+    """
+    items = "".join(f"<li>{r}</li>" for r in roles)
+    return f"""<div class="hero-visual">
+  <div class="portrait portrait--hero" role="img" aria-label="{alt}">NT</div>
+  <div class="role-note">
+    <ul>{items}</ul>
+    <p>{caption}</p>
   </div>
 </div>"""
 

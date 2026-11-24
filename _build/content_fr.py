@@ -1,15 +1,19 @@
-"""Contenu français de twty.fr (langue principale)."""
-from parts import pay_card, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
+"""Contenu français de twty.fr (langue principale).
+
+Positionnement : formation, coaching et accompagnement. L'expérience de management de projets
+internationaux (fintech, paiement électronique) sert de preuve de légitimité, pas d'offre principale.
+"""
+from parts import hero_portrait, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
 from site_config import SITE
 
 BASE = SITE["base_url"]
 
 SLUGS = {
     "home": "index.html",
-    "payment": "expertise-paiement.html",
     "training": "formations.html",
-    "centres": "centres-de-formation.html",
+    "coaching": "coaching.html",
     "startups": "accompagnement-startup.html",
+    "centres": "centres-de-formation.html",
     "about": "nacim-touenti.html",
     "contact": "contact.html",
     "legal": "mentions-legales.html",
@@ -17,21 +21,21 @@ SLUGS = {
 
 UI = {
     "og_locale": "fr_FR",
-    "og_alt": "Nacim Touenti, Twty Consulting : expertise paiement, formation et accompagnement de startups",
+    "og_alt": "Nacim Touenti, Twty Consulting : formation, coaching et accompagnement de startups",
     "skip": "Aller au contenu",
     "menu": "Menu",
     "nav_label": "Navigation principale",
     "nav": [
-        ("payment", "Expertise paiement"),
         ("training", "Formations"),
-        ("centres", "Centres de formation"),
+        ("coaching", "Coaching"),
         ("startups", "Startups"),
+        ("centres", "Centres de formation"),
         ("about", "À propos"),
     ],
     "lang_switch": "EN",
     "lang_title": "English version",
     "cta_contact": "Prendre contact",
-    "footer_blurb": "Twty Consulting, le cabinet de Nacim Touenti : expertise en paiement électronique, formation et accompagnement de startups.",
+    "footer_blurb": "Twty Consulting, le cabinet de Nacim Touenti : formation, coaching et accompagnement de startups et d'entrepreneurs.",
     "footer_nav": "Le site",
     "footer_contact": "Contact",
     "footer_presence": "Présence",
@@ -41,27 +45,26 @@ UI = {
 
 # Bio de référence : à recopier à l'identique sur LinkedIn, Malt, pages universités…
 BIO_SHORT = (
-    "Nacim Touenti est expert en monétique et en gestion de projet, enseignant et formateur, "
-    "fondateur de Twty Consulting. Il accompagne entreprises, centres de formation et startups "
-    "sur leurs projets de paiement et la montée en compétences de leurs équipes."
+    "Nacim Touenti est formateur, coach et enseignant à l'université, fondateur de Twty Consulting. "
+    "Il accompagne entreprises, centres de formation, startups et entrepreneurs, en s'appuyant sur plus "
+    "de dix ans de management de projets internationaux."
 )
 
 BIO_LONG = (
-    "Nacim Touenti est expert en paiement électronique et en gestion de projet, enseignant et formateur, "
-    "et fondateur de Twty Consulting. Il dirige la gestion de projets à l'échelle EMEA chez un acteur mondial "
-    "des solutions de paiement, où il pilote le lancement de terminaux et de logiciels de paiement, "
-    "leurs certifications EMV (L1, L2, L3), la conformité PCI DSS et les relations avec les schémas "
-    "internationaux. Avec plus de dix ans d'expérience dans la fintech, le conseil et le déploiement "
-    "international, en Europe comme en Afrique, il enseigne également à l'université et conçoit des "
-    "programmes de formation. Avec Twty Consulting, présent à Paris, Zurich et Tanger, il accompagne "
-    "entreprises, centres de formation et startups : expertise paiement, formation et accompagnement "
-    "de projets, de produits et de stratégie commerciale."
+    "Nacim Touenti est formateur, coach et enseignant à l'université, et fondateur de Twty Consulting. "
+    "Il conçoit et anime des formations en gestion de projet, leadership, soft skills, étude de marché "
+    "et entrepreneuriat, coache dirigeants, managers et jeunes diplômés, et accompagne startups et "
+    "entrepreneurs de l'idée au lancement. Sa pédagogie s'appuie sur plus de dix ans de management de "
+    "projets internationaux dans la fintech et le paiement électronique, en Europe et en Afrique : il "
+    "dirige aujourd'hui la gestion de projets à l'échelle EMEA pour un acteur mondial du secteur. Il est "
+    "aussi le créateur de la méthode Softies de développement des soft skills et l'organisateur "
+    "d'ateliers Entrepreneur Week avec des universités et des entreprises. Twty Consulting intervient "
+    "depuis Paris, Zurich et Tanger, en français et en anglais."
 )
 
 ORG_DESCRIPTION = (
-    "Cabinet de conseil et de formation fondé par Nacim Touenti : expertise en monétique et paiement "
-    "électronique (EMV, PCI DSS, SoftPOS), formations pour entreprises et centres de formation, "
-    "accompagnement de startups."
+    "Cabinet de formation, de coaching et d'accompagnement fondé par Nacim Touenti : formations pour "
+    "entreprises et centres de formation, coaching individuel, accompagnement de startups et d'entrepreneurs."
 )
 
 CONTACT = "/" + SLUGS["contact"]
@@ -71,11 +74,11 @@ HOME_FAQ = [
     ("Intervenez-vous en présentiel ou à distance ?",
      "Les deux. J'interviens en présentiel à Paris, en Suisse et au Maroc, et à distance partout ailleurs."),
     ("Dans quelles langues travaillez-vous ?",
-     "En français et en anglais, pour les formations comme pour les missions de conseil."),
+     "En français et en anglais, pour les formations comme pour le coaching."),
     ("Vos formations peuvent-elles être financées ?",
      "Selon les cas : en intra-entreprise sur le budget formation de votre société, ou via un organisme de formation partenaire certifié Qualiopi pour un financement OPCO. Écrivez-moi pour trouver le bon montage."),
-    ("Pouvez-vous adapter une formation à notre contexte ?",
-     "Oui. Chaque formation intra est construite à partir de vos projets, de vos produits et de vos contraintes, avec des cas pratiques tirés de votre secteur."),
+    ("Comment se passe la première séance de coaching ?",
+     "Elle est offerte. Nous faisons le point sur votre situation et vos objectifs, et vous repartez avec une première piste concrète, que vous poursuiviez ou non."),
     ("Quel est le délai pour démarrer ?",
      "Un premier échange de 30 minutes peut se tenir dans la semaine. Il permet de cadrer le besoin et de vous envoyer une proposition."),
 ]
@@ -83,37 +86,37 @@ HOME_FAQ = [
 HOME = {
     "key": "home",
     "slug": SLUGS["home"],
-    "title": "Nacim Touenti — Expert monétique, formateur et consultant | Twty Consulting",
-    "description": "Nacim Touenti, expert en paiement électronique (EMV, PCI DSS, SoftPOS), enseignant et formateur. Conseil, formations et accompagnement de startups avec Twty Consulting.",
+    "title": "Nacim Touenti — Formateur, coach et enseignant | Twty Consulting",
+    "description": "Nacim Touenti, formateur, coach et enseignant à l'université. Formations, coaching et accompagnement de startups, avec plus de 10 ans de management de projets internationaux.",
     "schema": [faq_schema(HOME_FAQ, "fr")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Réussir vos projets de paiement. Faire grandir vos équipes.</h1>
-      <p class="lead">Je suis Nacim Touenti, expert en monétique et en gestion de projet, enseignant et formateur. J'accompagne entreprises, centres de formation et startups, de la certification EMV à la montée en compétences de leurs équipes.</p>
+      <h1>Former, coacher, accompagner. Faire grandir les personnes et leurs projets.</h1>
+      <p class="lead">Je suis Nacim Touenti, formateur, coach et enseignant à l'université. J'accompagne entreprises, centres de formation, startups et entrepreneurs avec l'expérience d'un manager qui pilote des projets internationaux au quotidien.</p>
       <div class="actions">
         <a class="btn" href="{CONTACT}">Prendre contact</a>
         <a class="btn btn--ghost" href="/{SLUGS['training']}">Voir les formations</a>
       </div>
     </div>
-    {pay_card("Expertise", "Paiement, formation, startups", "Présence", "Paris  Zurich  Tanger")}
+    {hero_portrait("Portrait de Nacim Touenti (photo à venir)", ["Formateur", "Coach", "Enseignant à l'université"], "Paris, Zurich, Tanger")}
   </div>
 </section>
 
 <section class="proof" aria-label="En bref">
   <div class="wrap proof-grid">
     <div class="proof-item">
-      <h4>Plus de 10 ans d'expérience</h4>
-      <p>Fintech, conseil et déploiements internationaux en Europe et en Afrique.</p>
+      <h4>Plus de 10 ans de management</h4>
+      <p>Projets internationaux en Europe et en Afrique, dans la fintech et le paiement électronique.</p>
     </div>
     <div class="proof-item">
-      <h4>EMV, PCI DSS, SoftPOS, TMS</h4>
-      <p>Certifications L1 à L3 et schémas Visa, Mastercard, Amex, UPI.</p>
+      <h4>Enseignant à l'université</h4>
+      <p>Cours, programmes, cas pratiques et examens conçus et animés.</p>
     </div>
     <div class="proof-item">
-      <h4>Enseignant et formateur</h4>
-      <p>Cours à l'université, programmes et formations sur mesure.</p>
+      <h4>Créateur de la méthode Softies</h4>
+      <p>Développement des soft skills, déployé dans plusieurs pays.</p>
     </div>
   </div>
 </section>
@@ -122,49 +125,49 @@ HOME = {
   <div class="wrap">
     <div class="section-head">
       <h2>Trois façons de travailler ensemble</h2>
-      <p>Une même exigence : des résultats concrets, transmis à vos équipes pour qu'ils durent.</p>
+      <p>Une même exigence : des progrès visibles, qui durent après mon intervention.</p>
     </div>
     <div class="offer-rows">
-      <article class="offer-row">
-        <div>
-          <h3>Paiement et monétique</h3>
-          <p class="who">Banques, acquéreurs, PSP, fintechs, fabricants de terminaux</p>
-        </div>
-        <p class="problem">Votre terminal, votre application ou votre passerelle de paiement doit sortir à l'heure, sécurisé et certifié.</p>
-        <div>
-          <ul>
-            <li>Diagnostic de projet paiement</li>
-            <li>Accompagnement aux certifications EMV et schémas</li>
-            <li>Pilotage de projet de transition</li>
-          </ul>
-          <a class="more" href="/{SLUGS['payment']}">Découvrir l'expertise paiement</a>
-        </div>
-      </article>
       <article class="offer-row">
         <div>
           <h3>Formation</h3>
           <p class="who">Entreprises, centres de formation, écoles et universités</p>
         </div>
-        <p class="problem">Vos équipes ou vos apprenants ont besoin d'un intervenant qui pratique au quotidien ce qu'il enseigne.</p>
+        <p class="problem">Vos équipes ou vos apprenants ont besoin d'un formateur qui pratique au quotidien ce qu'il enseigne.</p>
         <div>
           <ul>
-            <li>Formations intra-entreprise</li>
+            <li>Gestion de projet, leadership, soft skills</li>
+            <li>Étude de marché et entrepreneuriat</li>
             <li>Conception de modules et de programmes</li>
-            <li>Masterclasses et interventions</li>
           </ul>
           <a class="more" href="/{SLUGS['training']}">Voir le catalogue</a>
         </div>
       </article>
       <article class="offer-row">
         <div>
+          <h3>Coaching</h3>
+          <p class="who">Dirigeants, managers, chefs de projet, jeunes diplômés</p>
+        </div>
+        <p class="problem">Vous voulez prendre de meilleures décisions, gagner en impact ou réussir une étape clé de votre parcours.</p>
+        <div>
+          <ul>
+            <li>Coaching individuel, première séance offerte</li>
+            <li>Prise de parole, influence, leadership</li>
+            <li>Ateliers d'équipe et séances stratégiques</li>
+          </ul>
+          <a class="more" href="/{SLUGS['coaching']}">Découvrir le coaching</a>
+        </div>
+      </article>
+      <article class="offer-row">
+        <div>
           <h3>Accompagnement de startups</h3>
-          <p class="who">Fondateurs, entrepreneurs, chefs de projet</p>
+          <p class="who">Fondateurs, entrepreneurs, porteurs de projet</p>
         </div>
         <p class="problem">Vous avez une idée ou un premier produit : il vous faut un cadre, une feuille de route et des ventes.</p>
         <div>
           <ul>
             <li>Programme Launch sur 3 mois</li>
-            <li>Coaching de dirigeant et de chef de projet</li>
+            <li>Mentorat d'entrepreneurs</li>
             <li>Redressement de projet en difficulté</li>
           </ul>
           <a class="more" href="/{SLUGS['startups']}">Voir l'accompagnement</a>
@@ -181,16 +184,16 @@ HOME = {
     </div>
     <div class="reasons">
       <div class="reason">
-        <h3>Le terrain</h3>
-        <p>Je pilote au quotidien des projets de paiement à l'échelle EMEA : terminaux, logiciels, certifications. Mes recommandations viennent de projets livrés.</p>
+        <h3>Un manager de terrain</h3>
+        <p>Je dirige au quotidien des projets internationaux à l'échelle EMEA. Ce que j'enseigne et ce que je conseille, je le pratique.</p>
       </div>
       <div class="reason">
-        <h3>La pédagogie</h3>
-        <p>J'enseigne à l'université et je conçois des cours, des cas pratiques et des examens. Je rends un sujet technique clair et actionnable.</p>
+        <h3>Un pédagogue</h3>
+        <p>J'enseigne à l'université et je conçois cours, cas pratiques et examens. On apprend en faisant, pas en écoutant.</p>
       </div>
       <div class="reason">
-        <h3>L'Europe et l'Afrique</h3>
-        <p>J'ai mené des projets sur les deux continents, dont le déploiement d'un portefeuille mobile. Je connais les contraintes des marchés matures comme émergents.</p>
+        <h3>Deux continents</h3>
+        <p>J'ai travaillé avec des équipes en Europe et en Afrique. Je sais adapter une méthode à chaque culture et à chaque contexte.</p>
       </div>
     </div>
   </div>
@@ -203,12 +206,12 @@ HOME = {
       <p>Quelques projets représentatifs. Détails et références sur demande.</p>
     </div>
     <div class="cases">
-      <article class="case"><span class="tag">Paiement</span><h3>Lancement de logiciel pour terminaux de paiement</h3><p>Déploiements internationaux avec mise en conformité locale et accompagnement complet à la certification L3.</p></article>
-      <article class="case"><span class="tag">Paiement</span><h3>Certifications PCI, EMV et schémas</h3><p>Expertise en sécurité des paiements, PCI DSS et certifications auprès des schémas internationaux.</p></article>
-      <article class="case"><span class="tag">Paiement</span><h3>Portefeuille mobile en Afrique</h3><p>Lancement d'outils financiers mobiles pour des populations peu bancarisées.</p></article>
       <article class="case"><span class="tag">Formation</span><h3>Conception de programmes universitaires</h3><p>Programmes construits autour de problématiques réelles d'entreprise.</p></article>
+      <article class="case"><span class="tag">Coaching</span><h3>Méthode Softies</h3><p>Méthode de développement des soft skills déployée dans plusieurs pays.</p></article>
       <article class="case"><span class="tag">Startups</span><h3>Entrepreneur Week</h3><p>Ateliers organisés avec des universités et des entreprises pour stimuler l'innovation et l'entrepreneuriat.</p></article>
-      <article class="case"><span class="tag">Formation</span><h3>Méthode Softies</h3><p>Méthode de développement des soft skills déployée dans plusieurs pays.</p></article>
+      <article class="case"><span class="tag">Startups</span><h3>Mentorat de futurs entrepreneurs</h3><p>Accompagnement de porteurs de projet, de la vision à l'exécution.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>Lancements internationaux</h3><p>Pilotage de déploiements logiciels dans plusieurs pays, avec des équipes multiculturelles.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>Portefeuille mobile en Afrique</h3><p>Lancement d'outils financiers mobiles pour des populations peu bancarisées.</p></article>
     </div>
   </div>
 </section>
@@ -229,123 +232,28 @@ HOME = {
 """,
 }
 
-# ---------------------------------------------------------------- Expertise paiement
-PAYMENT = {
-    "key": "payment",
-    "slug": SLUGS["payment"],
-    "title": "Consultant monétique et expert EMV, PCI DSS, SoftPOS | Nacim Touenti",
-    "description": "Diagnostic de projet paiement, certifications EMV L1 à L3 et schémas (Visa, Mastercard, Amex, UPI), PCI DSS, SoftPOS et TMS. Conseil et pilotage par Nacim Touenti.",
-    "body": page_hero(
-        '<a href="/">Accueil</a> / Expertise paiement',
-        "Expertise paiement et monétique",
-        "Je vous aide à lancer des terminaux, des applications et des services de paiement qui passent les certifications du premier coup et respectent les exigences de sécurité.",
-        "expertise-paiement.webp",
-        "Équipe projet autour d'un terminal de paiement et d'un tableau de flux de transactions EMV",
-        f'<div class="actions"><a class="btn" href="{mailto("Demande de diagnostic projet paiement")}">Demander un diagnostic</a></div>',
-    ) + f"""
-<section class="section">
-  <div class="wrap two-col">
-    <div>
-      <h2>Pour qui</h2>
-      <p class="measure">Vous avez un projet de paiement en cours ou un objectif ambitieux, et vous voulez une intégration sans accroc et une conformité internationale.</p>
-      <ul class="chips">
-        <li>Banques</li><li>Acquéreurs</li><li>PSP et passerelles</li><li>Fintechs</li><li>Fabricants de terminaux</li><li>Éditeurs de logiciels</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Domaines d'intervention</h2>
-      <ul class="ticks">
-        <li>Implémentation et certification EMV (L1, L2, L3)</li>
-        <li>Certifications Visa, Mastercard, Amex, UPI et schémas locaux</li>
-        <li>SoftPOS, sans contact et paiement par QR code</li>
-        <li>Mise en place de systèmes de gestion de parc (TMS)</li>
-        <li>APIs de paiement, logiciels et intégration de passerelles</li>
-        <li>Audits de sécurité, gestion des clés, conformité PCI DSS</li>
-        <li>Architectures SaaS et solutions sur mesure</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section--mist">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Trois formats de mission</h2>
-    </div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Diagnostic projet paiement</h3><p class="who">2 à 5 jours</p></div>
-        <p class="problem">Un regard expert sur votre projet avant qu'un retard de certification ne coûte cher.</p>
-        <div><ul><li>Rapport d'écarts : certification, sécurité, planning</li><li>Feuille de route priorisée</li><li>Restitution à votre direction</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Pilotage de projet</h3><p class="who">Mission de quelques semaines à quelques mois</p></div>
-        <p class="problem">Un chef de projet senior qui prend en main le lancement, les fournisseurs et les laboratoires de certification.</p>
-        <div><ul><li>Gouvernance et reporting pour la direction</li><li>Coordination des équipes et des partenaires</li><li>Suivi des certifications jusqu'à l'obtention</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Formation des équipes</h3><p class="who">1 à 2 jours, intra-entreprise</p></div>
-        <p class="problem">Des équipes produit, projet et support qui comprennent enfin la chaîne de paiement de bout en bout.</p>
-        <div><ul><li>Fondamentaux de la monétique</li><li>Préparer une certification EMV et schémas</li></ul><a class="more" href="/{SLUGS['training']}">Voir les formations</a></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Comment se déroule un diagnostic</h2>
-    </div>
-    <ol class="steps">
-      <li><h3>Cadrage</h3><p>Un échange de 30 minutes pour comprendre le projet, les échéances et les enjeux.</p></li>
-      <li><h3>Analyse</h3><p>Revue de la documentation et entretiens avec vos équipes et vos partenaires.</p></li>
-      <li><h3>Écarts</h3><p>Identification des risques : certification, sécurité, planning, organisation.</p></li>
-      <li><h3>Restitution</h3><p>Rapport et feuille de route priorisée, présentés à vos décideurs.</p></li>
-    </ol>
-  </div>
-</section>
-
-{cta_band("Un projet de paiement à sécuriser ?", "Décrivez-moi votre projet et vos échéances : je vous réponds avec une proposition de diagnostic.", "Demander un diagnostic", mailto("Demande de diagnostic projet paiement"), "Prendre contact", CONTACT)}
-""",
-}
-
 # ---------------------------------------------------------------- Formations
 COURSES = [
     {
-        "id": "fondamentaux-monetique",
-        "name": "Fondamentaux de la monétique : EMV, PCI DSS, SoftPOS",
-        "desc": "Comprendre la chaîne de paiement par carte de bout en bout, de la puce EMV à l'acquisition, et les exigences de sécurité PCI DSS.",
-        "for": "Équipes produit, projet, commerciales et support d'entreprises du paiement ou de la fintech",
+        "id": "soft-skills-softies",
+        "name": "Soft skills et leadership : la méthode Softies",
+        "desc": "Développer communication, négociation, intelligence émotionnelle et leadership par la mise en situation.",
+        "for": "Managers, équipes projet, étudiants et jeunes diplômés",
         "goals": [
-            "Expliquer le parcours d'une transaction carte, du terminal à l'émetteur",
-            "Comprendre EMV, le sans contact, le SoftPOS et la tokenisation",
-            "Situer les exigences PCI DSS et leurs impacts sur un projet",
-            "Dialoguer efficacement avec experts, laboratoires et schémas",
+            "Prendre la parole et convaincre avec clarté",
+            "Négocier et gérer les tensions en équipe",
+            "Développer un leadership adapté à sa personnalité",
         ],
-        "duration": "2 jours (14 h)",
-        "format": "Intra-entreprise, présentiel ou distanciel",
-    },
-    {
-        "id": "certification-emv",
-        "name": "Préparer une certification EMV et schémas",
-        "desc": "Planifier et réussir les certifications EMV L1, L2, L3 et les certifications Visa, Mastercard, Amex et UPI.",
-        "for": "Chefs de projet, ingénieurs et responsables qualité de fabricants, PSP et éditeurs",
-        "goals": [
-            "Connaître les étapes et les acteurs de chaque niveau de certification",
-            "Construire un planning réaliste et anticiper les points de blocage",
-            "Préparer la documentation et les campagnes de tests",
-        ],
-        "duration": "1 jour (7 h)",
-        "format": "Intra-entreprise, présentiel ou distanciel",
+        "duration": "1 jour ou parcours modulable",
+        "format": "Présentiel de préférence, jeux de rôle et serious games",
     },
     {
         "id": "gestion-de-projet",
-        "name": "Gestion de projet hybride pour équipes tech",
-        "desc": "Combiner agilité et jalons de conformité pour livrer des projets techniques à l'heure.",
-        "for": "Chefs de projet, product owners, managers d'équipes techniques",
+        "name": "Gestion de projet : méthodes agiles et hybrides",
+        "desc": "Piloter un projet de bout en bout, avec la bonne méthode pour son équipe et son contexte.",
+        "for": "Chefs de projet, product owners, managers, étudiants",
         "goals": [
-            "Choisir et adapter une méthode agile ou hybride à son contexte",
+            "Choisir et adapter une méthode agile ou hybride",
             "Maîtriser le périmètre et aligner les parties prenantes",
             "Produire un reporting utile aux décideurs",
             "Redresser un projet en difficulté",
@@ -367,17 +275,30 @@ COURSES = [
         "format": "Écoles, universités, incubateurs, entreprises",
     },
     {
-        "id": "soft-skills-softies",
-        "name": "Soft skills et leadership : la méthode Softies",
-        "desc": "Développer communication, négociation, intelligence émotionnelle et leadership par la mise en situation.",
-        "for": "Managers, équipes projet, étudiants et jeunes diplômés",
+        "id": "entrepreneuriat",
+        "name": "Entreprendre : de l'idée aux premiers clients",
+        "desc": "Structurer un projet entrepreneurial, tester son marché et construire un premier plan commercial.",
+        "for": "Porteurs de projet, étudiants entrepreneurs, incubés",
         "goals": [
-            "Prendre la parole et convaincre avec clarté",
-            "Négocier et gérer les tensions en équipe",
-            "Développer un leadership adapté à sa personnalité",
+            "Clarifier sa proposition de valeur et sa cible",
+            "Construire une feuille de route réaliste",
+            "Préparer son pitch et ses premiers rendez-vous clients",
         ],
-        "duration": "1 jour ou parcours modulable",
-        "format": "Présentiel de préférence, jeux de rôle et serious games",
+        "duration": "1 à 2 jours, ou format atelier",
+        "format": "Incubateurs, écoles, programmes d'entrepreneuriat",
+    },
+    {
+        "id": "paiement-electronique",
+        "name": "Formation technique : les fondamentaux du paiement électronique",
+        "desc": "Pour les entreprises du secteur : comprendre la chaîne de paiement par carte, EMV, PCI DSS et SoftPOS.",
+        "for": "Équipes produit, projet, commerciales et support de la fintech",
+        "goals": [
+            "Expliquer le parcours d'une transaction carte",
+            "Comprendre EMV, le sans contact et le SoftPOS",
+            "Situer les exigences PCI DSS et les certifications",
+        ],
+        "duration": "1 à 2 jours",
+        "format": "Intra-entreprise, présentiel ou distanciel",
     },
 ]
 
@@ -404,8 +325,8 @@ def course_html(c):
 TRAINING = {
     "key": "training",
     "slug": SLUGS["training"],
-    "title": "Formations monétique, EMV, PCI DSS et gestion de projet | Nacim Touenti",
-    "description": "Formations en monétique (EMV, PCI DSS, SoftPOS), certification, gestion de projet, étude de marché et soft skills. Intra-entreprise, présentiel ou distanciel, par Nacim Touenti.",
+    "title": "Formations soft skills, leadership, gestion de projet, entrepreneuriat | Nacim Touenti",
+    "description": "Formations en soft skills et leadership (méthode Softies), gestion de projet, étude de marché et entrepreneuriat. Intra-entreprise, écoles et centres de formation, par Nacim Touenti.",
     "schema": [course_schema(c["name"], c["desc"], "fr", f"{BASE}/{SLUGS['training']}#{c['id']}") for c in COURSES],
     "body": page_hero(
         '<a href="/">Accueil</a> / Formations',
@@ -458,16 +379,149 @@ TRAINING = {
 """,
 }
 
+# ---------------------------------------------------------------- Coaching
+COACHING = {
+    "key": "coaching",
+    "slug": SLUGS["coaching"],
+    "title": "Coaching de dirigeants, managers et jeunes diplômés | Nacim Touenti",
+    "description": "Coaching individuel et d'équipe : leadership, prise de parole, décision, transitions de carrière. Première séance offerte. Par Nacim Touenti, Paris, Zurich et à distance.",
+    "body": page_hero(
+        '<a href="/">Accueil</a> / Coaching',
+        "Coaching",
+        "Un regard extérieur exigeant et bienveillant pour clarifier où vous allez, décider plus vite et gagner en impact. La première séance est offerte.",
+        "coaching.webp",
+        "Deux professionnels marchant ensemble en ville",
+        f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver la séance offerte</a></div>',
+    ) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pour qui</h2>
+    </div>
+    <div class="offer-rows">
+      <article class="offer-row">
+        <div><h3>Dirigeants et fondateurs</h3><p class="who">Coaching individuel</p></div>
+        <p class="problem">Vous portez les décisions seul et vous voulez un partenaire de réflexion qui connaît la réalité du terrain.</p>
+        <div><ul><li>Vision et feuille de route</li><li>Décisions difficiles et priorités</li><li>Leadership en croissance comme en crise</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Managers et chefs de projet</h3><p class="who">Coaching individuel</p></div>
+        <p class="problem">Vous prenez un nouveau poste, une équipe plus grande ou un projet sous pression.</p>
+        <div><ul><li>Communication et influence</li><li>Gestion des parties prenantes</li><li>Intelligence émotionnelle et posture</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Étudiants et jeunes diplômés</h3><p class="who">Coaching de carrière</p></div>
+        <p class="problem">Vous préparez votre entrée dans la vie professionnelle ou un premier projet d'entreprise.</p>
+        <div><ul><li>Projet professionnel et état d'esprit</li><li>Recherche d'emploi et entretiens</li><li>Création d'entreprise</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Équipes</h3><p class="who">Ateliers en entreprise, sur site ou à distance</p></div>
+        <p class="problem">Vous voulez aligner une équipe de direction ou remobiliser une équipe projet.</p>
+        <div><ul><li>Séances stratégiques Speak-Up</li><li>Construction d'une culture de performance</li><li>Ateliers soft skills (méthode Softies)</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Comment se déroule un coaching</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Séance offerte</h3><p>Nous faisons le point sur votre situation et ce que vous voulez changer.</p></li>
+      <li><h3>Objectifs</h3><p>Deux ou trois objectifs concrets et un rythme de séances adapté.</p></li>
+      <li><h3>Séances</h3><p>Échanges, mises en situation et actions à tester entre deux séances.</p></li>
+      <li><h3>Bilan</h3><p>Ce qui a changé, ce qui reste à travailler et comment continuer seul.</p></li>
+    </ol>
+  </div>
+</section>
+
+{cta_band("Prêt à passer un cap ?", "Réservez votre séance offerte pour clarifier votre situation et vos prochaines étapes.", "Réserver la séance offerte", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
+""",
+}
+
+# ---------------------------------------------------------------- Startups
+STARTUPS = {
+    "key": "startups",
+    "slug": SLUGS["startups"],
+    "title": "Accompagnement de startups et d'entrepreneurs : projet, produit, ventes | Nacim Touenti",
+    "description": "Programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et redressement de projet. Accompagnement de startups par Nacim Touenti.",
+    "body": page_hero(
+        '<a href="/">Accueil</a> / Startups',
+        "Accompagnement de startups et d'entrepreneurs",
+        "Passer de l'idée à l'exécution demande un cadre, des priorités claires et quelqu'un qui a déjà mené des lancements. Je vous aide à structurer votre projet, votre produit et vos ventes.",
+        "startups.webp",
+        "Équipe de startup travaillant sur une feuille de route",
+        f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver un appel découverte</a></div>',
+    ) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Quatre formats</h2>
+    </div>
+    <div class="offer-rows">
+      <article class="offer-row">
+        <div><h3>Programme Launch</h3><p class="who">3 mois, une séance par semaine</p></div>
+        <p class="problem">Pour les startups en phase de lancement qui doivent tout cadrer en même temps.</p>
+        <div><ul><li>Cadrage du projet et feuille de route</li><li>Produit : priorités, tests, premières versions</li><li>Go-to-market : cible, offre, pitch, plan commercial</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Mentorat d'entrepreneurs</h3><p class="who">Rendez-vous réguliers, sur la durée</p></div>
+        <p class="problem">Pour garder le cap, prendre du recul et ne pas rester seul face aux décisions.</p>
+        <div><ul><li>Points mensuels ou bimensuels</li><li>Relecture du pitch et des documents clés</li><li>Mise en relation selon les besoins</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Ateliers pour incubateurs et écoles</h3><p class="who">Demi-journée à une semaine</p></div>
+        <p class="problem">Pour faire avancer plusieurs projets à la fois, sur le modèle d'Entrepreneur Week.</p>
+        <div><ul><li>Ateliers idée, marché, pitch</li><li>Jurys et retours individualisés</li><li>Programmes co-construits avec votre structure</li></ul></div>
+      </article>
+      <article class="offer-row">
+        <div><h3>Redressement de projet</h3><p class="who">Mission courte</p></div>
+        <p class="problem">Pour un projet qui dérape : délais, périmètre, équipe ou relation client.</p>
+        <div><ul><li>Diagnostic rapide et plan de reprise</li><li>Recadrage du périmètre et des parties prenantes</li><li>Mise en place d'outils adaptés (Jira, Notion, ClickUp…)</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap two-col">
+    <div>
+      <h2>Ce que je privilégie</h2>
+      <ul class="ticks">
+        <li>Un pilotage stratégique, pas seulement l'exécution de tâches</li>
+        <li>Des méthodes agiles ou hybrides adaptées à votre équipe</li>
+        <li>Des résultats mesurables, pas seulement des livrables</li>
+        <li>Des tests rapides sur le marché avant les gros investissements</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Ce que j'évite</h2>
+      <ul class="ticks cross">
+        <li>Les méthodes génériques plaquées sans adaptation</li>
+        <li>Les business plans que personne ne relit</li>
+        <li>Les rôles flous et la communication dispersée</li>
+        <li>Construire un produit avant d'avoir parlé aux clients</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{cta_band("Votre projet mérite un cadre solide", "Un appel découverte de 30 minutes pour faire le point sur votre situation et voir le format qui vous convient.", "Réserver un appel découverte", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
+""",
+}
+
 # ---------------------------------------------------------------- Centres de formation
 CENTRES = {
     "key": "centres",
     "slug": SLUGS["centres"],
-    "title": "Formateur expert pour centres de formation et écoles | Nacim Touenti",
-    "description": "Intervenant et concepteur de programmes pour centres de formation, écoles et universités : paiement et fintech, gestion de projet, étude de marché, entrepreneuriat, soft skills.",
+    "title": "Formateur et intervenant pour centres de formation, écoles et universités | Nacim Touenti",
+    "description": "Intervenant et concepteur de programmes pour centres de formation, écoles et universités : gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat.",
     "body": page_hero(
         '<a href="/">Accueil</a> / Centres de formation',
         "Pour les centres de formation, écoles et universités",
-        "Vous cherchez un intervenant expert, capable de concevoir un module complet et de l'animer avec exigence. J'apporte la double casquette de praticien du paiement et d'enseignant.",
+        "Vous cherchez un intervenant capable de concevoir un module complet et de l'animer avec exigence. J'apporte la double casquette d'enseignant et de manager en activité.",
         "centres.webp",
         "Formateur animant un atelier participatif",
         f'<div class="actions"><a class="btn" href="{mailto("Proposition d intervention")}">Proposer une intervention</a></div>',
@@ -486,8 +540,8 @@ CENTRES = {
     <div>
       <h2>Sujets enseignés</h2>
       <ul class="chips">
-        <li>Monétique et paiement électronique</li><li>Fintech</li><li>Gestion de projet</li><li>Méthodes agiles</li>
-        <li>Étude de marché</li><li>Lean et Test &amp; Learn</li><li>Entrepreneuriat</li><li>Leadership</li><li>Soft skills</li>
+        <li>Gestion de projet</li><li>Méthodes agiles</li><li>Leadership</li><li>Soft skills</li><li>Communication</li>
+        <li>Étude de marché</li><li>Lean et Test &amp; Learn</li><li>Entrepreneuriat</li><li>Fintech et paiement</li>
       </ul>
       <p class="measure" style="margin-top:24px">Exemple : un examen d'étude de marché construit autour d'une startup fictive, qui évalue les pièges de causalité, la logique Test &amp; Learn et le rôle de l'étude de marché dans la décision.</p>
     </div>
@@ -519,79 +573,13 @@ CENTRES = {
 """,
 }
 
-# ---------------------------------------------------------------- Startups
-STARTUPS = {
-    "key": "startups",
-    "slug": SLUGS["startups"],
-    "title": "Accompagnement de startups : projet, produit, ventes | Nacim Touenti",
-    "description": "Programme Launch sur 3 mois, coaching de dirigeant et de chef de projet, redressement de projet. Accompagnement de startups et d'entrepreneurs par Nacim Touenti.",
-    "body": page_hero(
-        '<a href="/">Accueil</a> / Startups',
-        "Accompagnement de startups et d'entrepreneurs",
-        "Passer de l'idée à l'exécution demande un cadre, des priorités claires et quelqu'un qui a déjà livré. Je vous aide à structurer votre projet, votre produit et vos ventes.",
-        "startups.webp",
-        "Équipe de startup travaillant sur une feuille de route",
-        f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver un appel découverte</a></div>',
-    ) + f"""
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Trois formats</h2>
-    </div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Programme Launch</h3><p class="who">3 mois, une séance par semaine</p></div>
-        <p class="problem">Pour les startups en phase de lancement qui doivent tout cadrer en même temps.</p>
-        <div><ul><li>Cadrage du projet et feuille de route</li><li>Produit : priorités, tests, premières versions</li><li>Go-to-market : cible, offre, pitch, plan commercial</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Coaching individuel</h3><p class="who">Pack de séances, première séance offerte</p></div>
-        <p class="problem">Pour un fondateur ou un chef de projet qui veut prendre de meilleures décisions, plus vite.</p>
-        <div><ul><li>Clarifier sa vision et sa prochaine étape</li><li>Communication et influence</li><li>Leadership en croissance comme en crise</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Redressement de projet</h3><p class="who">Mission courte</p></div>
-        <p class="problem">Pour un projet qui dérape : délais, périmètre, équipe ou relation client.</p>
-        <div><ul><li>Diagnostic rapide et plan de reprise</li><li>Recadrage du périmètre et des parties prenantes</li><li>Mise en place d'outils adaptés (Jira, Notion, ClickUp…)</li></ul></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section--mist">
-  <div class="wrap two-col">
-    <div>
-      <h2>Ce que je privilégie</h2>
-      <ul class="ticks">
-        <li>Un pilotage stratégique, pas seulement l'exécution de tâches</li>
-        <li>Des méthodes agiles ou hybrides adaptées à votre équipe</li>
-        <li>Des résultats mesurables, pas seulement des livrables</li>
-        <li>Un reporting qui aide vraiment à décider</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Ce que j'évite</h2>
-      <ul class="ticks cross">
-        <li>Les méthodes génériques plaquées sans adaptation</li>
-        <li>La documentation qui ne sert à personne</li>
-        <li>Les rôles flous et la communication dispersée</li>
-        <li>Le reporting identique pour tous les publics</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-{cta_band("Votre projet mérite un cadre solide", "Un appel découverte de 30 minutes pour faire le point sur votre situation et voir le format qui vous convient.", "Réserver un appel découverte", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
-""",
-}
-
 # ---------------------------------------------------------------- À propos
 ABOUT = {
     "key": "about",
     "slug": SLUGS["about"],
     "page_type": "ProfilePage",
-    "title": "Nacim Touenti — Expert paiement, enseignant et fondateur de Twty Consulting",
-    "description": "Qui est Nacim Touenti ? Expert en monétique et gestion de projet, enseignant à l'université, formateur et fondateur de Twty Consulting (Paris, Zurich, Tanger).",
+    "title": "Nacim Touenti — Formateur, coach, enseignant et fondateur de Twty Consulting",
+    "description": "Qui est Nacim Touenti ? Formateur, coach et enseignant à l'université, fondateur de Twty Consulting, avec plus de 10 ans de management de projets internationaux.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -600,11 +588,12 @@ ABOUT = {
       <div class="portrait" role="img" aria-label="Portrait de Nacim Touenti (photo à venir)">NT</div>
       <div>
         <h1>Nacim Touenti</h1>
-        <p class="lead">Expert en paiement électronique et en gestion de projet, enseignant et formateur, fondateur de Twty Consulting.</p>
+        <p class="lead">Formateur, coach et enseignant à l'université, fondateur de Twty Consulting.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
-          <dt>Spécialités</dt><dd>Monétique, EMV, PCI DSS, SoftPOS, TMS, gestion de projet</dd>
-          <dt>Enseignement</dt><dd>Université et formation professionnelle</dd>
+          <dt>Formation</dt><dd>Gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat</dd>
+          <dt>Coaching</dt><dd>Dirigeants, managers, chefs de projet, jeunes diplômés</dd>
+          <dt>Expérience</dt><dd>Plus de 10 ans de management de projets internationaux (fintech, paiement)</dd>
           <dt>Langues</dt><dd>Français, anglais</dd>
           <dt>Présence</dt><dd>Paris – La Défense, Zurich, Tanger</dd>
           <dt>Profil</dt><dd><a href="{SITE['linkedin_url']}" rel="me noopener">LinkedIn</a></dd>
@@ -618,12 +607,12 @@ ABOUT = {
   <div class="wrap">
     <div class="section-head">
       <h2>Trois métiers, une même ligne</h2>
-      <p>Faire réussir les projets et faire grandir les personnes qui les portent.</p>
+      <p>Faire grandir les personnes et faire réussir leurs projets.</p>
     </div>
     <div class="reasons">
-      <div class="reason"><h3>Praticien du paiement</h3><p>Lancement de terminaux et de logiciels, certifications EMV et schémas, conformité PCI DSS, déploiements en Europe et en Afrique.</p></div>
-      <div class="reason"><h3>Enseignant et formateur</h3><p>Cours à l'université, conception de programmes, d'examens et de cas pratiques, formations en entreprise.</p></div>
-      <div class="reason"><h3>Entrepreneur</h3><p>Fondateur de Twty Consulting, mentor d'entrepreneurs, créateur de la méthode Softies et organisateur d'Entrepreneur Week.</p></div>
+      <div class="reason"><h3>Formateur et enseignant</h3><p>Cours à l'université, conception de programmes, d'examens et de cas pratiques, formations en entreprise.</p></div>
+      <div class="reason"><h3>Coach et mentor</h3><p>Créateur de la méthode Softies, coach de dirigeants et de managers, mentor de futurs entrepreneurs.</p></div>
+      <div class="reason"><h3>Manager de terrain</h3><p>Direction de projets internationaux à l'échelle EMEA, lancements dans plusieurs pays, équipes multiculturelles en Europe et en Afrique.</p></div>
     </div>
   </div>
 </section>
@@ -644,7 +633,7 @@ CONTACT_PAGE = {
     "slug": SLUGS["contact"],
     "page_type": "ContactPage",
     "title": "Contact — Nacim Touenti | Twty Consulting",
-    "description": "Contactez Nacim Touenti pour un projet de paiement, une formation ou un accompagnement de startup. Email, WhatsApp, LinkedIn. Paris, Zurich, Tanger.",
+    "description": "Contactez Nacim Touenti pour une formation, un coaching ou un accompagnement de startup. Email, WhatsApp, LinkedIn. Paris, Zurich, Tanger.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -664,10 +653,10 @@ CONTACT_PAGE = {
         <label>Organisation<input name="organisation" autocomplete="organization"></label>
         <label>Votre besoin
           <select name="besoin">
-            <option>Projet de paiement</option>
             <option>Formation pour mon équipe</option>
-            <option>Intervention en centre de formation ou école</option>
+            <option>Coaching individuel</option>
             <option>Accompagnement de startup</option>
+            <option>Intervention en centre de formation ou école</option>
             <option>Autre</option>
           </select>
         </label>
@@ -727,7 +716,7 @@ NOT_FOUND = {
     "noindex": True,
     "title": "Page introuvable | Twty Consulting",
     "description": "Cette page n'existe pas ou a été déplacée.",
-    "body": f"""
+    "body": """
 <section class="section center-404">
   <div class="wrap measure">
     <h1>Cette page n'existe pas</h1>
@@ -738,7 +727,7 @@ NOT_FOUND = {
 """,
 }
 
-PAGES = [HOME, PAYMENT, TRAINING, CENTRES, STARTUPS, ABOUT, CONTACT_PAGE, LEGAL, NOT_FOUND]
+PAGES = [HOME, TRAINING, COACHING, STARTUPS, CENTRES, ABOUT, CONTACT_PAGE, LEGAL, NOT_FOUND]
 
 LLMS_TXT = f"""
 # Twty Consulting — Nacim Touenti
@@ -748,10 +737,10 @@ LLMS_TXT = f"""
 {BIO_LONG}
 
 ## Offres
-- [Expertise paiement et monétique]({BASE}/expertise-paiement.html) : diagnostic de projet paiement, certifications EMV L1/L2/L3 et schémas (Visa, Mastercard, Amex, UPI), PCI DSS, SoftPOS, TMS, pilotage de projet.
-- [Formations]({BASE}/formations.html) : fondamentaux de la monétique, préparation aux certifications, gestion de projet hybride, étude de marché et Test & Learn, soft skills (méthode Softies).
+- [Formations]({BASE}/formations.html) : soft skills et leadership (méthode Softies), gestion de projet agile et hybride, étude de marché et Test & Learn, entrepreneuriat, fondamentaux du paiement électronique.
+- [Coaching]({BASE}/coaching.html) : coaching individuel de dirigeants, managers, chefs de projet et jeunes diplômés ; ateliers d'équipe. Première séance offerte.
+- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et écoles, redressement de projet.
 - [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
-- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : programme Launch sur 3 mois, coaching, redressement de projet.
 
 ## Personne
 - [À propos de Nacim Touenti]({BASE}/nacim-touenti.html)

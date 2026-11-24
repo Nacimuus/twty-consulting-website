@@ -1,14 +1,14 @@
 # Twty Consulting — Nacim Touenti
 
-> Nacim Touenti est expert en monétique et en gestion de projet, enseignant et formateur, fondateur de Twty Consulting. Il accompagne entreprises, centres de formation et startups sur leurs projets de paiement et la montée en compétences de leurs équipes.
+> Nacim Touenti est formateur, coach et enseignant à l'université, fondateur de Twty Consulting. Il accompagne entreprises, centres de formation, startups et entrepreneurs, en s'appuyant sur plus de dix ans de management de projets internationaux.
 
-Nacim Touenti est expert en paiement électronique et en gestion de projet, enseignant et formateur, et fondateur de Twty Consulting. Il dirige la gestion de projets à l'échelle EMEA chez un acteur mondial des solutions de paiement, où il pilote le lancement de terminaux et de logiciels de paiement, leurs certifications EMV (L1, L2, L3), la conformité PCI DSS et les relations avec les schémas internationaux. Avec plus de dix ans d'expérience dans la fintech, le conseil et le déploiement international, en Europe comme en Afrique, il enseigne également à l'université et conçoit des programmes de formation. Avec Twty Consulting, présent à Paris, Zurich et Tanger, il accompagne entreprises, centres de formation et startups : expertise paiement, formation et accompagnement de projets, de produits et de stratégie commerciale.
+Nacim Touenti est formateur, coach et enseignant à l'université, et fondateur de Twty Consulting. Il conçoit et anime des formations en gestion de projet, leadership, soft skills, étude de marché et entrepreneuriat, coache dirigeants, managers et jeunes diplômés, et accompagne startups et entrepreneurs de l'idée au lancement. Sa pédagogie s'appuie sur plus de dix ans de management de projets internationaux dans la fintech et le paiement électronique, en Europe et en Afrique : il dirige aujourd'hui la gestion de projets à l'échelle EMEA pour un acteur mondial du secteur. Il est aussi le créateur de la méthode Softies de développement des soft skills et l'organisateur d'ateliers Entrepreneur Week avec des universités et des entreprises. Twty Consulting intervient depuis Paris, Zurich et Tanger, en français et en anglais.
 
 ## Offres
-- [Expertise paiement et monétique](https://www.twty.fr/expertise-paiement.html) : diagnostic de projet paiement, certifications EMV L1/L2/L3 et schémas (Visa, Mastercard, Amex, UPI), PCI DSS, SoftPOS, TMS, pilotage de projet.
-- [Formations](https://www.twty.fr/formations.html) : fondamentaux de la monétique, préparation aux certifications, gestion de projet hybride, étude de marché et Test & Learn, soft skills (méthode Softies).
+- [Formations](https://www.twty.fr/formations.html) : soft skills et leadership (méthode Softies), gestion de projet agile et hybride, étude de marché et Test & Learn, entrepreneuriat, fondamentaux du paiement électronique.
+- [Coaching](https://www.twty.fr/coaching.html) : coaching individuel de dirigeants, managers, chefs de projet et jeunes diplômés ; ateliers d'équipe. Première séance offerte.
+- [Accompagnement de startups](https://www.twty.fr/accompagnement-startup.html) : programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et écoles, redressement de projet.
 - [Centres de formation et écoles](https://www.twty.fr/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
-- [Accompagnement de startups](https://www.twty.fr/accompagnement-startup.html) : programme Launch sur 3 mois, coaching, redressement de projet.
 
 ## Personne
 - [À propos de Nacim Touenti](https://www.twty.fr/nacim-touenti.html)

@@ -8,13 +8,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/"/>
   </url>
   <url>
-    <loc>https://www.twty.fr/expertise-paiement.html</loc>
-    <lastmod>2026-11-24</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/expertise-paiement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/payment-expertise.html"/>
-  </url>
-  <url>
     <loc>https://www.twty.fr/formations.html</loc>
     <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
@@ -22,11 +15,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training.html"/>
   </url>
   <url>
-    <loc>https://www.twty.fr/centres-de-formation.html</loc>
+    <loc>https://www.twty.fr/coaching.html</loc>
     <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/centres-de-formation.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training-centres.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/coaching.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/coaching.html"/>
   </url>
   <url>
     <loc>https://www.twty.fr/accompagnement-startup.html</loc>
@@ -34,6 +27,13 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/accompagnement-startup.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/startup-coaching.html"/>
+  </url>
+  <url>
+    <loc>https://www.twty.fr/centres-de-formation.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/centres-de-formation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training-centres.html"/>
   </url>
   <url>
     <loc>https://www.twty.fr/nacim-touenti.html</loc>
@@ -64,13 +64,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/"/>
   </url>
   <url>
-    <loc>https://www.twty.fr/en/payment-expertise.html</loc>
-    <lastmod>2026-11-24</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/expertise-paiement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/payment-expertise.html"/>
-  </url>
-  <url>
     <loc>https://www.twty.fr/en/training.html</loc>
     <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
@@ -78,11 +71,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training.html"/>
   </url>
   <url>
-    <loc>https://www.twty.fr/en/training-centres.html</loc>
+    <loc>https://www.twty.fr/en/coaching.html</loc>
     <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/centres-de-formation.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training-centres.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/coaching.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/coaching.html"/>
   </url>
   <url>
     <loc>https://www.twty.fr/en/startup-coaching.html</loc>
@@ -90,6 +83,13 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/accompagnement-startup.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/startup-coaching.html"/>
+  </url>
+  <url>
+    <loc>https://www.twty.fr/en/training-centres.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.twty.fr/centres-de-formation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.twty.fr/en/training-centres.html"/>
   </url>
   <url>
     <loc>https://www.twty.fr/en/nacim-touenti.html</loc>
