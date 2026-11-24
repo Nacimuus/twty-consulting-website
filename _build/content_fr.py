@@ -35,7 +35,7 @@ UI = {
     "lang_switch": "EN",
     "lang_title": "English version",
     "cta_contact": "Prendre contact",
-    "footer_blurb": "Twty Consulting, le cabinet de Nacim Touenti : formation, coaching et accompagnement de startups et d'entrepreneurs.",
+    "footer_blurb": "Formation, coaching, accompagnement de startups. Par Nacim Touenti.",
     "footer_nav": "Le site",
     "footer_contact": "Contact",
     "footer_presence": "Présence",
@@ -51,15 +51,13 @@ BIO_SHORT = (
 )
 
 BIO_LONG = (
-    "Nacim Touenti est formateur, coach et enseignant à l'université, et fondateur de Twty Consulting. "
-    "Il conçoit et anime des formations en gestion de projet, leadership, soft skills, étude de marché "
-    "et entrepreneuriat, coache dirigeants, managers et jeunes diplômés, et accompagne startups et "
-    "entrepreneurs de l'idée au lancement. Sa pédagogie s'appuie sur plus de dix ans de management de "
-    "projets internationaux dans la fintech et le paiement électronique, en Europe et en Afrique : il "
-    "dirige aujourd'hui la gestion de projets à l'échelle EMEA pour un acteur mondial du secteur. Il est "
-    "aussi le créateur de la méthode Softies de développement des soft skills et l'organisateur "
-    "d'ateliers Entrepreneur Week avec des universités et des entreprises. Twty Consulting intervient "
-    "depuis Paris, Zurich et Tanger, en français et en anglais."
+    "Nacim Touenti est formateur, coach et enseignant à l'université. Il a fondé Twty Consulting pour "
+    "former les équipes, coacher les managers et accompagner les startups. Son atout : il pratique ce "
+    "qu'il enseigne. Depuis plus de dix ans, il pilote des projets internationaux dans la fintech et le "
+    "paiement électronique, en Europe et en Afrique. Il dirige aujourd'hui la gestion de projets EMEA "
+    "pour un acteur mondial du secteur. Il a créé la méthode Softies pour développer les soft skills et "
+    "organise des ateliers Entrepreneur Week avec universités et entreprises. Il intervient depuis Paris, "
+    "Zurich et Tanger, en français et en anglais."
 )
 
 ORG_DESCRIPTION = (
@@ -72,31 +70,31 @@ CONTACT = "/" + SLUGS["contact"]
 # ---------------------------------------------------------------- Accueil
 HOME_FAQ = [
     ("Intervenez-vous en présentiel ou à distance ?",
-     "Les deux. J'interviens en présentiel à Paris, en Suisse et au Maroc, et à distance partout ailleurs."),
+     "Les deux. Sur place à Paris, en Suisse et au Maroc. À distance partout ailleurs."),
     ("Dans quelles langues travaillez-vous ?",
-     "En français et en anglais, pour les formations comme pour le coaching."),
+     "Français et anglais."),
     ("Vos formations peuvent-elles être financées ?",
-     "Selon les cas : en intra-entreprise sur le budget formation de votre société, ou via un organisme de formation partenaire certifié Qualiopi pour un financement OPCO. Écrivez-moi pour trouver le bon montage."),
+     "Oui, dans la plupart des cas. Sur votre budget formation, ou via un organisme partenaire certifié Qualiopi pour un financement OPCO. On trouve le bon montage ensemble."),
     ("Comment se passe la première séance de coaching ?",
-     "Elle est offerte. Nous faisons le point sur votre situation et vos objectifs, et vous repartez avec une première piste concrète, que vous poursuiviez ou non."),
+     "Elle est offerte. On fait le point, et vous repartez avec une première action concrète. Même si on s'arrête là."),
     ("Quel est le délai pour démarrer ?",
-     "Un premier échange de 30 minutes peut se tenir dans la semaine. Il permet de cadrer le besoin et de vous envoyer une proposition."),
+     "Un premier appel de 30 minutes, souvent dans la semaine. Ensuite, je vous envoie une proposition."),
 ]
 
 HOME = {
     "key": "home",
     "slug": SLUGS["home"],
     "title": "Nacim Touenti — Formateur, coach et enseignant | Twty Consulting",
-    "description": "Nacim Touenti, formateur, coach et enseignant à l'université. Formations, coaching et accompagnement de startups, avec plus de 10 ans de management de projets internationaux.",
+    "description": "Formateur, coach et enseignant à l'université. Nacim Touenti forme vos équipes, coache vos managers et accompagne votre startup. Plus de 10 ans de projets internationaux.",
     "schema": [faq_schema(HOME_FAQ, "fr")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Former, coacher, accompagner. Faire grandir les personnes et leurs projets.</h1>
-      <p class="lead">Je suis Nacim Touenti, formateur, coach et enseignant à l'université. J'accompagne entreprises, centres de formation, startups et entrepreneurs avec l'expérience d'un manager qui pilote des projets internationaux au quotidien.</p>
+      <h1>On apprend mieux avec quelqu'un qui le fait tous les jours.</h1>
+      <p class="lead">Je suis Nacim Touenti. Formateur, coach, enseignant à l'université. Et manager de projets internationaux depuis plus de 10 ans. Ce que je vous transmets, je l'applique chaque semaine.</p>
       <div class="actions">
-        <a class="btn" href="{CONTACT}">Prendre contact</a>
+        <a class="btn" href="{CONTACT}">Parlons-en</a>
         <a class="btn btn--ghost" href="/{SLUGS['training']}">Voir les formations</a>
       </div>
     </div>
@@ -107,16 +105,16 @@ HOME = {
 <section class="proof" aria-label="En bref">
   <div class="wrap proof-grid">
     <div class="proof-item">
-      <h4>Plus de 10 ans de management</h4>
-      <p>Projets internationaux en Europe et en Afrique, dans la fintech et le paiement électronique.</p>
+      <h4>10 ans de projets internationaux</h4>
+      <p>Europe et Afrique. Fintech et paiement électronique.</p>
     </div>
     <div class="proof-item">
       <h4>Enseignant à l'université</h4>
-      <p>Cours, programmes, cas pratiques et examens conçus et animés.</p>
+      <p>Je conçois et j'anime cours, cas pratiques et examens.</p>
     </div>
     <div class="proof-item">
       <h4>Créateur de la méthode Softies</h4>
-      <p>Développement des soft skills, déployé dans plusieurs pays.</p>
+      <p>Des soft skills qui se voient. Déployée dans plusieurs pays.</p>
     </div>
   </div>
 </section>
@@ -124,8 +122,8 @@ HOME = {
 <section class="section" id="offres">
   <div class="wrap">
     <div class="section-head">
-      <h2>Trois façons de travailler ensemble</h2>
-      <p>Une même exigence : des progrès visibles, qui durent après mon intervention.</p>
+      <h2>Par où on commence ?</h2>
+      <p>Former une équipe, passer un cap, lancer un projet. Choisissez.</p>
     </div>
     <div class="offer-rows">
       <article class="offer-row">
@@ -133,12 +131,12 @@ HOME = {
           <h3>Formation</h3>
           <p class="who">Entreprises, centres de formation, écoles et universités</p>
         </div>
-        <p class="problem">Vos équipes ou vos apprenants ont besoin d'un formateur qui pratique au quotidien ce qu'il enseigne.</p>
+        <p class="problem">Des formations dont on se souvient. Et qu'on applique dès le lundi.</p>
         <div>
           <ul>
-            <li>Gestion de projet, leadership, soft skills</li>
-            <li>Étude de marché et entrepreneuriat</li>
-            <li>Conception de modules et de programmes</li>
+            <li>Soft skills et leadership</li>
+            <li>Gestion de projet</li>
+            <li>Étude de marché, entrepreneuriat</li>
           </ul>
           <a class="more" href="/{SLUGS['training']}">Voir le catalogue</a>
         </div>
@@ -148,12 +146,12 @@ HOME = {
           <h3>Coaching</h3>
           <p class="who">Dirigeants, managers, chefs de projet, jeunes diplômés</p>
         </div>
-        <p class="problem">Vous voulez prendre de meilleures décisions, gagner en impact ou réussir une étape clé de votre parcours.</p>
+        <p class="problem">Un cap à passer ? Une décision à prendre ? On s'y met ensemble.</p>
         <div>
           <ul>
-            <li>Coaching individuel, première séance offerte</li>
-            <li>Prise de parole, influence, leadership</li>
-            <li>Ateliers d'équipe et séances stratégiques</li>
+            <li>Première séance offerte</li>
+            <li>Leadership, prise de parole</li>
+            <li>Ateliers d'équipe</li>
           </ul>
           <a class="more" href="/{SLUGS['coaching']}">Découvrir le coaching</a>
         </div>
@@ -163,12 +161,12 @@ HOME = {
           <h3>Accompagnement de startups</h3>
           <p class="who">Fondateurs, entrepreneurs, porteurs de projet</p>
         </div>
-        <p class="problem">Vous avez une idée ou un premier produit : il vous faut un cadre, une feuille de route et des ventes.</p>
+        <p class="problem">Une idée, c'est bien. Des clients, c'est mieux.</p>
         <div>
           <ul>
-            <li>Programme Launch sur 3 mois</li>
+            <li>Programme Launch, 3 mois</li>
             <li>Mentorat d'entrepreneurs</li>
-            <li>Redressement de projet en difficulté</li>
+            <li>Projet à redresser</li>
           </ul>
           <a class="more" href="/{SLUGS['startups']}">Voir l'accompagnement</a>
         </div>
@@ -180,20 +178,20 @@ HOME = {
 <section class="section section--dark">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pourquoi travailler avec moi</h2>
+      <h2>Pourquoi moi ?</h2>
     </div>
     <div class="reasons">
       <div class="reason">
-        <h3>Un manager de terrain</h3>
-        <p>Je dirige au quotidien des projets internationaux à l'échelle EMEA. Ce que j'enseigne et ce que je conseille, je le pratique.</p>
+        <h3>Je pratique ce que j'enseigne</h3>
+        <p>Je pilote des projets dans toute la zone EMEA. Mes conseils sortent du terrain. Ils ont été testés.</p>
       </div>
       <div class="reason">
-        <h3>Un pédagogue</h3>
-        <p>J'enseigne à l'université et je conçois cours, cas pratiques et examens. On apprend en faisant, pas en écoutant.</p>
+        <h3>Je sais tenir une salle</h3>
+        <p>J'enseigne à l'université. Chez moi, on participe. On débat, on joue, on s'implique.</p>
       </div>
       <div class="reason">
-        <h3>Deux continents</h3>
-        <p>J'ai travaillé avec des équipes en Europe et en Afrique. Je sais adapter une méthode à chaque culture et à chaque contexte.</p>
+        <h3>Je parle à tout le monde</h3>
+        <p>Étudiants, managers, dirigeants. Europe et Afrique. J'adapte le ton, jamais l'exigence.</p>
       </div>
     </div>
   </div>
@@ -202,16 +200,16 @@ HOME = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Réalisations</h2>
-      <p>Quelques projets représentatifs. Détails et références sur demande.</p>
+      <h2>Quelques réalisations</h2>
+      <p>Les détails ? Je vous les raconte de vive voix.</p>
     </div>
     <div class="cases">
-      <article class="case"><span class="tag">Formation</span><h3>Conception de programmes universitaires</h3><p>Programmes construits autour de problématiques réelles d'entreprise.</p></article>
-      <article class="case"><span class="tag">Coaching</span><h3>Méthode Softies</h3><p>Méthode de développement des soft skills déployée dans plusieurs pays.</p></article>
-      <article class="case"><span class="tag">Startups</span><h3>Entrepreneur Week</h3><p>Ateliers organisés avec des universités et des entreprises pour stimuler l'innovation et l'entrepreneuriat.</p></article>
-      <article class="case"><span class="tag">Startups</span><h3>Mentorat de futurs entrepreneurs</h3><p>Accompagnement de porteurs de projet, de la vision à l'exécution.</p></article>
-      <article class="case"><span class="tag">Management</span><h3>Lancements internationaux</h3><p>Pilotage de déploiements logiciels dans plusieurs pays, avec des équipes multiculturelles.</p></article>
-      <article class="case"><span class="tag">Management</span><h3>Portefeuille mobile en Afrique</h3><p>Lancement d'outils financiers mobiles pour des populations peu bancarisées.</p></article>
+      <article class="case"><span class="tag">Formation</span><h3>Conception de programmes universitaires</h3><p>Des cursus bâtis sur de vrais cas d'entreprise.</p></article>
+      <article class="case"><span class="tag">Coaching</span><h3>Méthode Softies</h3><p>Ma méthode soft skills, lancée dans plusieurs pays.</p></article>
+      <article class="case"><span class="tag">Startups</span><h3>Entrepreneur Week</h3><p>Des ateliers avec universités et entreprises. Objectif : faire naître des projets.</p></article>
+      <article class="case"><span class="tag">Startups</span><h3>Mentorat de futurs entrepreneurs</h3><p>De l'idée à l'exécution, aux côtés des porteurs de projet.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>Lancements internationaux</h3><p>Des déploiements dans plusieurs pays. Des équipes de toutes les cultures.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>Portefeuille mobile en Afrique</h3><p>Des services financiers sur mobile pour les non-bancarisés.</p></article>
     </div>
   </div>
 </section>
@@ -228,7 +226,7 @@ HOME = {
   </div>
 </section>
 
-{cta_band("Parlons de votre projet", "Un premier échange de 30 minutes, sans engagement, pour comprendre votre besoin et voir comment je peux vous aider.", "Prendre contact", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Un projet ? Une équipe à faire grandir ?", "30 minutes pour en parler. Offert, sans engagement.", "Réserver un échange", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -237,12 +235,12 @@ COURSES = [
     {
         "id": "soft-skills-softies",
         "name": "Soft skills et leadership : la méthode Softies",
-        "desc": "Développer communication, négociation, intelligence émotionnelle et leadership par la mise en situation.",
+        "desc": "Parler avec aplomb. Négocier sans braquer. Mener une équipe avec son propre style.",
         "for": "Managers, équipes projet, étudiants et jeunes diplômés",
         "goals": [
-            "Prendre la parole et convaincre avec clarté",
-            "Négocier et gérer les tensions en équipe",
-            "Développer un leadership adapté à sa personnalité",
+            "Prendre la parole et convaincre",
+            "Négocier et désamorcer les tensions",
+            "Trouver son style de leader",
         ],
         "duration": "1 jour ou parcours modulable",
         "format": "Présentiel de préférence, jeux de rôle et serious games",
@@ -250,13 +248,13 @@ COURSES = [
     {
         "id": "gestion-de-projet",
         "name": "Gestion de projet : méthodes agiles et hybrides",
-        "desc": "Piloter un projet de bout en bout, avec la bonne méthode pour son équipe et son contexte.",
+        "desc": "Livrer à l'heure. Sans épuiser l'équipe.",
         "for": "Chefs de projet, product owners, managers, étudiants",
         "goals": [
-            "Choisir et adapter une méthode agile ou hybride",
-            "Maîtriser le périmètre et aligner les parties prenantes",
-            "Produire un reporting utile aux décideurs",
-            "Redresser un projet en difficulté",
+            "Choisir la bonne méthode, agile ou hybride",
+            "Tenir le périmètre, embarquer les parties prenantes",
+            "Faire un reporting que les décideurs lisent",
+            "Remettre un projet sur les rails",
         ],
         "duration": "2 jours (14 h)",
         "format": "Intra ou inter-entreprise, présentiel ou distanciel",
@@ -264,12 +262,12 @@ COURSES = [
     {
         "id": "etude-de-marche",
         "name": "Étude de marché et logique Test & Learn",
-        "desc": "Utiliser l'étude de marché comme outil d'aide à la décision et éviter les pièges classiques d'interprétation.",
+        "desc": "Arrêter de deviner. Tester, mesurer, décider.",
         "for": "Entrepreneurs, étudiants, équipes marketing et innovation",
         "goals": [
-            "Formuler les bonnes questions avant de collecter des données",
-            "Éviter les pièges de causalité dans l'analyse",
-            "Tester vite et à moindre coût avec une démarche Lean",
+            "Poser les bonnes questions avant de collecter",
+            "Éviter les pièges de causalité",
+            "Tester vite et pas cher, en mode Lean",
         ],
         "duration": "1 jour (7 h), déclinable en module universitaire",
         "format": "Écoles, universités, incubateurs, entreprises",
@@ -277,12 +275,12 @@ COURSES = [
     {
         "id": "entrepreneuriat",
         "name": "Entreprendre : de l'idée aux premiers clients",
-        "desc": "Structurer un projet entrepreneurial, tester son marché et construire un premier plan commercial.",
+        "desc": "De l'idée au premier client. Sans se perdre en route.",
         "for": "Porteurs de projet, étudiants entrepreneurs, incubés",
         "goals": [
-            "Clarifier sa proposition de valeur et sa cible",
-            "Construire une feuille de route réaliste",
-            "Préparer son pitch et ses premiers rendez-vous clients",
+            "Clarifier sa cible et sa promesse",
+            "Bâtir une feuille de route réaliste",
+            "Pitcher et décrocher ses premiers rendez-vous",
         ],
         "duration": "1 à 2 jours, ou format atelier",
         "format": "Incubateurs, écoles, programmes d'entrepreneuriat",
@@ -290,7 +288,7 @@ COURSES = [
     {
         "id": "paiement-electronique",
         "name": "Formation technique : les fondamentaux du paiement électronique",
-        "desc": "Pour les entreprises du secteur : comprendre la chaîne de paiement par carte, EMV, PCI DSS et SoftPOS.",
+        "desc": "Pour les équipes de la fintech. Ce qui se passe vraiment quand on paie par carte.",
         "for": "Équipes produit, projet, commerciales et support de la fintech",
         "goals": [
             "Expliquer le parcours d'une transaction carte",
@@ -331,7 +329,7 @@ TRAINING = {
     "body": page_hero(
         '<a href="/">Accueil</a> / Formations',
         "Formations",
-        "Des formations construites par un praticien qui enseigne : on apprend en faisant, sur des cas réels, et on repart avec des outils utilisables dès le lendemain.",
+        "Ici, personne ne s'endort. On joue, on débat, on se trompe, on progresse. Vous repartez avec des outils, pas avec des slides.",
         "formation.webp",
         "Session de formation interactive en petit groupe",
         f'<div class="actions"><a class="btn" href="#catalogue">Voir le catalogue</a><a class="btn btn--ghost" href="{CONTACT}">Demander une formation sur mesure</a></div>',
@@ -339,14 +337,14 @@ TRAINING = {
 <section class="section">
   <div class="wrap two-col">
     <div>
-      <h2>Ma façon de former</h2>
-      <p class="measure">Pas de cours magistral ni de diaporama sans fin. Les participants négocient, présentent, décident et parfois se trompent, volontairement : c'est ainsi qu'on progresse.</p>
+      <h2>Ma méthode</h2>
+      <p class="measure">Zéro cours magistral. Vos équipes négocient, présentent, décident. Elles se trompent parfois, exprès. C'est comme ça qu'on retient.</p>
     </div>
     <ul class="ticks">
-      <li><b>Apprendre en faisant</b> : mises en situation, études de cas, simulations</li>
-      <li><b>Serious games</b> : des jeux qui enseignent et qui engagent</li>
-      <li><b>Prendre du recul</b> : un débrief après chaque exercice pour ancrer les acquis</li>
-      <li><b>Outils interactifs</b> : sondages, quiz, tableaux Miro et Trello</li>
+      <li>Mises en situation et études de cas réels</li>
+      <li>Serious games qui font réfléchir</li>
+      <li>Un débrief après chaque exercice</li>
+      <li>Miro, quiz, sondages en direct</li>
     </ul>
   </div>
 </section>
@@ -355,7 +353,7 @@ TRAINING = {
   <div class="wrap">
     <div class="section-head">
       <h2>Catalogue</h2>
-      <p>Chaque formation est adaptable : durée, niveau, exemples tirés de votre secteur.</p>
+      <p>Tout s'adapte. La durée, le niveau, les exemples de votre secteur.</p>
     </div>
     {"".join(course_html(c) for c in COURSES)}
   </div>
@@ -364,18 +362,18 @@ TRAINING = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Comment je construis une formation</h2>
+      <h2>De la commande à la salle</h2>
     </div>
     <ol class="steps">
-      <li><h3>Conception</h3><p>Des modules immersifs et réalistes, construits avec vous autour de vos objectifs.</p></li>
-      <li><h3>Test pilote</h3><p>Un essai avec de vrais participants pour affiner les exercices.</p></li>
-      <li><h3>Validation</h3><p>Relecture par des experts et ajustements selon les retours.</p></li>
-      <li><h3>Animation</h3><p>Sessions en présentiel ou à distance, avec évaluation des acquis.</p></li>
+      <li><h3>Conception</h3><p>On part de vos objectifs. Je construis des modules concrets.</p></li>
+      <li><h3>Test</h3><p>Un essai avec de vrais participants. On ajuste.</p></li>
+      <li><h3>Validation</h3><p>Vous relisez. On affine.</p></li>
+      <li><h3>Animation</h3><p>Sur place ou à distance. Avec évaluation des acquis.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Une formation pour votre équipe ?", "Dites-moi qui vous voulez former, sur quoi et dans quel délai : je vous envoie une proposition de programme.", "Demander une formation", CONTACT, "Vous êtes un centre de formation", "/" + SLUGS["centres"])}
+{cta_band("Une équipe à former ?", "Dites-moi qui, quoi, quand. Je vous envoie un programme.", "Demander une formation", CONTACT, "Vous êtes un centre de formation", "/" + SLUGS["centres"])}
 """,
 }
 
@@ -388,35 +386,35 @@ COACHING = {
     "body": page_hero(
         '<a href="/">Accueil</a> / Coaching',
         "Coaching",
-        "Un regard extérieur exigeant et bienveillant pour clarifier où vous allez, décider plus vite et gagner en impact. La première séance est offerte.",
+        "Vous avez les compétences. Il vous manque parfois du recul, un sparring-partner, un cap clair. C'est mon rôle. La première séance est offerte.",
         "coaching.webp",
         "Deux professionnels marchant ensemble en ville",
-        f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver la séance offerte</a></div>',
+        f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver ma séance offerte</a></div>',
     ) + f"""
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pour qui</h2>
+      <h2>Pour qui ?</h2>
     </div>
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Dirigeants et fondateurs</h3><p class="who">Coaching individuel</p></div>
-        <p class="problem">Vous portez les décisions seul et vous voulez un partenaire de réflexion qui connaît la réalité du terrain.</p>
+        <p class="problem">Seul face aux décisions ? Parlez-en à quelqu'un qui connaît le terrain.</p>
         <div><ul><li>Vision et feuille de route</li><li>Décisions difficiles et priorités</li><li>Leadership en croissance comme en crise</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Managers et chefs de projet</h3><p class="who">Coaching individuel</p></div>
-        <p class="problem">Vous prenez un nouveau poste, une équipe plus grande ou un projet sous pression.</p>
+        <p class="problem">Nouveau poste. Équipe plus grande. Projet sous pression. On prépare la suite.</p>
         <div><ul><li>Communication et influence</li><li>Gestion des parties prenantes</li><li>Intelligence émotionnelle et posture</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Étudiants et jeunes diplômés</h3><p class="who">Coaching de carrière</p></div>
-        <p class="problem">Vous préparez votre entrée dans la vie professionnelle ou un premier projet d'entreprise.</p>
+        <p class="problem">Premier job ou première boîte ? Partez avec un plan.</p>
         <div><ul><li>Projet professionnel et état d'esprit</li><li>Recherche d'emploi et entretiens</li><li>Création d'entreprise</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Équipes</h3><p class="who">Ateliers en entreprise, sur site ou à distance</p></div>
-        <p class="problem">Vous voulez aligner une équipe de direction ou remobiliser une équipe projet.</p>
+        <p class="problem">Une équipe à aligner ou à remotiver ? Un atelier change la dynamique.</p>
         <div><ul><li>Séances stratégiques Speak-Up</li><li>Construction d'une culture de performance</li><li>Ateliers soft skills (méthode Softies)</li></ul></div>
       </article>
     </div>
@@ -426,18 +424,18 @@ COACHING = {
 <section class="section section--dark">
   <div class="wrap">
     <div class="section-head">
-      <h2>Comment se déroule un coaching</h2>
+      <h2>Comment ça marche</h2>
     </div>
     <ol class="steps">
-      <li><h3>Séance offerte</h3><p>Nous faisons le point sur votre situation et ce que vous voulez changer.</p></li>
-      <li><h3>Objectifs</h3><p>Deux ou trois objectifs concrets et un rythme de séances adapté.</p></li>
-      <li><h3>Séances</h3><p>Échanges, mises en situation et actions à tester entre deux séances.</p></li>
-      <li><h3>Bilan</h3><p>Ce qui a changé, ce qui reste à travailler et comment continuer seul.</p></li>
+      <li><h3>Séance offerte</h3><p>On fait le point. Sans engagement.</p></li>
+      <li><h3>Objectifs</h3><p>Deux ou trois objectifs concrets. Pas plus.</p></li>
+      <li><h3>Séances</h3><p>On échange, on s'entraîne. Vous testez entre deux séances.</p></li>
+      <li><h3>Bilan</h3><p>On mesure le chemin parcouru. Vous continuez seul.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Prêt à passer un cap ?", "Réservez votre séance offerte pour clarifier votre situation et vos prochaines étapes.", "Réserver la séance offerte", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Prêt à passer un cap ?", "La première séance est offerte. Vous n'avez rien à perdre.", "Réserver ma séance offerte", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -450,7 +448,7 @@ STARTUPS = {
     "body": page_hero(
         '<a href="/">Accueil</a> / Startups',
         "Accompagnement de startups et d'entrepreneurs",
-        "Passer de l'idée à l'exécution demande un cadre, des priorités claires et quelqu'un qui a déjà mené des lancements. Je vous aide à structurer votre projet, votre produit et vos ventes.",
+        "Une idée, de l'énergie, mais pas de mode d'emploi ? Je vous aide à cadrer, tester et vendre. Vite.",
         "startups.webp",
         "Équipe de startup travaillant sur une feuille de route",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver un appel découverte</a></div>',
@@ -458,28 +456,28 @@ STARTUPS = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Quatre formats</h2>
+      <h2>Comment je vous aide</h2>
     </div>
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Programme Launch</h3><p class="who">3 mois, une séance par semaine</p></div>
-        <p class="problem">Pour les startups en phase de lancement qui doivent tout cadrer en même temps.</p>
-        <div><ul><li>Cadrage du projet et feuille de route</li><li>Produit : priorités, tests, premières versions</li><li>Go-to-market : cible, offre, pitch, plan commercial</li></ul></div>
+        <p class="problem">Trois mois pour passer de l'idée au lancement.</p>
+        <div><ul><li>Un projet cadré, une feuille de route claire</li><li>Un produit testé sur de vrais clients</li><li>Une offre, un pitch, un plan commercial</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Mentorat d'entrepreneurs</h3><p class="who">Rendez-vous réguliers, sur la durée</p></div>
-        <p class="problem">Pour garder le cap, prendre du recul et ne pas rester seul face aux décisions.</p>
-        <div><ul><li>Points mensuels ou bimensuels</li><li>Relecture du pitch et des documents clés</li><li>Mise en relation selon les besoins</li></ul></div>
+        <p class="problem">Quelqu'un à vos côtés quand il faut trancher.</p>
+        <div><ul><li>Un point tous les 15 jours ou tous les mois</li><li>Relecture de votre pitch</li><li>Mises en relation utiles</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Ateliers pour incubateurs et écoles</h3><p class="who">Demi-journée à une semaine</p></div>
-        <p class="problem">Pour faire avancer plusieurs projets à la fois, sur le modèle d'Entrepreneur Week.</p>
-        <div><ul><li>Ateliers idée, marché, pitch</li><li>Jurys et retours individualisés</li><li>Programmes co-construits avec votre structure</li></ul></div>
+        <p class="problem">Faites avancer toute une promo d'un coup. Comme à l'Entrepreneur Week.</p>
+        <div><ul><li>Ateliers idée, marché, pitch</li><li>Jurys et retours individuels</li><li>Un programme construit avec vous</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Redressement de projet</h3><p class="who">Mission courte</p></div>
-        <p class="problem">Pour un projet qui dérape : délais, périmètre, équipe ou relation client.</p>
-        <div><ul><li>Diagnostic rapide et plan de reprise</li><li>Recadrage du périmètre et des parties prenantes</li><li>Mise en place d'outils adaptés (Jira, Notion, ClickUp…)</li></ul></div>
+        <p class="problem">Ça dérape ? On reprend la main. Vite.</p>
+        <div><ul><li>Diagnostic express et plan de reprise</li><li>Périmètre et équipe recadrés</li><li>Les bons outils (Jira, Notion, ClickUp…)</li></ul></div>
       </article>
     </div>
   </div>
@@ -488,27 +486,27 @@ STARTUPS = {
 <section class="section section--mist">
   <div class="wrap two-col">
     <div>
-      <h2>Ce que je privilégie</h2>
+      <h2>Mes règles</h2>
       <ul class="ticks">
-        <li>Un pilotage stratégique, pas seulement l'exécution de tâches</li>
-        <li>Des méthodes agiles ou hybrides adaptées à votre équipe</li>
-        <li>Des résultats mesurables, pas seulement des livrables</li>
-        <li>Des tests rapides sur le marché avant les gros investissements</li>
+        <li>Parler aux clients avant de coder</li>
+        <li>Tester petit avant d'investir gros</li>
+        <li>Des priorités claires chaque semaine</li>
+        <li>Des résultats, pas des slides</li>
       </ul>
     </div>
     <div>
-      <h2>Ce que j'évite</h2>
+      <h2>Ce que je fuis</h2>
       <ul class="ticks cross">
-        <li>Les méthodes génériques plaquées sans adaptation</li>
-        <li>Les business plans que personne ne relit</li>
-        <li>Les rôles flous et la communication dispersée</li>
-        <li>Construire un produit avant d'avoir parlé aux clients</li>
+        <li>Les business plans que personne ne lit</li>
+        <li>Les méthodes copiées-collées</li>
+        <li>Les rôles flous</li>
+        <li>Les réunions sans décision</li>
       </ul>
     </div>
   </div>
 </section>
 
-{cta_band("Votre projet mérite un cadre solide", "Un appel découverte de 30 minutes pour faire le point sur votre situation et voir le format qui vous convient.", "Réserver un appel découverte", CONTACT, "Écrire sur WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Passez de l'idée à l'action.", "30 minutes pour faire le point sur votre projet. Offert.", "Réserver un appel découverte", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -521,7 +519,7 @@ CENTRES = {
     "body": page_hero(
         '<a href="/">Accueil</a> / Centres de formation',
         "Pour les centres de formation, écoles et universités",
-        "Vous cherchez un intervenant capable de concevoir un module complet et de l'animer avec exigence. J'apporte la double casquette d'enseignant et de manager en activité.",
+        "Un intervenant qui tient une salle et connaît le terrain ? Je conçois et j'anime vos modules, de A à Z.",
         "centres.webp",
         "Formateur animant un atelier participatif",
         f'<div class="actions"><a class="btn" href="{mailto("Proposition d intervention")}">Proposer une intervention</a></div>',
@@ -531,10 +529,10 @@ CENTRES = {
     <div>
       <h2>Ce que je vous apporte</h2>
       <ul class="ticks">
-        <li><b>Interventions</b> : modules courts, masterclasses, conférences métiers</li>
-        <li><b>Conception clés en main</b> : syllabus, supports, cas pratiques, évaluations</li>
-        <li><b>Examens et cas pratiques</b> alignés sur les concepts du cours</li>
-        <li><b>Jurys et accompagnement</b> de projets étudiants ou entrepreneuriaux</li>
+        <li>Modules courts, masterclasses, conférences</li>
+        <li>Programmes clés en main, supports compris</li>
+        <li>Examens et cas pratiques sur mesure</li>
+        <li>Jurys et suivi de projets étudiants</li>
       </ul>
     </div>
     <div>
@@ -543,7 +541,7 @@ CENTRES = {
         <li>Gestion de projet</li><li>Méthodes agiles</li><li>Leadership</li><li>Soft skills</li><li>Communication</li>
         <li>Étude de marché</li><li>Lean et Test &amp; Learn</li><li>Entrepreneuriat</li><li>Fintech et paiement</li>
       </ul>
-      <p class="measure" style="margin-top:24px">Exemple : un examen d'étude de marché construit autour d'une startup fictive, qui évalue les pièges de causalité, la logique Test &amp; Learn et le rôle de l'étude de marché dans la décision.</p>
+      <p class="measure" style="margin-top:24px">Exemple : un examen d'étude de marché bâti autour d'une startup fictive. Concret, et calé sur le cours.</p>
     </div>
   </div>
 </section>
@@ -551,25 +549,25 @@ CENTRES = {
 <section class="section section--dark">
   <div class="wrap">
     <div class="section-head">
-      <h2>Notre collaboration, étape par étape</h2>
+      <h2>Comment on travaille</h2>
     </div>
     <ol class="steps">
-      <li><h3>Besoin</h3><p>Public, objectifs pédagogiques, volume horaire et contraintes du référentiel.</p></li>
-      <li><h3>Proposition</h3><p>Programme détaillé, modalités d'évaluation et devis.</p></li>
-      <li><h3>Production</h3><p>Supports, cas pratiques et évaluations livrés dans vos formats.</p></li>
-      <li><h3>Animation et bilan</h3><p>Sessions, évaluation des acquis et retour d'expérience pour la session suivante.</p></li>
+      <li><h3>Besoin</h3><p>Public, objectifs, volume horaire. Vous me briefez.</p></li>
+      <li><h3>Proposition</h3><p>Programme détaillé et devis.</p></li>
+      <li><h3>Production</h3><p>Supports, cas, évaluations. Dans vos formats.</p></li>
+      <li><h3>Animation</h3><p>Je donne les cours. On fait le bilan ensemble.</p></li>
     </ol>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap measure">
-    <h2>Financement et cadre administratif</h2>
-    <p>J'interviens en sous-traitance de votre organisme, qui conserve la relation avec les financeurs. Je vous fournis tous les éléments nécessaires à votre démarche qualité : programme, objectifs, modalités d'évaluation, CV de l'intervenant.</p>
+    <h2>Côté administratif, c'est simple</h2>
+    <p>J'interviens en sous-traitance. Vous gardez la relation avec les financeurs. Je vous fournis tout pour votre démarche qualité : programme, objectifs, évaluations, CV.</p>
   </div>
 </section>
 
-{cta_band("Un module à concevoir ou à animer ?", "Envoyez-moi le thème, le public et le calendrier : je reviens vers vous avec une proposition.", "Proposer une intervention", mailto("Proposition d intervention"), "Voir le catalogue", "/" + SLUGS["training"])}
+{cta_band("Un module à monter ?", "Envoyez-moi le thème, le public et les dates. Je reviens vers vous vite.", "Proposer une intervention", mailto("Proposition d intervention"), "Voir le catalogue", "/" + SLUGS["training"])}
 """,
 }
 
@@ -588,7 +586,7 @@ ABOUT = {
       <div class="portrait" role="img" aria-label="Portrait de Nacim Touenti (photo à venir)">NT</div>
       <div>
         <h1>Nacim Touenti</h1>
-        <p class="lead">Formateur, coach et enseignant à l'université, fondateur de Twty Consulting.</p>
+        <p class="lead">Formateur, coach, enseignant. Et toujours manager de projets internationaux.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
           <dt>Formation</dt><dd>Gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat</dd>
@@ -606,13 +604,13 @@ ABOUT = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Trois métiers, une même ligne</h2>
-      <p>Faire grandir les personnes et faire réussir leurs projets.</p>
+      <h2>Trois casquettes, une obsession</h2>
+      <p>Que les gens progressent. Pour de vrai.</p>
     </div>
     <div class="reasons">
-      <div class="reason"><h3>Formateur et enseignant</h3><p>Cours à l'université, conception de programmes, d'examens et de cas pratiques, formations en entreprise.</p></div>
-      <div class="reason"><h3>Coach et mentor</h3><p>Créateur de la méthode Softies, coach de dirigeants et de managers, mentor de futurs entrepreneurs.</p></div>
-      <div class="reason"><h3>Manager de terrain</h3><p>Direction de projets internationaux à l'échelle EMEA, lancements dans plusieurs pays, équipes multiculturelles en Europe et en Afrique.</p></div>
+      <div class="reason"><h3>Formateur et enseignant</h3><p>À l'université comme en entreprise. Je conçois et j'anime.</p></div>
+      <div class="reason"><h3>Coach et mentor</h3><p>J'ai créé la méthode Softies. Je coache managers et dirigeants. Je mentore des entrepreneurs.</p></div>
+      <div class="reason"><h3>Manager de terrain</h3><p>Je pilote des projets dans toute la zone EMEA. Plusieurs pays, plusieurs cultures, des délais serrés.</p></div>
     </div>
   </div>
 </section>
@@ -638,8 +636,8 @@ CONTACT_PAGE = {
 <section class="page-hero">
   <div class="wrap">
     <p class="crumbs"><a href="/">Accueil</a> / Contact</p>
-    <h1>Parlons de votre projet</h1>
-    <p class="lead">Décrivez votre besoin en quelques lignes. Je vous réponds avec une proposition d'échange de 30 minutes.</p>
+    <h1>Parlons-en</h1>
+    <p class="lead">Quelques lignes suffisent. Je vous réponds vite, avec un créneau de 30 minutes.</p>
   </div>
 </section>
 <section class="section">

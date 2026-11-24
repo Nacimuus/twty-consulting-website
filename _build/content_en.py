@@ -40,7 +40,7 @@ UI = {
     "lang_switch": "FR",
     "lang_title": "Version française",
     "cta_contact": "Get in touch",
-    "footer_blurb": "Twty Consulting, Nacim Touenti's practice: training, coaching and support for startups and entrepreneurs.",
+    "footer_blurb": "Training, coaching, startup support. By Nacim Touenti.",
     "footer_nav": "Site",
     "footer_contact": "Contact",
     "footer_presence": "Locations",
@@ -55,14 +55,12 @@ BIO_SHORT = (
 )
 
 BIO_LONG = (
-    "Nacim Touenti is a trainer, coach and university lecturer, and the founder of Twty Consulting. "
-    "He designs and delivers training in project management, leadership, soft skills, market research and "
-    "entrepreneurship, coaches executives, managers and graduates, and supports startups and entrepreneurs "
-    "from idea to launch. His teaching draws on more than ten years of managing international projects in "
-    "fintech and electronic payments across Europe and Africa: he currently leads project management across "
-    "EMEA for a global player in the sector. He created the Softies soft-skills method and runs Entrepreneur "
-    "Week workshops with universities and companies. Twty Consulting works from Paris, Zurich and Tangier, "
-    "in French and English."
+    "Nacim Touenti is a trainer, coach and university lecturer. He founded Twty Consulting to train teams, "
+    "coach managers and support startups. His edge: he practises what he teaches. For more than ten years "
+    "he has run international projects in fintech and electronic payments, across Europe and Africa. "
+    "Today he leads project management across EMEA for a global player in the sector. He created the "
+    "Softies method for soft skills and runs Entrepreneur Week workshops with universities and companies. "
+    "He works from Paris, Zurich and Tangier, in French and English."
 )
 
 ORG_DESCRIPTION = (
@@ -74,29 +72,29 @@ CONTACT = u("contact")
 
 HOME_FAQ = [
     ("Do you work on site or remotely?",
-     "Both. I work on site in Paris, Switzerland and Morocco, and remotely everywhere else."),
+     "Both. On site in Paris, Switzerland and Morocco. Remote everywhere else."),
     ("Which languages do you work in?",
-     "French and English, for both training and coaching."),
+     "French and English."),
     ("How does the first coaching session work?",
-     "It's free. We review your situation and goals, and you leave with a first concrete step, whether or not you continue."),
+     "It's free. We take stock, and you leave with a first concrete action. Even if we stop there."),
     ("How soon can we start?",
-     "A first 30-minute call can usually happen within the week. It scopes your need so I can send you a proposal."),
+     "A first 30-minute call, often within the week. Then I send you a proposal."),
 ]
 
 HOME = {
     "key": "home",
     "slug": SLUGS["home"],
     "title": "Nacim Touenti — Trainer, coach and lecturer | Twty Consulting",
-    "description": "Nacim Touenti, trainer, coach and university lecturer. Training, coaching and startup support, backed by 10+ years of international project management.",
+    "description": "Trainer, coach and university lecturer. Nacim Touenti trains your teams, coaches your managers and supports your startup. 10+ years of international projects.",
     "schema": [faq_schema(HOME_FAQ, "en")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Train, coach, support. Help people and their projects grow.</h1>
-      <p class="lead">I'm Nacim Touenti, a trainer, coach and university lecturer. I support companies, training centres, startups and entrepreneurs with the experience of a manager who runs international projects every day.</p>
+      <h1>People learn best from someone who does it every day.</h1>
+      <p class="lead">I'm Nacim Touenti. Trainer, coach, university lecturer. And an international project manager for 10+ years. What I teach you, I apply every week.</p>
       <div class="actions">
-        <a class="btn" href="{CONTACT}">Get in touch</a>
+        <a class="btn" href="{CONTACT}">Let's talk</a>
         <a class="btn btn--ghost" href="{u('training')}">See training courses</a>
       </div>
     </div>
@@ -106,33 +104,33 @@ HOME = {
 
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
-    <div class="proof-item"><h4>10+ years of management</h4><p>International projects across Europe and Africa, in fintech and electronic payments.</p></div>
-    <div class="proof-item"><h4>University lecturer</h4><p>Courses, programmes, case studies and exams designed and delivered.</p></div>
-    <div class="proof-item"><h4>Creator of the Softies method</h4><p>Soft-skills development, rolled out in several countries.</p></div>
+    <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa. Fintech and payments.</p></div>
+    <div class="proof-item"><h4>University lecturer</h4><p>I design and teach courses, case studies and exams.</p></div>
+    <div class="proof-item"><h4>Creator of the Softies method</h4><p>Soft skills you can see. Rolled out in several countries.</p></div>
   </div>
 </section>
 
 <section class="section" id="offers">
   <div class="wrap">
     <div class="section-head">
-      <h2>Three ways to work together</h2>
-      <p>One standard throughout: visible progress that lasts after I leave.</p>
+      <h2>Where do we start?</h2>
+      <p>Train a team, take a step up, launch a project. Your call.</p>
     </div>
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Training</h3><p class="who">Companies, training centres, schools and universities</p></div>
-        <p class="problem">Your teams or learners need a trainer who practises every day what he teaches.</p>
-        <div><ul><li>Project management, leadership, soft skills</li><li>Market research and entrepreneurship</li><li>Module and programme design</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
+        <p class="problem">Training people remember. And use on Monday.</p>
+        <div><ul><li>Soft skills and leadership</li><li>Project management</li><li>Market research, entrepreneurship</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
       </article>
       <article class="offer-row">
         <div><h3>Coaching</h3><p class="who">Executives, managers, project leads, graduates</p></div>
-        <p class="problem">You want to make better decisions, have more impact or succeed at a key career step.</p>
-        <div><ul><li>One-to-one coaching, first session free</li><li>Public speaking, influence, leadership</li><li>Team workshops and strategy sessions</li></ul><a class="more" href="{u('coaching')}">Explore coaching</a></div>
+        <p class="problem">A step to take? A decision to make? Let's work on it together.</p>
+        <div><ul><li>First session free</li><li>Leadership, public speaking</li><li>Team workshops</li></ul><a class="more" href="{u('coaching')}">Explore coaching</a></div>
       </article>
       <article class="offer-row">
         <div><h3>Startup support</h3><p class="who">Founders, entrepreneurs, project owners</p></div>
-        <p class="problem">You have an idea or a first product: you need structure, a roadmap and sales.</p>
-        <div><ul><li>3-month Launch programme</li><li>Mentoring for entrepreneurs</li><li>Project turnaround</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
+        <p class="problem">An idea is good. Customers are better.</p>
+        <div><ul><li>Launch programme, 3 months</li><li>Mentoring for entrepreneurs</li><li>Project turnaround</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
       </article>
     </div>
   </div>
@@ -140,25 +138,25 @@ HOME = {
 
 <section class="section section--dark">
   <div class="wrap">
-    <div class="section-head"><h2>Why work with me</h2></div>
+    <div class="section-head"><h2>Why me?</h2></div>
     <div class="reasons">
-      <div class="reason"><h3>A hands-on manager</h3><p>I run international projects across EMEA every day. What I teach and advise, I practise.</p></div>
-      <div class="reason"><h3>A teacher</h3><p>I lecture at university and design courses, case studies and exams. People learn by doing, not by listening.</p></div>
-      <div class="reason"><h3>Two continents</h3><p>I have worked with teams in Europe and Africa. I know how to adapt a method to each culture and context.</p></div>
+      <div class="reason"><h3>I practise what I teach</h3><p>I run projects across EMEA. My advice comes from the field. It has been tested.</p></div>
+      <div class="reason"><h3>I can hold a room</h3><p>I lecture at university. In my sessions, everyone takes part. We debate, we play, we get involved.</p></div>
+      <div class="reason"><h3>I speak to everyone</h3><p>Students, managers, executives. Europe and Africa. I adapt the tone, never the standard.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Selected work</h2><p>A few representative projects. Details and references on request.</p></div>
+    <div class="section-head"><h2>Selected work</h2><p>Want the details? I'll tell you in person.</p></div>
     <div class="cases">
-      <article class="case"><span class="tag">Training</span><h3>University programme design</h3><p>Programmes built around real business challenges.</p></article>
-      <article class="case"><span class="tag">Coaching</span><h3>The Softies method</h3><p>A soft-skills development method rolled out in several countries.</p></article>
-      <article class="case"><span class="tag">Startups</span><h3>Entrepreneur Week</h3><p>Workshops run with universities and companies to spark innovation and entrepreneurship.</p></article>
-      <article class="case"><span class="tag">Startups</span><h3>Mentoring future entrepreneurs</h3><p>Supporting project owners from vision to execution.</p></article>
-      <article class="case"><span class="tag">Management</span><h3>International launches</h3><p>Software rollouts across several countries with multicultural teams.</p></article>
-      <article class="case"><span class="tag">Management</span><h3>Mobile wallet in Africa</h3><p>Launch of mobile-first financial tools for underbanked communities.</p></article>
+      <article class="case"><span class="tag">Training</span><h3>University programme design</h3><p>Courses built on real business cases.</p></article>
+      <article class="case"><span class="tag">Coaching</span><h3>The Softies method</h3><p>My soft-skills method, launched in several countries.</p></article>
+      <article class="case"><span class="tag">Startups</span><h3>Entrepreneur Week</h3><p>Workshops with universities and companies. The goal: new projects.</p></article>
+      <article class="case"><span class="tag">Startups</span><h3>Mentoring future entrepreneurs</h3><p>From idea to execution, alongside project owners.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>International launches</h3><p>Rollouts in several countries. Teams from every culture.</p></article>
+      <article class="case"><span class="tag">Management</span><h3>Mobile wallet in Africa</h3><p>Mobile financial services for the unbanked.</p></article>
     </div>
   </div>
 </section>
@@ -170,7 +168,7 @@ HOME = {
   </div>
 </section>
 
-{cta_band("Let's talk about your project", "A free 30-minute call to understand your need and see how I can help.", "Get in touch", CONTACT, "Message on WhatsApp", SITE["whatsapp_url"])}
+{cta_band("A project? A team to grow?", "30 minutes to talk it through. Free, no strings.", "Book a call", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -178,12 +176,12 @@ COURSES = [
     {
         "id": "soft-skills-softies",
         "name": "Soft skills and leadership: the Softies method",
-        "desc": "Build communication, negotiation, emotional intelligence and leadership through role play.",
+        "desc": "Speak with confidence. Negotiate without friction. Lead in your own style.",
         "for": "Managers, project teams, students and graduates",
         "goals": [
-            "Speak up and persuade with clarity",
-            "Negotiate and handle tension in a team",
-            "Develop a leadership style that fits your personality",
+            "Speak up and persuade",
+            "Negotiate and defuse tension",
+            "Find your leadership style",
         ],
         "duration": "1 day or modular programme",
         "format": "On site preferred, role play and serious games",
@@ -191,13 +189,13 @@ COURSES = [
     {
         "id": "project-management",
         "name": "Project management: agile and hybrid methods",
-        "desc": "Run a project end to end, with the right method for your team and context.",
+        "desc": "Deliver on time. Without burning out the team.",
         "for": "Project managers, product owners, managers, students",
         "goals": [
-            "Choose and adapt an agile or hybrid method",
-            "Control scope and align stakeholders",
-            "Produce reporting that helps decision-makers",
-            "Turn around a struggling project",
+            "Pick the right method, agile or hybrid",
+            "Hold scope, bring stakeholders along",
+            "Report in a way leaders actually read",
+            "Get a project back on track",
         ],
         "duration": "2 days (14 h)",
         "format": "In-house or open session, on site or remote",
@@ -205,12 +203,12 @@ COURSES = [
     {
         "id": "market-research",
         "name": "Market research and Test & Learn",
-        "desc": "Use market research as a decision-making tool and avoid the classic interpretation traps.",
+        "desc": "Stop guessing. Test, measure, decide.",
         "for": "Entrepreneurs, students, marketing and innovation teams",
         "goals": [
             "Ask the right questions before collecting data",
-            "Avoid causality traps in analysis",
-            "Test fast and cheaply with a Lean approach",
+            "Avoid causality traps",
+            "Test fast and cheap, the Lean way",
         ],
         "duration": "1 day (7 h), available as a university module",
         "format": "Schools, universities, incubators, companies",
@@ -218,12 +216,12 @@ COURSES = [
     {
         "id": "entrepreneurship",
         "name": "Entrepreneurship: from idea to first customers",
-        "desc": "Structure a business project, test the market and build a first sales plan.",
+        "desc": "From idea to first customer. Without getting lost on the way.",
         "for": "Project owners, student entrepreneurs, incubatees",
         "goals": [
-            "Clarify your value proposition and target",
+            "Clarify your target and your promise",
             "Build a realistic roadmap",
-            "Prepare your pitch and first customer meetings",
+            "Pitch and land your first meetings",
         ],
         "duration": "1 to 2 days, or workshop format",
         "format": "Incubators, schools, entrepreneurship programmes",
@@ -231,7 +229,7 @@ COURSES = [
     {
         "id": "electronic-payments",
         "name": "Technical course: electronic payments fundamentals",
-        "desc": "For companies in the sector: understand the card payment chain, EMV, PCI DSS and SoftPOS.",
+        "desc": "For fintech teams. What really happens when you pay by card.",
         "for": "Product, project, sales and support teams in fintech",
         "goals": [
             "Explain the journey of a card transaction",
@@ -272,7 +270,7 @@ TRAINING = {
     "body": page_hero(
         '<a href="/en/">Home</a> / Training',
         "Training",
-        "Courses built by a practitioner who teaches: learn by doing, on real cases, and leave with tools you can use the next day.",
+        "Nobody falls asleep here. We play, debate, get it wrong and improve. You leave with tools, not slides.",
         "formation.webp",
         "Interactive small-group training session",
         f'<div class="actions"><a class="btn" href="#catalogue">See the catalogue</a><a class="btn btn--ghost" href="{CONTACT}">Request a tailored course</a></div>',
@@ -280,38 +278,38 @@ TRAINING = {
 <section class="section">
   <div class="wrap two-col">
     <div>
-      <h2>How I teach</h2>
-      <p class="measure">No lectures, no endless slides. Participants negotiate, present, decide and sometimes fail, on purpose: that's how people grow.</p>
+      <h2>My method</h2>
+      <p class="measure">No lectures. Your teams negotiate, present and decide. Sometimes they fail, on purpose. That's how it sticks.</p>
     </div>
     <ul class="ticks">
-      <li><b>Learn by doing</b>: role play, case studies, simulations</li>
-      <li><b>Serious games</b>: games that teach and engage</li>
-      <li><b>Step back</b>: a debrief after every exercise to anchor learning</li>
-      <li><b>Interactive tools</b>: polls, quizzes, Miro and Trello boards</li>
+      <li>Role play and real case studies</li>
+      <li>Serious games that make people think</li>
+      <li>A debrief after every exercise</li>
+      <li>Miro, quizzes, live polls</li>
     </ul>
   </div>
 </section>
 
 <section class="section section--mist" id="catalogue">
   <div class="wrap">
-    <div class="section-head"><h2>Catalogue</h2><p>Every course can be adapted: length, level, examples from your industry.</p></div>
+    <div class="section-head"><h2>Catalogue</h2><p>Everything adapts. Length, level, examples from your industry.</p></div>
     {"".join(course_html(c) for c in COURSES)}
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>How I build a course</h2></div>
+    <div class="section-head"><h2>From brief to classroom</h2></div>
     <ol class="steps">
-      <li><h3>Design</h3><p>Immersive, realistic modules built with you around your goals.</p></li>
-      <li><h3>Pilot</h3><p>A trial run with real participants to refine the exercises.</p></li>
-      <li><h3>Validation</h3><p>Expert review and adjustments based on feedback.</p></li>
-      <li><h3>Delivery</h3><p>On-site or remote sessions, with learning assessment.</p></li>
+      <li><h3>Design</h3><p>We start from your goals. I build hands-on modules.</p></li>
+      <li><h3>Pilot</h3><p>A trial with real participants. We adjust.</p></li>
+      <li><h3>Validation</h3><p>You review. We refine.</p></li>
+      <li><h3>Delivery</h3><p>On site or remote. With learning assessment.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Training for your team?", "Tell me who you want to train, on what and by when: I'll send you a programme proposal.", "Request training", CONTACT, "For training centres", u("centres"))}
+{cta_band("A team to train?", "Tell me who, what and when. I'll send you a programme.", "Request training", CONTACT, "For training centres", u("centres"))}
 """,
 }
 
@@ -323,33 +321,33 @@ COACHING = {
     "body": page_hero(
         '<a href="/en/">Home</a> / Coaching',
         "Coaching",
-        "A demanding, supportive outside view to clarify where you're going, decide faster and have more impact. The first session is free.",
+        "You have the skills. Sometimes you lack perspective, a sparring partner, a clear direction. That's my job. The first session is free.",
         "coaching.webp",
         "Two professionals walking together in the city",
-        f'<div class="actions"><a class="btn" href="{CONTACT}">Book the free session</a></div>',
+        f'<div class="actions"><a class="btn" href="{CONTACT}">Book my free session</a></div>',
     ) + f"""
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Who it's for</h2></div>
+    <div class="section-head"><h2>Who is it for?</h2></div>
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Executives and founders</h3><p class="who">One-to-one coaching</p></div>
-        <p class="problem">You carry decisions alone and want a thinking partner who knows the reality on the ground.</p>
+        <p class="problem">Alone with the decisions? Talk them through with someone who knows the field.</p>
         <div><ul><li>Vision and roadmap</li><li>Hard decisions and priorities</li><li>Leadership in growth and in crisis</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Managers and project leads</h3><p class="who">One-to-one coaching</p></div>
-        <p class="problem">You're taking on a new role, a bigger team or a project under pressure.</p>
+        <p class="problem">New role. Bigger team. Project under pressure. Let's prepare what's next.</p>
         <div><ul><li>Communication and influence</li><li>Stakeholder management</li><li>Emotional intelligence and presence</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Students and graduates</h3><p class="who">Career coaching</p></div>
-        <p class="problem">You're preparing to enter working life or launch a first business.</p>
+        <p class="problem">First job or first company? Go in with a plan.</p>
         <div><ul><li>Career plan and mindset</li><li>Job search and interviews</li><li>Starting a business</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Teams</h3><p class="who">In-company workshops, on site or remote</p></div>
-        <p class="problem">You want to align a leadership team or re-energise a project team.</p>
+        <p class="problem">A team to align or re-energise? One workshop changes the dynamic.</p>
         <div><ul><li>Speak-Up strategy sessions</li><li>Building a high-performance culture</li><li>Soft-skills workshops (Softies method)</li></ul></div>
       </article>
     </div>
@@ -358,17 +356,17 @@ COACHING = {
 
 <section class="section section--dark">
   <div class="wrap">
-    <div class="section-head"><h2>How coaching works</h2></div>
+    <div class="section-head"><h2>How it works</h2></div>
     <ol class="steps">
-      <li><h3>Free session</h3><p>We review your situation and what you want to change.</p></li>
-      <li><h3>Goals</h3><p>Two or three concrete goals and a session rhythm that suits you.</p></li>
-      <li><h3>Sessions</h3><p>Discussion, role play and actions to try between sessions.</p></li>
-      <li><h3>Review</h3><p>What changed, what's left and how to keep going on your own.</p></li>
+      <li><h3>Free session</h3><p>We take stock. No commitment.</p></li>
+      <li><h3>Goals</h3><p>Two or three concrete goals. No more.</p></li>
+      <li><h3>Sessions</h3><p>We talk, we practise. You test between sessions.</p></li>
+      <li><h3>Review</h3><p>We measure the progress. You carry on alone.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Ready for the next step?", "Book your free session to clarify your situation and your next steps.", "Book the free session", CONTACT, "Message on WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Ready for the next step?", "The first session is free. You have nothing to lose.", "Book my free session", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -380,34 +378,34 @@ STARTUPS = {
     "body": page_hero(
         '<a href="/en/">Home</a> / Startups',
         "Support for startups and entrepreneurs",
-        "Going from idea to execution takes structure, clear priorities and someone who has led launches before. I help you structure your project, product and sales.",
+        "An idea, plenty of energy, but no manual? I help you frame, test and sell. Fast.",
         "startups.webp",
         "Startup team working on a roadmap",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Book a discovery call</a></div>',
     ) + f"""
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Four formats</h2></div>
+    <div class="section-head"><h2>How I help</h2></div>
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Launch programme</h3><p class="who">3 months, one session a week</p></div>
-        <p class="problem">For early-stage startups that need to frame everything at once.</p>
-        <div><ul><li>Project scoping and roadmap</li><li>Product: priorities, tests, first releases</li><li>Go-to-market: target, offer, pitch, sales plan</li></ul></div>
+        <p class="problem">Three months from idea to launch.</p>
+        <div><ul><li>A framed project, a clear roadmap</li><li>A product tested on real customers</li><li>An offer, a pitch, a sales plan</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Mentoring for entrepreneurs</h3><p class="who">Regular meetings over time</p></div>
-        <p class="problem">To stay on course, step back and not face decisions alone.</p>
-        <div><ul><li>Monthly or fortnightly check-ins</li><li>Review of your pitch and key documents</li><li>Introductions where useful</li></ul></div>
+        <p class="problem">Someone by your side when you have to call it.</p>
+        <div><ul><li>A check-in every two weeks or every month</li><li>Pitch review</li><li>Useful introductions</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Workshops for incubators and schools</h3><p class="who">Half a day to a week</p></div>
-        <p class="problem">To move several projects forward at once, on the Entrepreneur Week model.</p>
-        <div><ul><li>Idea, market and pitch workshops</li><li>Juries and individual feedback</li><li>Programmes co-designed with your organisation</li></ul></div>
+        <p class="problem">Move a whole cohort forward at once. Like at Entrepreneur Week.</p>
+        <div><ul><li>Idea, market and pitch workshops</li><li>Juries and individual feedback</li><li>A programme built with you</li></ul></div>
       </article>
       <article class="offer-row">
         <div><h3>Project turnaround</h3><p class="who">Short engagement</p></div>
-        <p class="problem">For a project that is slipping: deadlines, scope, team or client relationship.</p>
-        <div><ul><li>Rapid diagnosis and recovery plan</li><li>Reset scope and stakeholders</li><li>Set up the right tools (Jira, Notion, ClickUp…)</li></ul></div>
+        <p class="problem">Slipping? We take back control. Fast.</p>
+        <div><ul><li>Express diagnosis and recovery plan</li><li>Scope and team reset</li><li>The right tools (Jira, Notion, ClickUp…)</li></ul></div>
       </article>
     </div>
   </div>
@@ -416,17 +414,17 @@ STARTUPS = {
 <section class="section section--mist">
   <div class="wrap two-col">
     <div>
-      <h2>What I favour</h2>
-      <ul class="ticks"><li>Strategic leadership, not just task execution</li><li>Agile or hybrid methods tailored to your team</li><li>Measurable outcomes, not just deliverables</li><li>Quick market tests before big investments</li></ul>
+      <h2>My rules</h2>
+      <ul class="ticks"><li>Talk to customers before you build</li><li>Test small before you invest big</li><li>Clear priorities every week</li><li>Results, not slides</li></ul>
     </div>
     <div>
-      <h2>What I avoid</h2>
-      <ul class="ticks cross"><li>Generic frameworks applied without adaptation</li><li>Business plans nobody reads</li><li>Unclear roles and scattered communication</li><li>Building a product before talking to customers</li></ul>
+      <h2>What I steer clear of</h2>
+      <ul class="ticks cross"><li>Business plans nobody reads</li><li>Copy-paste methods</li><li>Unclear roles</li><li>Meetings with no decision</li></ul>
     </div>
   </div>
 </section>
 
-{cta_band("Your project deserves solid foundations", "A 30-minute discovery call to review where you are and find the right format.", "Book a discovery call", CONTACT, "Message on WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Go from idea to action.", "30 minutes to review your project. Free.", "Book a discovery call", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -438,7 +436,7 @@ CENTRES = {
     "body": page_hero(
         '<a href="/en/">Home</a> / Training centres',
         "For training centres, schools and universities",
-        "You need someone who can design a complete module and deliver it to a high standard. I bring the combined perspective of a lecturer and a working manager.",
+        "Need a speaker who can hold a room and knows the field? I design and teach your modules, end to end.",
         "centres.webp",
         "Trainer running a participatory workshop",
         f'<div class="actions"><a class="btn" href="{mailto("Teaching proposal")}">Propose a session</a></div>',
@@ -448,33 +446,33 @@ CENTRES = {
     <div>
       <h2>What I bring</h2>
       <ul class="ticks">
-        <li><b>Teaching</b>: short modules, masterclasses, industry talks</li>
-        <li><b>Turnkey design</b>: syllabus, materials, case studies, assessments</li>
-        <li><b>Exams and case studies</b> aligned with course concepts</li>
-        <li><b>Juries and mentoring</b> of student or entrepreneurial projects</li>
+        <li>Short modules, masterclasses, talks</li>
+        <li>Turnkey programmes, materials included</li>
+        <li>Tailored exams and case studies</li>
+        <li>Juries and student project mentoring</li>
       </ul>
     </div>
     <div>
       <h2>Subjects taught</h2>
       <ul class="chips"><li>Project management</li><li>Agile methods</li><li>Leadership</li><li>Soft skills</li><li>Communication</li><li>Market research</li><li>Lean and Test &amp; Learn</li><li>Entrepreneurship</li><li>Fintech and payments</li></ul>
-      <p class="measure" style="margin-top:24px">Example: a market research exam built around a fictional startup, assessing causality traps, Test &amp; Learn logic and the role of research in decision-making.</p>
+      <p class="measure" style="margin-top:24px">Example: a market research exam built around a fictional startup. Hands-on, and aligned with the course.</p>
     </div>
   </div>
 </section>
 
 <section class="section section--dark">
   <div class="wrap">
-    <div class="section-head"><h2>How we work together</h2></div>
+    <div class="section-head"><h2>How we work</h2></div>
     <ol class="steps">
-      <li><h3>Need</h3><p>Audience, learning outcomes, hours and curriculum constraints.</p></li>
-      <li><h3>Proposal</h3><p>Detailed programme, assessment methods and quotation.</p></li>
-      <li><h3>Production</h3><p>Materials, case studies and assessments delivered in your formats.</p></li>
-      <li><h3>Delivery and review</h3><p>Sessions, assessment and lessons learned for the next intake.</p></li>
+      <li><h3>Brief</h3><p>Audience, outcomes, hours. You brief me.</p></li>
+      <li><h3>Proposal</h3><p>Detailed programme and quotation.</p></li>
+      <li><h3>Production</h3><p>Materials, cases, assessments. In your formats.</p></li>
+      <li><h3>Delivery</h3><p>I teach. We review together.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("A module to design or deliver?", "Send me the topic, audience and schedule: I'll come back with a proposal.", "Propose a session", mailto("Teaching proposal"), "See the catalogue", u("training"))}
+{cta_band("A module to set up?", "Send me the topic, audience and dates. I'll get back to you fast.", "Propose a session", mailto("Teaching proposal"), "See the catalogue", u("training"))}
 """,
 }
 
@@ -492,7 +490,7 @@ ABOUT = {
       <div class="portrait" role="img" aria-label="Portrait of Nacim Touenti (photo coming soon)">NT</div>
       <div>
         <h1>Nacim Touenti</h1>
-        <p class="lead">Trainer, coach and university lecturer, founder of Twty Consulting.</p>
+        <p class="lead">Trainer, coach, lecturer. And still an international project manager.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
           <dt>Training</dt><dd>Project management, leadership, soft skills, market research, entrepreneurship</dd>
@@ -509,11 +507,11 @@ ABOUT = {
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Three roles, one thread</h2><p>Helping people grow and their projects succeed.</p></div>
+    <div class="section-head"><h2>Three hats, one obsession</h2><p>That people really improve.</p></div>
     <div class="reasons">
-      <div class="reason"><h3>Trainer and lecturer</h3><p>University teaching, programme, exam and case-study design, corporate training.</p></div>
-      <div class="reason"><h3>Coach and mentor</h3><p>Creator of the Softies method, coach to executives and managers, mentor to future entrepreneurs.</p></div>
-      <div class="reason"><h3>Hands-on manager</h3><p>Leading international projects across EMEA, launches in several countries, multicultural teams in Europe and Africa.</p></div>
+      <div class="reason"><h3>Trainer and lecturer</h3><p>At university and in companies. I design and I teach.</p></div>
+      <div class="reason"><h3>Coach and mentor</h3><p>I created the Softies method. I coach managers and executives. I mentor entrepreneurs.</p></div>
+      <div class="reason"><h3>Hands-on manager</h3><p>I run projects across EMEA. Several countries, several cultures, tight deadlines.</p></div>
     </div>
   </div>
 </section>
@@ -538,8 +536,8 @@ CONTACT_PAGE = {
 <section class="page-hero">
   <div class="wrap">
     <p class="crumbs"><a href="/en/">Home</a> / Contact</p>
-    <h1>Let's talk about your project</h1>
-    <p class="lead">Describe your need in a few lines. I'll reply with a proposal for a 30-minute call.</p>
+    <h1>Let's talk</h1>
+    <p class="lead">A few lines are enough. I'll reply fast, with a 30-minute slot.</p>
   </div>
 </section>
 <section class="section">
