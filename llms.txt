@@ -1,0 +1,20 @@
+# Twty Consulting — Nacim Touenti
+
+> Nacim Touenti est expert en monétique et en gestion de projet, enseignant et formateur, fondateur de Twty Consulting. Il accompagne entreprises, centres de formation et startups sur leurs projets de paiement et la montée en compétences de leurs équipes.
+
+Nacim Touenti est expert en paiement électronique et en gestion de projet, enseignant et formateur, et fondateur de Twty Consulting. Il dirige la gestion de projets à l'échelle EMEA chez un acteur mondial des solutions de paiement, où il pilote le lancement de terminaux et de logiciels de paiement, leurs certifications EMV (L1, L2, L3), la conformité PCI DSS et les relations avec les schémas internationaux. Avec plus de dix ans d'expérience dans la fintech, le conseil et le déploiement international, en Europe comme en Afrique, il enseigne également à l'université et conçoit des programmes de formation. Avec Twty Consulting, présent à Paris, Zurich et Tanger, il accompagne entreprises, centres de formation et startups : expertise paiement, formation et accompagnement de projets, de produits et de stratégie commerciale.
+
+## Offres
+- [Expertise paiement et monétique](https://www.twty.fr/expertise-paiement.html) : diagnostic de projet paiement, certifications EMV L1/L2/L3 et schémas (Visa, Mastercard, Amex, UPI), PCI DSS, SoftPOS, TMS, pilotage de projet.
+- [Formations](https://www.twty.fr/formations.html) : fondamentaux de la monétique, préparation aux certifications, gestion de projet hybride, étude de marché et Test & Learn, soft skills (méthode Softies).
+- [Centres de formation et écoles](https://www.twty.fr/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
+- [Accompagnement de startups](https://www.twty.fr/accompagnement-startup.html) : programme Launch sur 3 mois, coaching, redressement de projet.
+
+## Personne
+- [À propos de Nacim Touenti](https://www.twty.fr/nacim-touenti.html)
+- LinkedIn : https://www.linkedin.com/in/nacimuus/
+- Contact : contact@twty.fr
+- Présence : Paris – La Défense, Zurich, Tanger. Langues : français, anglais.
+
+## English
+- [English version](https://www.twty.fr/en/)
