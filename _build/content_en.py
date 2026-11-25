@@ -102,7 +102,7 @@ HOME = {
   </div>
 </section>
 
-{ticker(['Leadership', 'Project management', 'Soft skills', 'Public speaking', 'Market research', 'Entrepreneurship', 'Coaching', 'Agile methods', 'Negotiation', 'Pitching'], 'Topics')}
+{ticker(['Project management', 'Product', 'Starting a business', 'Scale-up', 'Finance', 'BI and dashboards', 'Lead generation', 'Soft skills', 'Coaching', 'Leadership'], 'Topics')}
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
     <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa, with multicultural teams.</p></div>
@@ -174,105 +174,80 @@ HOME = {
 """,
 }
 
-COURSES = [
-    {
-        "id": "soft-skills-softies",
-        "name": "Soft skills and leadership: the Softies method",
-        "desc": "Speak with confidence. Negotiate without friction. Lead in your own style.",
-        "for": "Managers, project teams, students and graduates",
-        "goals": [
-            "Speak up and persuade",
-            "Negotiate and defuse tension",
-            "Find your leadership style",
-        ],
-        "duration": "1 day or modular programme",
-        "format": "On site preferred, role play and serious games",
-    },
-    {
-        "id": "project-management",
-        "name": "Project management: agile and hybrid methods",
-        "desc": "Deliver on time. Without burning out the team.",
-        "for": "Project managers, product owners, managers, students",
-        "goals": [
-            "Pick the right method, agile or hybrid",
-            "Hold scope, bring stakeholders along",
-            "Report in a way leaders actually read",
-            "Get a project back on track",
-        ],
-        "duration": "2 days (14 h)",
-        "format": "In-house or open session, on site or remote",
-    },
-    {
-        "id": "market-research",
-        "name": "Market research and Test & Learn",
-        "desc": "Stop guessing. Test, measure, decide.",
-        "for": "Entrepreneurs, students, marketing and innovation teams",
-        "goals": [
-            "Ask the right questions before collecting data",
-            "Avoid causality traps",
-            "Test fast and cheap, the Lean way",
-        ],
-        "duration": "1 day (7 h), available as a university module",
-        "format": "Schools, universities, incubators, companies",
-    },
-    {
-        "id": "entrepreneurship",
-        "name": "Entrepreneurship: from idea to first customers",
-        "desc": "From idea to first customer. Without getting lost on the way.",
-        "for": "Project owners, student entrepreneurs, incubatees",
-        "goals": [
-            "Clarify your target and your promise",
-            "Build a realistic roadmap",
-            "Pitch and land your first meetings",
-        ],
-        "duration": "1 to 2 days, or workshop format",
-        "format": "Incubators, schools, entrepreneurship programmes",
-    },
-    {
-        "id": "electronic-payments",
-        "name": "Technical course: electronic payments fundamentals",
-        "desc": "For fintech teams. What really happens when you pay by card.",
-        "for": "Product, project, sales and support teams in fintech",
-        "goals": [
-            "Explain the journey of a card transaction",
-            "Understand EMV, contactless and SoftPOS",
-            "Place PCI DSS requirements and certifications",
-        ],
-        "duration": "1 to 2 days",
-        "format": "In-house, on site or remote",
-    },
+CATALOG = [
+    ("Run your projects", [
+        {"id": "project-management", "name": "Agile and hybrid project management",
+         "hook": "Deliver on time. Without burning out the team.",
+         "topics": ["Pick the right method, agile or hybrid", "Clear, shared project processes", "Reporting leaders actually read", "Get a project back on track"],
+         "for": "Project managers, managers, tech teams"},
+        {"id": "product", "name": "Product: from idea to roadmap",
+         "hook": "Build the right product, in the right order.",
+         "topics": ["Roadmap and prioritisation", "Project and product processes", "Automating repetitive work", "Test before you invest"],
+         "for": "Product owners, founders, product teams"},
+    ]),
+    ("Start and grow", [
+        {"id": "starting-a-business", "name": "Starting a business",
+         "hook": "From idea to first customer. Without getting lost on the way.",
+         "topics": ["Target and value proposition", "Market research and Test & Learn", "A realistic roadmap", "Pitch and first meetings"],
+         "for": "Project owners, student entrepreneurs, incubatees"},
+        {"id": "scale-up", "name": "Scale-up: structuring growth",
+         "hook": "Sell more. And earn more from every sale.",
+         "topics": ["Sales processes and sales policy", "Lead generation", "P&L and profitability optimisation", "Automate to scale"],
+         "for": "Leaders of growing startups and SMEs"},
+    ]),
+    ("Finance and data", [
+        {"id": "finance", "name": "Finance for non-financial people",
+         "hook": "Understand the numbers to decide better. Beginner or refresher level.",
+         "topics": ["Read a balance sheet and P&L", "Cash, margins, profitability", "Build and track a budget", "Speak the same language as finance"],
+         "for": "Managers, entrepreneurs, students"},
+        {"id": "bi-dashboards", "name": "BI and dashboards",
+         "hook": "Tools that show what matters, at a glance.",
+         "topics": ["Pick the right indicators", "Design useful dashboards", "Build tailored tools for the business", "Automate data collection"],
+         "for": "Leaders, managers, operations teams"},
+    ]),
+    ("Presence and industry expertise", [
+        {"id": "soft-skills", "name": "Soft skills and professional presence",
+         "hook": "Speak with confidence. Negotiate without friction. Find your place.",
+         "topics": ["Public speaking and persuasion", "Negotiation and handling tension", "Professional presence and leadership"],
+         "for": "Managers, teams, students and graduates"},
+        {"id": "electronic-payments", "name": "Electronic payments fundamentals",
+         "hook": "For fintech teams: what really happens when you pay by card.",
+         "topics": ["The journey of a card transaction", "EMV, contactless, SoftPOS", "PCI DSS and certifications"],
+         "for": "Product, project and support teams in fintech"},
+    ]),
 ]
+COURSES = [c for _, group in CATALOG for c in group]
 
 
 def course_html(c):
-    goals = "".join(f"<li>{g}</li>" for g in c["goals"])
-    return f"""<article class="course" id="{c['id']}">
-  <div>
-    <h3>{c['name']}</h3>
-    <p>{c['desc']}</p>
-    <h4>Objectives</h4>
-    <ul>{goals}</ul>
-    <a class="more" href="{mailto('Detailed programme: ' + c['name'])}">Request the detailed programme</a>
-  </div>
-  <dl>
-    <dt>Audience</dt><dd>{c['for']}</dd>
-    <dt>Duration</dt><dd>{c['duration']}</dd>
-    <dt>Format</dt><dd>{c['format']}</dd>
-    <dt>Price</dt><dd>On quotation, depending on format and group size</dd>
-  </dl>
+    topics = "".join(f"<li>{t}</li>" for t in c["topics"])
+    return f"""<article class="course-card" id="{c['id']}">
+  <h3>{c['name']}</h3>
+  <p class="hook">{c['hook']}</p>
+  <ul>{topics}</ul>
+  <p class="for"><b>For:</b> {c['for']}</p>
+  <a class="more" href="{mailto('Programme: ' + c['name'])}">Request the programme</a>
 </article>"""
+
+
+def catalog_html():
+    out = []
+    for title, group in CATALOG:
+        cards = "".join(course_html(c) for c in group)
+        out.append(f'<div class="catalog-group"><h3 class="catalog-title">{title}</h3><div class="course-grid">{cards}</div></div>')
+    return "\n".join(out)
 
 
 TRAINING = {
     "key": "training",
     "slug": SLUGS["training"],
-    "title": "Soft skills, leadership, project management and entrepreneurship training | Nacim Touenti",
-    "description": "Training in soft skills and leadership (Softies method), project management, market research and entrepreneurship. In-house, schools and training centres, by Nacim Touenti.",
-    "schema": [course_schema(c["name"], c["desc"], "en", f"{BASE}/en/{SLUGS['training']}#{c['id']}") for c in COURSES],
+    "title": "Project management, product, business creation, finance and BI training | Nacim Touenti",
+    "description": "Tailored training in project management, product, starting a business, scale-up, finance, BI and soft skills. Hours or days, in companies and schools, by Nacim Touenti.",
+    "schema": [course_schema(c["name"], c["hook"], "en", f"{BASE}/en/{SLUGS['training']}#{c['id']}") for c in COURSES],
     "body": page_hero(
         '<a href="/en/">Home</a> / Training',
-        "Training",
-        "Nobody falls asleep here. We play, debate, get it wrong and improve. You leave with tools, not slides.",
+        "Training that does you good.",
+        "Project management, product, starting a business, scale-up, finance, BI. Tailored, hands-on, usable on Monday.",
         "formation.webp",
         "Interactive small-group training session",
         f'<div class="actions"><a class="btn" href="#catalogue">See the catalogue</a><a class="btn btn--ghost" href="{CONTACT}">Request a tailored course</a></div>',
@@ -294,8 +269,9 @@ TRAINING = {
 
 <section class="section section--mist" id="catalogue">
   <div class="wrap">
-    <div class="section-head"><h2>Catalogue</h2><p>Everything adapts. Length, level, examples from your industry.</p></div>
-    {"".join(course_html(c) for c in COURSES)}
+    <div class="section-head"><h2>Catalogue</h2><p>Everything adapts: length, level, examples from your industry.</p></div>
+    {catalog_html()}
+    <p class="catalog-note">Modules of a few hours or several days. On site or remote. In companies, schools or training centres. Price on quotation.</p>
   </div>
 </section>
 
@@ -456,7 +432,7 @@ CENTRES = {
     </div>
     <div>
       <h2>Subjects taught</h2>
-      <ul class="chips"><li>Project management</li><li>Agile methods</li><li>Leadership</li><li>Soft skills</li><li>Communication</li><li>Market research</li><li>Lean and Test &amp; Learn</li><li>Entrepreneurship</li><li>Fintech and payments</li></ul>
+      <ul class="chips"><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li><li>Finance</li><li>BI and dashboards</li><li>Market research</li><li>Soft skills</li><li>Leadership</li><li>Fintech and payments</li></ul>
       <p class="measure" style="margin-top:24px">Example: a market research exam built around a fictional startup. Hands-on, and aligned with the course.</p>
     </div>
   </div>

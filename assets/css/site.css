@@ -496,3 +496,24 @@ img.portrait { object-fit: cover; width: 100%; height: 100%; }
 /* « Pourquoi ça marche » : quatre cartes en 2 x 2 */
 .reasons--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 700px) { .reasons--four { grid-template-columns: 1fr; } }
+
+/* Catalogue de formations : familles + cartes courtes */
+.catalog-group + .catalog-group { margin-top: clamp(40px, 5vw, 64px); }
+.catalog-title { display: flex; align-items: center; gap: 14px; font-size: clamp(1.1rem, 1.8vw, 1.35rem); margin-bottom: 20px; }
+.catalog-title::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--gold); transform: rotate(45deg); box-shadow: 0 0 12px var(--gold); }
+.catalog-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+.course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.course-card {
+  display: flex; flex-direction: column; padding: clamp(24px, 3vw, 34px); border-radius: var(--r-lg);
+  background: var(--glass); border: 1px solid var(--glass-line); transition: border-color .3s ease, transform .3s ease;
+}
+.course-card:hover { border-color: rgba(216, 180, 90, .5); transform: translateY(-3px); }
+.course-card h3 { font-size: clamp(1.05rem, 1.6vw, 1.25rem); margin-bottom: .4em; }
+.course-card .hook { color: var(--gold-2); font-weight: 600; margin-bottom: 14px; }
+.course-card ul { list-style: none; padding: 0; margin: 0 0 16px; }
+.course-card li { position: relative; padding-left: 22px; margin-bottom: 6px; }
+.course-card li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+.course-card .for { color: var(--muted); font-size: .93rem; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--glass-line); }
+.course-card .more { margin-top: 6px; }
+.catalog-note { margin: clamp(28px, 4vw, 44px) 0 0; padding: 18px 24px; border-radius: 999px; background: rgba(216, 180, 90, .08); border: 1px solid var(--line); color: var(--text); text-align: center; font-weight: 600; }
+@media (max-width: 760px) { .course-grid { grid-template-columns: 1fr; } .catalog-note { border-radius: var(--r-md); } }
