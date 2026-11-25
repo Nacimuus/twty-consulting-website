@@ -73,8 +73,6 @@ HOME_FAQ = [
      "Les deux. Sur place à Paris, en Suisse et au Maroc. À distance partout ailleurs."),
     ("Dans quelles langues travaillez-vous ?",
      "Français et anglais."),
-    ("Vos formations peuvent-elles être financées ?",
-     "Oui, dans la plupart des cas. Sur votre budget formation, ou via un organisme partenaire certifié Qualiopi pour un financement OPCO. On trouve le bon montage ensemble."),
     ("Comment se passe la première séance de coaching ?",
      "Elle est offerte. On fait le point, et vous repartez avec une première action concrète. Même si on s'arrête là."),
     ("Quel est le délai pour démarrer ?",
@@ -531,34 +529,58 @@ STARTUPS = {
 CENTRES = {
     "key": "centres",
     "slug": SLUGS["centres"],
-    "title": "Formateur et intervenant pour centres de formation, écoles et universités | Nacim Touenti",
-    "description": "Intervenant et concepteur de programmes pour centres de formation, écoles et universités : gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat.",
+    "title": "Intervenant et ingénieur pédagogique pour écoles, universités et centres de formation | Nacim Touenti",
+    "description": "Conception et animation de modules sur mesure, en présentiel et en ligne. Plus de 15 établissements, plus de 1000 personnes formées, plus de 20 modules créés : IUT Paris Descartes, ISG, XP School, Sorbonne, IUT Sénart, PSB.",
     "body": page_hero(
         '<a href="/">Accueil</a> / Centres de formation',
-        "Pour les centres de formation, écoles et universités",
-        "Un intervenant qui tient une salle et connaît le terrain ? Je conçois et j'anime vos modules, de A à Z.",
+        "Vos modules, conçus et animés de A à Z.",
+        "Écoles, universités, centres de formation. Intervenant à l'université et formateur en entreprise depuis 6 ans, je conçois et j'anime des modules concrets, sur mesure, en présentiel et en ligne.",
         "centres.webp",
         "Formateur animant un atelier participatif",
         f'<div class="actions"><a class="btn" href="{mailto("Proposition d intervention")}">Proposer une intervention</a></div>',
     ) + f"""
+<section class="proof" aria-label="En chiffres">
+  <div class="wrap proof-grid">
+    <div class="proof-item"><b class="num">15+</b><h4>établissements</h4><p>Écoles, universités, centres de formation.</p></div>
+    <div class="proof-item"><b class="num">1000+</b><h4>personnes formées</h4><p>Étudiants, salariés, entrepreneurs.</p></div>
+    <div class="proof-item"><b class="num">20+</b><h4>modules créés</h4><p>Conçus sur mesure, de A à Z.</p></div>
+  </div>
+  <div class="wrap trust">
+    <p>Ils m'ont fait confiance</p>
+    <ul class="chips"><li>IUT Paris Descartes</li><li>ISG</li><li>XP School</li><li>Sorbonne</li><li>IUT Sénart</li><li>PSB</li></ul>
+  </div>
+</section>
+
 <section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ce que je vous apporte</h2>
+    </div>
+    <div class="reasons">
+      <div class="reason"><h3>Interventions</h3><p>Modules courts, masterclasses, conférences.</p></div>
+      <div class="reason"><h3>Ingénierie pédagogique</h3><p>Des parcours pensés pour la salle et pour le en ligne.</p></div>
+      <div class="reason"><h3>Modules clés en main</h3><p>Syllabus, supports, cas pratiques compris.</p></div>
+      <div class="reason"><h3>Examens et jurys</h3><p>Évaluations sur mesure, suivi de projets étudiants.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
   <div class="wrap two-col">
     <div>
-      <h2>Ce que je vous apporte</h2>
-      <ul class="ticks">
-        <li>Modules courts, masterclasses, conférences</li>
-        <li>Programmes clés en main, supports compris</li>
-        <li>Examens et cas pratiques sur mesure</li>
-        <li>Jurys et suivi de projets étudiants</li>
+      <h2>Sujets</h2>
+      <ul class="chips chips--big">
+        <li>Gestion de projet</li><li>Produit</li><li>Création d'entreprise</li><li>Scale-up</li><li>Finance</li><li>BI et dashboards</li><li>Étude de marché</li><li>Soft skills</li><li>Leadership</li>
       </ul>
+      <p style="margin-top:24px"><a class="more" href="/{SLUGS['training']}">Voir le catalogue complet</a></p>
     </div>
     <div>
-      <h2>Sujets enseignés</h2>
-      <ul class="chips">
-        <li>Gestion de projet</li><li>Produit</li><li>Création d'entreprise</li><li>Scale-up</li><li>Finance</li>
-        <li>BI et dashboards</li><li>Étude de marché</li><li>Soft skills</li><li>Leadership</li><li>Fintech et paiement</li>
-      </ul>
-      <p class="measure" style="margin-top:24px">Exemple : un examen d'étude de marché bâti autour d'une startup fictive. Concret, et calé sur le cours.</p>
+      <article class="course-card">
+        <span class="tag">Exemple</span>
+        <h3>Un examen d'étude de marché</h3>
+        <p class="hook">Bâti autour d'une startup fictive.</p>
+        <ul><li>Calé sur les concepts du cours</li><li>Pièges de causalité, logique Test &amp; Learn</li><li>Des étudiants qui raisonnent, pas qui récitent</li></ul>
+      </article>
     </div>
   </div>
 </section>
@@ -571,16 +593,9 @@ CENTRES = {
     <ol class="steps">
       <li><h3>Besoin</h3><p>Public, objectifs, volume horaire. Vous me briefez.</p></li>
       <li><h3>Proposition</h3><p>Programme détaillé et devis.</p></li>
-      <li><h3>Production</h3><p>Supports, cas, évaluations. Dans vos formats.</p></li>
+      <li><h3>Production</h3><p>Supports, cas, évaluations. En présentiel ou en ligne.</p></li>
       <li><h3>Animation</h3><p>Je donne les cours. On fait le bilan ensemble.</p></li>
     </ol>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap measure">
-    <h2>Côté administratif, c'est simple</h2>
-    <p>J'interviens en sous-traitance. Vous gardez la relation avec les financeurs. Je vous fournis tout pour votre démarche qualité : programme, objectifs, évaluations, CV.</p>
   </div>
 </section>
 
@@ -755,7 +770,7 @@ LLMS_TXT = f"""
 - [Formations]({BASE}/formations.html) : gestion de projet agile et hybride, produit et roadmap, création d'entreprise, scale-up (process commerciaux, lead generation, P&L), finance pour non-financiers, BI et tableaux de bord, soft skills et posture, fondamentaux du paiement électronique. En modules d'heures ou de jours.
 - [Coaching]({BASE}/coaching.html) : prise de parole, leadership, confiance en soi, créativité, gestion du stress, création ou restructuration d'entreprise. Pour dirigeants, managers, jeunes diplômés et équipes. 1 h découverte offerte, puis accompagnement sur mesure en packs de 5 ou 10 séances.
 - [Accompagnement de startups]({BASE}/accompagnement-startup.html) : lancement, développement commercial (process, lead generation, politique commerciale), process projet et produit, rentabilité (P&L). Programme Launch sur 3 mois (1 à 2 séances par semaine), à la carte, mentorat, ateliers. Références : Humen Recrut (+50 % de leads, +3 rendez-vous clients par semaine en moyenne sur 3 mois), AWA (formation stratégie et politique commerciale).
-- [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
+- [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, ingénierie pédagogique en présentiel et en ligne, modules clés en main, examens et jurys. Plus de 15 établissements (dont IUT Paris Descartes, ISG, XP School, Sorbonne, IUT Sénart, PSB), plus de 1000 personnes formées, plus de 20 modules créés.
 
 ## Personne
 - [À propos de Nacim Touenti]({BASE}/nacim-touenti.html)

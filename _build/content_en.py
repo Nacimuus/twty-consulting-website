@@ -434,31 +434,54 @@ STARTUPS = {
 CENTRES = {
     "key": "centres",
     "slug": SLUGS["centres"],
-    "title": "Trainer and guest lecturer for training centres, schools and universities | Nacim Touenti",
-    "description": "Guest lecturer and programme designer for training centres, schools and universities: project management, leadership, soft skills, market research, entrepreneurship.",
+    "title": "Guest lecturer and instructional designer for schools, universities and training centres | Nacim Touenti",
+    "description": "Tailored modules designed and delivered, on site and online. 15+ institutions, 1,000+ people trained, 20+ modules created: IUT Paris Descartes, ISG, XP School, Sorbonne, IUT Sénart, PSB.",
     "body": page_hero(
         '<a href="/en/">Home</a> / Training centres',
-        "For training centres, schools and universities",
-        "Need a speaker who can hold a room and knows the field? I design and teach your modules, end to end.",
+        "Your modules, designed and delivered end to end.",
+        "Schools, universities, training centres. A university guest lecturer and corporate trainer for 6 years, I design and deliver hands-on, tailored modules, on site and online.",
         "centres.webp",
         "Trainer running a participatory workshop",
         f'<div class="actions"><a class="btn" href="{mailto("Teaching proposal")}">Propose a session</a></div>',
     ) + f"""
+<section class="proof" aria-label="In figures">
+  <div class="wrap proof-grid">
+    <div class="proof-item"><b class="num">15+</b><h4>institutions</h4><p>Schools, universities, training centres.</p></div>
+    <div class="proof-item"><b class="num">1,000+</b><h4>people trained</h4><p>Students, employees, entrepreneurs.</p></div>
+    <div class="proof-item"><b class="num">20+</b><h4>modules created</h4><p>Tailor-made, end to end.</p></div>
+  </div>
+  <div class="wrap trust">
+    <p>They have trusted me</p>
+    <ul class="chips"><li>IUT Paris Descartes</li><li>ISG</li><li>XP School</li><li>Sorbonne</li><li>IUT Sénart</li><li>PSB</li></ul>
+  </div>
+</section>
+
 <section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>What I bring</h2></div>
+    <div class="reasons">
+      <div class="reason"><h3>Teaching</h3><p>Short modules, masterclasses, talks.</p></div>
+      <div class="reason"><h3>Instructional design</h3><p>Courses built for the classroom and for online.</p></div>
+      <div class="reason"><h3>Turnkey modules</h3><p>Syllabus, materials and case studies included.</p></div>
+      <div class="reason"><h3>Exams and juries</h3><p>Tailored assessments, student project follow-up.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
   <div class="wrap two-col">
     <div>
-      <h2>What I bring</h2>
-      <ul class="ticks">
-        <li>Short modules, masterclasses, talks</li>
-        <li>Turnkey programmes, materials included</li>
-        <li>Tailored exams and case studies</li>
-        <li>Juries and student project mentoring</li>
-      </ul>
+      <h2>Subjects</h2>
+      <ul class="chips chips--big"><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li><li>Finance</li><li>BI and dashboards</li><li>Market research</li><li>Soft skills</li><li>Leadership</li></ul>
+      <p style="margin-top:24px"><a class="more" href="{u('training')}">See the full catalogue</a></p>
     </div>
     <div>
-      <h2>Subjects taught</h2>
-      <ul class="chips"><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li><li>Finance</li><li>BI and dashboards</li><li>Market research</li><li>Soft skills</li><li>Leadership</li><li>Fintech and payments</li></ul>
-      <p class="measure" style="margin-top:24px">Example: a market research exam built around a fictional startup. Hands-on, and aligned with the course.</p>
+      <article class="course-card">
+        <span class="tag">Example</span>
+        <h3>A market research exam</h3>
+        <p class="hook">Built around a fictional startup.</p>
+        <ul><li>Aligned with the course concepts</li><li>Causality traps, Test &amp; Learn logic</li><li>Students who reason, not recite</li></ul>
+      </article>
     </div>
   </div>
 </section>
@@ -469,7 +492,7 @@ CENTRES = {
     <ol class="steps">
       <li><h3>Brief</h3><p>Audience, outcomes, hours. You brief me.</p></li>
       <li><h3>Proposal</h3><p>Detailed programme and quotation.</p></li>
-      <li><h3>Production</h3><p>Materials, cases, assessments. In your formats.</p></li>
+      <li><h3>Production</h3><p>Materials, cases, assessments. On site or online.</p></li>
       <li><h3>Delivery</h3><p>I teach. We review together.</p></li>
     </ol>
   </div>
