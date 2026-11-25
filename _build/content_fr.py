@@ -183,7 +183,7 @@ HOME = {
   <div class="wrap">
     <div class="section-head">
       <h2>Pourquoi ça marche</h2>
-      <p>Tout est sur mesure. Chaque formation, chaque coaching part de vos besoins et de vos cas réels. Pas de contenu standard, pas d'approche générique copiée-collée ou produite par une IA.</p>
+      <p>Tout est sur mesure. Chaque formation, chaque coaching part de vos besoins et de vos cas réels. Pas de contenu standard, pas d'approche générique copiée-collée. L'IA est un outil, pas un raccourci.</p>
     </div>
     <div class="reasons reasons--four">
       <div class="reason">
