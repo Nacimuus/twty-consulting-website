@@ -294,40 +294,45 @@ TRAINING = {
 COACHING = {
     "key": "coaching",
     "slug": SLUGS["coaching"],
-    "title": "Coaching for executives, managers and graduates | Nacim Touenti",
-    "description": "One-to-one and team coaching: leadership, public speaking, decision-making, career transitions. First session free. By Nacim Touenti, Paris, Zurich and remote.",
+    "title": "Coaching: public speaking, leadership, self-confidence, stress management | Nacim Touenti",
+    "description": "Tailored coaching for executives, managers, graduates and teams: public speaking, leadership, self-confidence, creativity, stress management, starting or restructuring a business. First hour free.",
     "body": page_hero(
         '<a href="/en/">Home</a> / Coaching',
-        "Coaching",
-        "You have the skills. Sometimes you lack perspective, a sparring partner, a clear direction. That's my job. The first session is free.",
+        "A step to take? Let's do it together.",
+        "Executives, managers, graduates. I help you step back, decide faster and have more impact. Always tailored. First session free.",
         "coaching.webp",
         "Two professionals walking together in the city",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Book my free session</a></div>',
     ) + f"""
 <section class="section">
   <div class="wrap">
+    <div class="section-head"><h2>What we work on</h2></div>
+    <ul class="chips chips--big">
+      <li>Public speaking</li><li>Leadership</li><li>Self-confidence</li><li>Creativity</li><li>Stress management</li><li>Starting or restructuring a business</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
     <div class="section-head"><h2>Who is it for?</h2></div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Executives and founders</h3><p class="who">One-to-one coaching</p></div>
-        <p class="problem">Alone with the decisions? Talk them through with someone who knows the field.</p>
-        <div><ul><li>Vision and roadmap</li><li>Hard decisions and priorities</li><li>Leadership in growth and in crisis</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Managers and project leads</h3><p class="who">One-to-one coaching</p></div>
-        <p class="problem">New role. Bigger team. Project under pressure. Let's prepare what's next.</p>
-        <div><ul><li>Communication and influence</li><li>Stakeholder management</li><li>Emotional intelligence and presence</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Students and graduates</h3><p class="who">Career coaching</p></div>
-        <p class="problem">First job or first company? Go in with a plan.</p>
-        <div><ul><li>Career plan and mindset</li><li>Job search and interviews</li><li>Starting a business</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Teams</h3><p class="who">In-company workshops, on site or remote</p></div>
-        <p class="problem">A team to align or re-energise? One workshop changes the dynamic.</p>
-        <div><ul><li>Speak-Up strategy sessions</li><li>Building a high-performance culture</li><li>Soft-skills workshops (Softies method)</li></ul></div>
-      </article>
+    <div class="course-grid">
+      <article class="course-card"><h3>Executives and founders</h3><p class="hook">Alone with the decisions? A field-tested view to help you decide.</p><ul><li>Leadership</li><li>Stress management</li><li>Starting or restructuring a business</li></ul></article>
+      <article class="course-card"><h3>Managers and project leads</h3><p class="hook">New role, bigger team, project under pressure.</p><ul><li>Public speaking</li><li>Leadership</li><li>Self-confidence</li></ul></article>
+      <article class="course-card"><h3>Students and graduates</h3><p class="hook">First job or first company? Go in with a plan.</p><ul><li>Self-confidence</li><li>Public speaking</li><li>Career plan</li></ul></article>
+      <article class="course-card"><h3>Teams</h3><p class="hook">Align, re-energise, move forward together.</p><ul><li>Creativity</li><li>Team cohesion</li><li>Strategy workshops</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Formats</h2></div>
+    <div class="reasons">
+      <div class="reason"><h3>1-hour discovery</h3><p>Free. We take stock, no commitment.</p></div>
+      <div class="reason"><h3>Tailored</h3><p>Support built around your goals.</p></div>
+      <div class="reason"><h3>Packs of 5 or 10 sessions</h3><p>At the pace that suits you.</p></div>
+      <div class="reason"><h3>Team workshop</h3><p>To move forward together, in your company.</p></div>
     </div>
   </div>
 </section>
@@ -336,15 +341,15 @@ COACHING = {
   <div class="wrap">
     <div class="section-head"><h2>How it works</h2></div>
     <ol class="steps">
-      <li><h3>Free session</h3><p>We take stock. No commitment.</p></li>
+      <li><h3>Free session</h3><p>1 hour to take stock. No commitment.</p></li>
       <li><h3>Goals</h3><p>Two or three concrete goals. No more.</p></li>
-      <li><h3>Sessions</h3><p>We talk, we practise. You test between sessions.</p></li>
+      <li><h3>Sessions</h3><p>In packs of 5 or 10, at your pace.</p></li>
       <li><h3>Review</h3><p>We measure the progress. You carry on alone.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Ready for the next step?", "The first session is free. You have nothing to lose.", "Book my free session", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Ready for the next step?", "The first hour is free. You have nothing to lose.", "Book my free session", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 

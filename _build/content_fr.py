@@ -365,12 +365,12 @@ TRAINING = {
 COACHING = {
     "key": "coaching",
     "slug": SLUGS["coaching"],
-    "title": "Coaching de dirigeants, managers et jeunes diplômés | Nacim Touenti",
-    "description": "Coaching individuel et d'équipe : leadership, prise de parole, décision, transitions de carrière. Première séance offerte. Par Nacim Touenti, Paris, Zurich et à distance.",
+    "title": "Coaching : prise de parole, leadership, confiance en soi, gestion du stress | Nacim Touenti",
+    "description": "Coaching sur mesure pour dirigeants, managers, jeunes diplômés et équipes : prise de parole, leadership, confiance en soi, créativité, gestion du stress, création ou restructuration d'entreprise. Première heure offerte.",
     "body": page_hero(
         '<a href="/">Accueil</a> / Coaching',
-        "Coaching",
-        "Vous avez les compétences. Il vous manque parfois du recul, un sparring-partner, un cap clair. C'est mon rôle. La première séance est offerte.",
+        "Un cap à passer ? On y va ensemble.",
+        "Dirigeants, managers, jeunes diplômés. Je vous aide à prendre du recul, décider plus vite et gagner en impact. Toujours sur mesure. Première séance offerte.",
         "coaching.webp",
         "Deux professionnels marchant ensemble en ville",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver ma séance offerte</a></div>',
@@ -378,29 +378,38 @@ COACHING = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
+      <h2>Ce qu'on travaille ensemble</h2>
+    </div>
+    <ul class="chips chips--big">
+      <li>Prise de parole</li><li>Leadership</li><li>Confiance en soi</li><li>Créativité</li><li>Gestion du stress</li><li>Création ou restructuration d'entreprise</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="section-head">
       <h2>Pour qui ?</h2>
     </div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Dirigeants et fondateurs</h3><p class="who">Coaching individuel</p></div>
-        <p class="problem">Seul face aux décisions ? Parlez-en à quelqu'un qui connaît le terrain.</p>
-        <div><ul><li>Vision et feuille de route</li><li>Décisions difficiles et priorités</li><li>Leadership en croissance comme en crise</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Managers et chefs de projet</h3><p class="who">Coaching individuel</p></div>
-        <p class="problem">Nouveau poste. Équipe plus grande. Projet sous pression. On prépare la suite.</p>
-        <div><ul><li>Communication et influence</li><li>Gestion des parties prenantes</li><li>Intelligence émotionnelle et posture</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Étudiants et jeunes diplômés</h3><p class="who">Coaching de carrière</p></div>
-        <p class="problem">Premier job ou première boîte ? Partez avec un plan.</p>
-        <div><ul><li>Projet professionnel et état d'esprit</li><li>Recherche d'emploi et entretiens</li><li>Création d'entreprise</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Équipes</h3><p class="who">Ateliers en entreprise, sur site ou à distance</p></div>
-        <p class="problem">Une équipe à aligner ou à remotiver ? Un atelier change la dynamique.</p>
-        <div><ul><li>Séances stratégiques Speak-Up</li><li>Construction d'une culture de performance</li><li>Ateliers soft skills (méthode Softies)</li></ul></div>
-      </article>
+    <div class="course-grid">
+      <article class="course-card"><h3>Dirigeants et fondateurs</h3><p class="hook">Seul face aux décisions ? Un regard de terrain pour trancher.</p><ul><li>Leadership</li><li>Gestion du stress</li><li>Création ou restructuration d'entreprise</li></ul></article>
+      <article class="course-card"><h3>Managers et chefs de projet</h3><p class="hook">Nouveau poste, équipe plus grande, projet sous pression.</p><ul><li>Prise de parole</li><li>Leadership</li><li>Confiance en soi</li></ul></article>
+      <article class="course-card"><h3>Étudiants et jeunes diplômés</h3><p class="hook">Premier job ou première boîte ? Partez avec un plan.</p><ul><li>Confiance en soi</li><li>Prise de parole</li><li>Projet professionnel</li></ul></article>
+      <article class="course-card"><h3>Équipes</h3><p class="hook">Aligner, remotiver, avancer ensemble.</p><ul><li>Créativité</li><li>Cohésion</li><li>Ateliers stratégiques</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Formats</h2>
+    </div>
+    <div class="reasons">
+      <div class="reason"><h3>1 h découverte</h3><p>Offerte. On fait le point, sans engagement.</p></div>
+      <div class="reason"><h3>Sur mesure</h3><p>Un accompagnement construit autour de vos objectifs.</p></div>
+      <div class="reason"><h3>Packs de 5 ou 10 séances</h3><p>Au rythme qui vous convient.</p></div>
+      <div class="reason"><h3>Atelier d'équipe</h3><p>Pour avancer ensemble, dans votre entreprise.</p></div>
     </div>
   </div>
 </section>
@@ -411,15 +420,15 @@ COACHING = {
       <h2>Comment ça marche</h2>
     </div>
     <ol class="steps">
-      <li><h3>Séance offerte</h3><p>On fait le point. Sans engagement.</p></li>
+      <li><h3>Séance offerte</h3><p>1 h pour faire le point. Sans engagement.</p></li>
       <li><h3>Objectifs</h3><p>Deux ou trois objectifs concrets. Pas plus.</p></li>
-      <li><h3>Séances</h3><p>On échange, on s'entraîne. Vous testez entre deux séances.</p></li>
+      <li><h3>Séances</h3><p>En pack de 5 ou 10, au rythme qui vous convient.</p></li>
       <li><h3>Bilan</h3><p>On mesure le chemin parcouru. Vous continuez seul.</p></li>
     </ol>
   </div>
 </section>
 
-{cta_band("Prêt à passer un cap ?", "La première séance est offerte. Vous n'avez rien à perdre.", "Réserver ma séance offerte", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
+{cta_band("Prêt à passer un cap ?", "La première heure est offerte. Vous n'avez rien à perdre.", "Réserver ma séance offerte", CONTACT, "WhatsApp", SITE["whatsapp_url"])}
 """,
 }
 
@@ -720,7 +729,7 @@ LLMS_TXT = f"""
 
 ## Offres
 - [Formations]({BASE}/formations.html) : gestion de projet agile et hybride, produit et roadmap, création d'entreprise, scale-up (process commerciaux, lead generation, P&L), finance pour non-financiers, BI et tableaux de bord, soft skills et posture, fondamentaux du paiement électronique. En modules d'heures ou de jours.
-- [Coaching]({BASE}/coaching.html) : coaching individuel de dirigeants, managers, chefs de projet et jeunes diplômés ; ateliers d'équipe. Première séance offerte.
+- [Coaching]({BASE}/coaching.html) : prise de parole, leadership, confiance en soi, créativité, gestion du stress, création ou restructuration d'entreprise. Pour dirigeants, managers, jeunes diplômés et équipes. 1 h découverte offerte, puis accompagnement sur mesure en packs de 5 ou 10 séances.
 - [Accompagnement de startups]({BASE}/accompagnement-startup.html) : programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et écoles, redressement de projet.
 - [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
 
