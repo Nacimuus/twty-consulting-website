@@ -26,3 +26,5 @@ pour les anciennes URL (`services.html`, `payment-systems.html`, `training.html`
 - `assets/js/site.js` : fond animé, étincelles des boutons, apparitions au défilement, menu mobile, formulaire de contact
 - `assets/img/` : images WebP optimisées, logo, image de partage `og-twty.jpg`
 - `Nacim.html` : page de profil NFC (non indexée), indépendante du reste du site
+  (styles `assets/css/nacim.css`, script `assets/js/nacim.js`, contact `assets/vcards/nacim.vcf`).
+  Bilingue FR/EN selon la langue du téléphone. Pour la photo, voir le commentaire dans `Nacim.html`.

@@ -1,0 +1,150 @@
+/* Carte de visite NFC — Nacim.html
+   S'appuie sur site.css (couleurs, polices, boutons dorés, orbites) et site.js (fond réseau, étincelles). */
+
+/* ---------- Bilingue : FR par défaut, EN quand <html data-lang="en"> ---------- */
+.t-en { display: none !important; }
+html[data-lang="en"] .t-en { display: revert !important; }
+html[data-lang="en"] a.t-en, html[data-lang="en"] .btn.t-en { display: inline-flex !important; }
+html[data-lang="en"] .nfc-offers a.t-en { display: grid !important; }
+html[data-lang="en"] .t-fr { display: none !important; }
+
+/* ---------- Mise en page ---------- */
+.nfc-body { min-height: 100vh; min-height: 100dvh; }
+.nfc {
+  width: 100%; max-width: 500px; margin: 0 auto;
+  padding: max(18px, env(safe-area-inset-top)) 14px max(28px, env(safe-area-inset-bottom));
+}
+.nfc-card {
+  position: relative; overflow: hidden;
+  padding: 22px clamp(18px, 5vw, 30px) 26px;
+  border-radius: 34px;
+  background:
+    radial-gradient(520px 340px at 100% 0%, rgba(90, 51, 163, .38), transparent 62%),
+    radial-gradient(460px 300px at 0% 18%, rgba(99, 210, 223, .14), transparent 60%),
+    linear-gradient(170deg, rgba(15, 70, 85, .82), rgba(5, 28, 36, .9));
+  border: 1px solid var(--glass-line);
+  box-shadow: 0 50px 120px -50px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .07);
+  backdrop-filter: blur(14px) saturate(130%); -webkit-backdrop-filter: blur(14px) saturate(130%);
+  animation: rise 1s cubic-bezier(.2, .7, .2, 1) both;
+}
+.nfc-card::before { /* filet doré lumineux en haut de carte */
+  content: ""; position: absolute; top: 0; left: 18%; right: 18%; height: 2px; border-radius: 2px;
+  background: var(--gold-grad); box-shadow: 0 0 22px rgba(216, 180, 90, .75);
+}
+
+/* ---------- En-tête de carte ---------- */
+.nfc-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.nfc-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); }
+.nfc-brand img { height: 38px; width: auto; filter: drop-shadow(0 0 10px rgba(216, 180, 90, .3)); }
+.nfc-brand span { font: 500 .82rem/1.2 var(--display); letter-spacing: -0.01em; }
+.nfc-lang { display: inline-flex; padding: 3px; border-radius: 999px; border: 1px solid var(--glass-line); background: rgba(5, 28, 36, .5); }
+.nfc-lang button {
+  font: 700 .74rem/1 var(--sans); letter-spacing: .04em; color: var(--muted);
+  background: none; border: 0; border-radius: 999px; padding: 7px 11px; cursor: pointer;
+}
+html[data-lang="fr"] .nfc-lang [data-set-lang="fr"],
+html[data-lang="en"] .nfc-lang [data-set-lang="en"] { background: var(--gold-grad); color: #1b1405; }
+
+/* ---------- Identité ---------- */
+.nfc-hero { text-align: center; padding-top: 8px; }
+.nfc-visual { position: relative; width: min(232px, 62vw); aspect-ratio: 1; margin: 10px auto 6px; }
+.nfc-visual .portrait--hero { font-size: clamp(2.1rem, 9vw, 2.7rem); }
+.nfc-visual img.portrait { position: absolute; inset: 24%; width: 52%; height: 52%; border-radius: 50%; }
+.nfc-name {
+  font-size: clamp(1.9rem, 8.4vw, 2.5rem); margin: 0 0 14px;
+  background: linear-gradient(100deg, #fff 0%, #fff 45%, #c4ecf1 75%, var(--gold-2) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.nfc-roles { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.nfc-roles li {
+  padding: 7px 13px; border-radius: 999px; font-weight: 700; font-size: .84rem; color: var(--heading);
+  background: rgba(5, 28, 36, .6); border: 1px solid var(--glass-line);
+}
+.nfc-roles li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-right: 8px; vertical-align: 2px; box-shadow: 0 0 8px var(--gold); }
+.nfc-tagline { color: var(--muted); font-size: 1rem; line-height: 1.55; margin: 0 auto; max-width: 24em; }
+
+/* ---------- Actions rapides ---------- */
+.nfc-actions { margin-top: 24px; display: grid; gap: 12px; }
+.nfc-save { width: 100%; padding: 18px 24px; font-size: 1.04rem; }
+.nfc-save svg, .nfc-act svg, .nfc-share svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.nfc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.nfc-act {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  min-height: 56px; padding: 12px; border-radius: 18px;
+  font-weight: 700; font-size: .95rem; color: var(--heading); text-decoration: none;
+  background: var(--glass); border: 1px solid var(--glass-line);
+  transition: border-color .2s, background .2s, transform .2s;
+}
+.nfc-act svg { color: var(--gold-2); }
+.nfc-act:hover { color: var(--heading); border-color: rgba(216, 180, 90, .6); background: var(--glass-2); }
+.nfc-act:active { transform: scale(.97); }
+
+/* ---------- Blocs ---------- */
+.nfc-block { margin-top: 30px; }
+.nfc-h2 { font-size: .8rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 0 0 12px; display: flex; align-items: center; gap: 12px; }
+.nfc-h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(216, 180, 90, .45), transparent); }
+
+.nfc-offers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.nfc-offers a {
+  position: relative; display: grid; gap: 3px; padding: 16px 48px 16px 18px; border-radius: 20px;
+  text-decoration: none; background: var(--glass); border: 1px solid var(--glass-line);
+  transition: border-color .25s, background .25s;
+}
+.nfc-offers a::after { /* flèche */
+  content: ""; position: absolute; right: 20px; top: 50%; width: 9px; height: 9px; margin-top: -5px;
+  border-top: 2px solid var(--gold-2); border-right: 2px solid var(--gold-2); transform: rotate(45deg);
+  transition: right .25s;
+}
+.nfc-offers a:hover { border-color: rgba(216, 180, 90, .55); background: var(--glass-2); }
+.nfc-offers a:hover::after { right: 16px; }
+.nfc-offers b { font: 500 .98rem/1.3 var(--display); color: var(--heading); letter-spacing: -0.01em; }
+.nfc-offers span { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+
+.nfc-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.nfc-facts li { position: relative; padding-left: 24px; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.nfc-facts li::before { content: ""; position: absolute; left: 3px; top: .45em; width: 8px; height: 8px; background: var(--gold-2); transform: rotate(45deg); box-shadow: 0 0 10px var(--gold); }
+.nfc-facts b { display: block; color: var(--heading); font-size: .98rem; }
+
+/* ---------- Appel à l'action (panneau violet du site) ---------- */
+.nfc-cta {
+  margin-top: 30px; padding: 24px 22px; border-radius: 26px; text-align: center;
+  background: radial-gradient(420px 220px at 90% 0%, rgba(216, 180, 90, .26), transparent 60%), linear-gradient(150deg, var(--purple), var(--purple-2));
+  border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+.nfc-cta h2 { font-size: 1.15rem; margin: 0 0 8px; }
+.nfc-cta p { color: #e4dbf7; font-size: .95rem; margin: 0 0 18px; }
+.nfc-cta__btns { display: grid; gap: 10px; }
+.nfc-cta .btn { width: 100%; padding: 15px 20px; }
+
+/* ---------- Pied de carte ---------- */
+.nfc-foot { margin-top: 26px; text-align: center; }
+.nfc-places { margin: 0 0 14px; font-size: .86rem; color: var(--muted); letter-spacing: .02em; }
+.nfc-share {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font: 700 .9rem/1 var(--sans); color: var(--gold-2);
+  padding: 11px 18px; border-radius: 999px; background: rgba(216, 180, 90, .06);
+  border: 0; box-shadow: inset 0 0 0 1.5px rgba(216, 180, 90, .5);
+}
+.nfc-share:hover { background: rgba(216, 180, 90, .14); }
+.nfc-copied { min-height: 1.4em; margin: 8px 0 0; font-size: .84rem; color: var(--aqua); }
+.nfc-note { text-align: center; margin: 18px 0 0; font: 400 .78rem var(--display); letter-spacing: .06em; color: rgba(155, 184, 191, .7); }
+
+/* ---------- Intro : le logo s'affiche puis s'efface (CSS seul, jamais bloquant) ---------- */
+.nfc-intro {
+  position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; pointer-events: none;
+  background: radial-gradient(600px 400px at 50% 45%, rgba(30, 110, 130, .6), transparent 70%), #051c24;
+  animation: intro-out .7s cubic-bezier(.6, 0, .3, 1) 1.15s forwards;
+}
+.nfc-intro__inner { display: grid; justify-items: center; gap: 16px; animation: intro-in .9s cubic-bezier(.2, .7, .2, 1) both; }
+.nfc-intro img { width: 92px; height: auto; filter: drop-shadow(0 0 24px rgba(216, 180, 90, .45)); }
+.nfc-intro__name { font: 500 1.05rem var(--display); letter-spacing: .02em; color: var(--gold-2); }
+@keyframes intro-in { from { opacity: 0; transform: scale(.86); } to { opacity: 1; transform: none; } }
+@keyframes intro-out { to { opacity: 0; visibility: hidden; transform: scale(1.06); } }
+.nfc-intro ~ .nfc .nfc-card { animation-delay: 1.25s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nfc-intro { display: none; }
+}
+@media (min-width: 560px) {
+  .nfc { padding-top: 48px; padding-bottom: 48px; }
+}

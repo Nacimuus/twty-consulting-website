@@ -3,11 +3,17 @@ VERSION:3.0
 N:Touenti;Nacim;;;
 FN:Nacim Touenti
 ORG:Twty Consulting
-TITLE:Payment Systems Expert · Project Leader
-EMAIL;TYPE=INTERNET,WORK:Nacim.twty@gmail.com
-TEL;TYPE=CELL:+33000000000
-URL:https://yourdomain.com
-URL;TYPE=LinkedIn:https://www.linkedin.com/in/your-linkedin-profile
-NOTE:Payment Systems Expert, Project Management Leader and Founder of Twty Consulting. Tech-driven consulting for a human-centered world.
+TITLE:Formateur\, coach et enseignant à l'université
+ROLE:Fondateur de Twty Consulting
+EMAIL;TYPE=INTERNET,WORK,PREF:contact@twty.fr
+TEL;TYPE=CELL,VOICE,PREF:+33698563366
+TEL;TYPE=WORK,VOICE:+41762912016
+TEL;TYPE=WORK,VOICE:+212774174115
+item1.URL:https://www.twty.fr/
+item1.X-ABLabel:Site web
+item2.URL:https://www.linkedin.com/in/nacimuus/
+item2.X-ABLabel:LinkedIn
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/nacimuus/
+ADR;TYPE=WORK:;;;Paris – La Défense;;;France
+NOTE:Formation\, coaching et accompagnement de startups. 10 ans de projets internationaux (fintech et paiement électronique). Paris · Zurich · Tanger.
 END:VCARD
-

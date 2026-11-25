@@ -124,7 +124,7 @@
     sparkle(x, y);
     // Laisser le temps de voir les étincelles avant de quitter la page
     var href = btn.getAttribute("href");
-    if (href && !reduceMotion && btn.tagName === "A" && !btn.target && !e.metaKey && !e.ctrlKey && href.charAt(0) !== "#" && href.indexOf("mailto:") !== 0) {
+    if (href && !reduceMotion && btn.tagName === "A" && !btn.target && !btn.hasAttribute("download") && !e.metaKey && !e.ctrlKey && href.charAt(0) !== "#" && href.indexOf("mailto:") !== 0) {
       e.preventDefault();
       setTimeout(function () { window.location.href = href; }, 320);
     }
