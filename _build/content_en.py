@@ -502,7 +502,7 @@ CENTRES = {
 """,
 }
 
-LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">LADR</a>' if SITE["ladr_url"] else "LADR")
+LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">Les Architectes de la Réussite</a>' if SITE["ladr_url"] else "Les Architectes de la Réussite")
 
 ABOUT = {
     "key": "about",
@@ -527,7 +527,7 @@ ABOUT = {
           <dt>Languages</dt><dd>French, English</dd>
           <dt>Locations</dt><dd>Paris – La Défense, Zurich, Tangier</dd>
           <dt>Profile</dt><dd><a href="{SITE['linkedin_url']}" rel="me noopener">LinkedIn</a></dd>
-          <dt>Involvement</dt><dd>Founder of {LADR}</dd>
+          <dt>Involvement</dt><dd>Founder of the non-profit {LADR}</dd>
         </dl>
       </div>
     </div>
@@ -576,7 +576,7 @@ CONTACT_PAGE = {
   <div class="wrap">
     <p class="crumbs"><a href="/en/">Home</a> / Contact</p>
     <h1>Let's talk</h1>
-    <p class="lead">A few lines are enough. I'll reply fast, with a 30-minute slot.</p>
+    <p class="lead">A few lines are enough. I'll reply within 48 hours.</p>
   </div>
 </section>
 <section class="section">
@@ -590,6 +590,7 @@ CONTACT_PAGE = {
         <label>Organisation<input name="organisation" autocomplete="organization"></label>
         <label>Your need
           <select name="need">
+            <option>Book my free session</option>
             <option>Training for my team</option>
             <option>One-to-one coaching</option>
             <option>Startup support</option>

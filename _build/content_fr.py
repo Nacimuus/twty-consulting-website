@@ -605,7 +605,7 @@ CENTRES = {
 }
 
 # ---------------------------------------------------------------- À propos
-LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">LADR</a>' if SITE["ladr_url"] else "LADR")
+LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">Les Architectes de la Réussite</a>' if SITE["ladr_url"] else "Les Architectes de la Réussite")
 
 ABOUT = {
     "key": "about",
@@ -630,7 +630,7 @@ ABOUT = {
           <dt>Langues</dt><dd>Français, anglais</dd>
           <dt>Présence</dt><dd>Paris – La Défense, Zurich, Tanger</dd>
           <dt>Profil</dt><dd><a href="{SITE['linkedin_url']}" rel="me noopener">LinkedIn</a></dd>
-          <dt>Engagement</dt><dd>Fondateur de {LADR}</dd>
+          <dt>Engagement</dt><dd>Fondateur de l'association {LADR}</dd>
         </dl>
       </div>
     </div>
@@ -683,7 +683,7 @@ CONTACT_PAGE = {
   <div class="wrap">
     <p class="crumbs"><a href="/">Accueil</a> / Contact</p>
     <h1>Parlons-en</h1>
-    <p class="lead">Quelques lignes suffisent. Je vous réponds vite, avec un créneau de 30 minutes.</p>
+    <p class="lead">Quelques lignes suffisent. Je vous réponds sous 48 h.</p>
   </div>
 </section>
 <section class="section">
@@ -697,6 +697,7 @@ CONTACT_PAGE = {
         <label>Organisation<input name="organisation" autocomplete="organization"></label>
         <label>Votre besoin
           <select name="besoin">
+            <option>Réserver ma séance offerte</option>
             <option>Formation pour mon équipe</option>
             <option>Coaching individuel</option>
             <option>Accompagnement de startup</option>
