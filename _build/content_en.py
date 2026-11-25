@@ -356,40 +356,60 @@ COACHING = {
 STARTUPS = {
     "key": "startups",
     "slug": SLUGS["startups"],
-    "title": "Support for startups and entrepreneurs: project, product, sales | Nacim Touenti",
-    "description": "A 3-month Launch programme, mentoring for entrepreneurs, workshops for incubators and project turnaround. Startup support by Nacim Touenti.",
+    "title": "Startup booster: launch, sales development, processes, profitability | Nacim Touenti",
+    "description": "Support for startups and SMEs: launch, sales processes, lead generation, project and product processes, P&L. 3-month Launch programme, à la carte, mentoring. Example: +50% leads at Humen Recrut.",
     "body": page_hero(
         '<a href="/en/">Home</a> / Startups',
-        "Support for startups and entrepreneurs",
-        "An idea, plenty of energy, but no manual? I help you frame, test and sell. Fast.",
+        "Startup booster.",
+        "Frame, test, sell, structure. I help you through every stage, with field-tested methods. Always tailored.",
         "startups.webp",
         "Startup team working on a roadmap",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Book a discovery call</a></div>',
     ) + f"""
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>How I help</h2></div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Launch programme</h3><p class="who">3 months, one session a week</p></div>
-        <p class="problem">Three months from idea to launch.</p>
-        <div><ul><li>A framed project, a clear roadmap</li><li>A product tested on real customers</li><li>An offer, a pitch, a sales plan</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Mentoring for entrepreneurs</h3><p class="who">Regular meetings over time</p></div>
-        <p class="problem">Someone by your side when you have to call it.</p>
-        <div><ul><li>A check-in every two weeks or every month</li><li>Pitch review</li><li>Useful introductions</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Workshops for incubators and schools</h3><p class="who">Half a day to a week</p></div>
-        <p class="problem">Move a whole cohort forward at once. Like at Entrepreneur Week.</p>
-        <div><ul><li>Idea, market and pitch workshops</li><li>Juries and individual feedback</li><li>A programme built with you</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Project turnaround</h3><p class="who">Short engagement</p></div>
-        <p class="problem">Slipping? We take back control. Fast.</p>
-        <div><ul><li>Express diagnosis and recovery plan</li><li>Scope and team reset</li><li>The right tools (Jira, Notion, ClickUp…)</li></ul></div>
-      </article>
+    <div class="section-head"><h2>Where I step in</h2></div>
+    <div class="course-grid">
+      <article class="course-card"><h3>Launch</h3><p class="hook">From idea to first customers.</p><ul><li>Target and value proposition</li><li>Market research, quick tests</li><li>Pitch and first meetings</li></ul></article>
+      <article class="course-card"><h3>Sell</h3><p class="hook">More leads, more meetings, more customers.</p><ul><li>Sales processes</li><li>Lead generation and automation</li><li>Sales policy, team training</li></ul></article>
+      <article class="course-card"><h3>Structure</h3><p class="hook">Processes that hold as the team grows.</p><ul><li>Project and product processes</li><li>Roadmap and priorities</li><li>Automating repetitive work</li></ul></article>
+      <article class="course-card"><h3>Make it profitable</h3><p class="hook">Grow, yes. And make money doing it.</p><ul><li>Reading and steering the P&amp;L</li><li>Profitability optimisation</li><li>Management dashboards</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="section-head"><h2>Real results</h2></div>
+    <article class="case-study">
+      <div>
+        <span class="tag">Sales development</span>
+        <h3>Humen Recrut</h3>
+        <p>Sales structure overhaul, process set-up, training of the sales team and SDRs, automated lead generation.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+50%</b><span>more leads</span></div>
+        <div class="stat"><b>+3</b><span>customer meetings a week, on average over 3 months</span></div>
+      </div>
+    </article>
+    <article class="case-study case-study--small">
+      <div>
+        <span class="tag">Training</span>
+        <h3>AWA</h3>
+        <p>Team training on sales strategy and sales policy.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Formats</h2></div>
+    <div class="reasons">
+      <div class="reason"><h3>Launch programme</h3><p>3 months, 1 to 2 sessions a week. Dedicated weeks if needed.</p></div>
+      <div class="reason"><h3>À la carte</h3><p>One specific topic, including a project to turn around.</p></div>
+      <div class="reason"><h3>Mentoring</h3><p>Regular check-ins to stay on course.</p></div>
+      <div class="reason"><h3>Workshops</h3><p>For incubators and schools, on the Entrepreneur Week model.</p></div>
     </div>
   </div>
 </section>

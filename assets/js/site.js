@@ -138,7 +138,7 @@
 
   /* ---------- Apparitions au défilement ---------- */
   if (!reduceMotion && "IntersectionObserver" in window) {
-    var targets = document.querySelectorAll(".section-head, .offer-row, .reason, .case, .course, .course-card, .steps li, .proof-item, .faq details, .ticks li, .chips, .cta-band h2, .two-col > div");
+    var targets = document.querySelectorAll(".section-head, .offer-row, .reason, .case, .course, .course-card, .case-study, .steps li, .proof-item, .faq details, .ticks li, .chips, .cta-band h2, .two-col > div");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }

@@ -436,12 +436,12 @@ COACHING = {
 STARTUPS = {
     "key": "startups",
     "slug": SLUGS["startups"],
-    "title": "Accompagnement de startups et d'entrepreneurs : projet, produit, ventes | Nacim Touenti",
-    "description": "Programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et redressement de projet. Accompagnement de startups par Nacim Touenti.",
+    "title": "Boosteur de startups : lancement, développement commercial, process, rentabilité | Nacim Touenti",
+    "description": "Accompagnement de startups et de PME : lancement, process commerciaux, lead generation, process projet et produit, P&L. Programme Launch sur 3 mois, à la carte, mentorat. Exemple : +50 % de leads chez Humen Recrut.",
     "body": page_hero(
         '<a href="/">Accueil</a> / Startups',
-        "Accompagnement de startups et d'entrepreneurs",
-        "Une idée, de l'énergie, mais pas de mode d'emploi ? Je vous aide à cadrer, tester et vendre. Vite.",
+        "Boosteur de startups.",
+        "Cadrer, tester, vendre, structurer. Je vous aide à passer chaque étape, avec des méthodes de terrain. Toujours sur mesure.",
         "startups.webp",
         "Équipe de startup travaillant sur une feuille de route",
         f'<div class="actions"><a class="btn" href="{CONTACT}">Réserver un appel découverte</a></div>',
@@ -449,29 +449,53 @@ STARTUPS = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Comment je vous aide</h2>
+      <h2>Là où j'interviens</h2>
     </div>
-    <div class="offer-rows">
-      <article class="offer-row">
-        <div><h3>Programme Launch</h3><p class="who">3 mois, une séance par semaine</p></div>
-        <p class="problem">Trois mois pour passer de l'idée au lancement.</p>
-        <div><ul><li>Un projet cadré, une feuille de route claire</li><li>Un produit testé sur de vrais clients</li><li>Une offre, un pitch, un plan commercial</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Mentorat d'entrepreneurs</h3><p class="who">Rendez-vous réguliers, sur la durée</p></div>
-        <p class="problem">Quelqu'un à vos côtés quand il faut trancher.</p>
-        <div><ul><li>Un point tous les 15 jours ou tous les mois</li><li>Relecture de votre pitch</li><li>Mises en relation utiles</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Ateliers pour incubateurs et écoles</h3><p class="who">Demi-journée à une semaine</p></div>
-        <p class="problem">Faites avancer toute une promo d'un coup. Comme à l'Entrepreneur Week.</p>
-        <div><ul><li>Ateliers idée, marché, pitch</li><li>Jurys et retours individuels</li><li>Un programme construit avec vous</li></ul></div>
-      </article>
-      <article class="offer-row">
-        <div><h3>Redressement de projet</h3><p class="who">Mission courte</p></div>
-        <p class="problem">Ça dérape ? On reprend la main. Vite.</p>
-        <div><ul><li>Diagnostic express et plan de reprise</li><li>Périmètre et équipe recadrés</li><li>Les bons outils (Jira, Notion, ClickUp…)</li></ul></div>
-      </article>
+    <div class="course-grid">
+      <article class="course-card"><h3>Lancer</h3><p class="hook">De l'idée aux premiers clients.</p><ul><li>Cible et proposition de valeur</li><li>Étude de marché, tests rapides</li><li>Pitch et premiers rendez-vous</li></ul></article>
+      <article class="course-card"><h3>Vendre</h3><p class="hook">Plus de leads, plus de rendez-vous, plus de clients.</p><ul><li>Process commerciaux</li><li>Lead generation et automatisation</li><li>Politique commerciale, formation des équipes</li></ul></article>
+      <article class="course-card"><h3>Structurer</h3><p class="hook">Des process qui tiennent quand l'équipe grandit.</p><ul><li>Process projet et produit</li><li>Roadmap et priorités</li><li>Automatisation des tâches répétitives</li></ul></article>
+      <article class="course-card"><h3>Rentabiliser</h3><p class="hook">Grandir, oui. En gagnant de l'argent.</p><ul><li>Lecture et pilotage du P&amp;L</li><li>Optimisation de la rentabilité</li><li>Tableaux de bord de pilotage</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Des résultats concrets</h2>
+    </div>
+    <article class="case-study">
+      <div>
+        <span class="tag">Développement commercial</span>
+        <h3>Humen Recrut</h3>
+        <p>Refonte de la structure commerciale, mise en place des process, formation de l'équipe commerciale et des SDR, automatisation de la génération de leads.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+50 %</b><span>de leads</span></div>
+        <div class="stat"><b>+3</b><span>rendez-vous clients par semaine, en moyenne sur 3 mois</span></div>
+      </div>
+    </article>
+    <article class="case-study case-study--small">
+      <div>
+        <span class="tag">Formation</span>
+        <h3>AWA</h3>
+        <p>Formation des équipes à la stratégie et à la politique commerciale.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Formats</h2>
+    </div>
+    <div class="reasons">
+      <div class="reason"><h3>Programme Launch</h3><p>3 mois, 1 à 2 séances par semaine. Des semaines dédiées si besoin.</p></div>
+      <div class="reason"><h3>À la carte</h3><p>Un sujet précis, y compris un projet à redresser.</p></div>
+      <div class="reason"><h3>Mentorat</h3><p>Un point régulier pour garder le cap.</p></div>
+      <div class="reason"><h3>Ateliers</h3><p>Pour incubateurs et écoles, sur le modèle d'Entrepreneur Week.</p></div>
     </div>
   </div>
 </section>
@@ -730,7 +754,7 @@ LLMS_TXT = f"""
 ## Offres
 - [Formations]({BASE}/formations.html) : gestion de projet agile et hybride, produit et roadmap, création d'entreprise, scale-up (process commerciaux, lead generation, P&L), finance pour non-financiers, BI et tableaux de bord, soft skills et posture, fondamentaux du paiement électronique. En modules d'heures ou de jours.
 - [Coaching]({BASE}/coaching.html) : prise de parole, leadership, confiance en soi, créativité, gestion du stress, création ou restructuration d'entreprise. Pour dirigeants, managers, jeunes diplômés et équipes. 1 h découverte offerte, puis accompagnement sur mesure en packs de 5 ou 10 séances.
-- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : programme Launch sur 3 mois, mentorat d'entrepreneurs, ateliers pour incubateurs et écoles, redressement de projet.
+- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : lancement, développement commercial (process, lead generation, politique commerciale), process projet et produit, rentabilité (P&L). Programme Launch sur 3 mois (1 à 2 séances par semaine), à la carte, mentorat, ateliers. Références : Humen Recrut (+50 % de leads, +3 rendez-vous clients par semaine en moyenne sur 3 mois), AWA (formation stratégie et politique commerciale).
 - [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, conception de modules et de programmes, examens et cas pratiques.
 
 ## Personne
