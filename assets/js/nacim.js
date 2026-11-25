@@ -21,7 +21,7 @@
       var en = root.getAttribute("data-lang") === "en";
       var data = {
         title: "Nacim Touenti — Twty Consulting",
-        text: en ? "Nacim Touenti: trainer, coach and university lecturer." : "Nacim Touenti : formateur, coach et enseignant à l'université.",
+        text: en ? "Nacim Touenti: trainer, coach and university guest lecturer." : "Nacim Touenti : formateur, coach et intervenant à l'université.",
         url: url
       };
       if (navigator.share) {
