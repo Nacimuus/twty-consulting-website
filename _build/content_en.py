@@ -59,7 +59,7 @@ BIO_LONG = (
     "IUT Paris Descartes, ISG, the Sorbonne and PSB, and trained more than 1,000 people. He draws on 10 years "
     "of managing international projects across Europe and Africa, for banks, fintechs, retailers, online "
     "businesses and non-profits, with project and opportunity portfolios worth more than 100 million euros a "
-    "year. His subjects: project management, product, starting a business, scale-up, finance, BI and soft "
+    "year. His subjects: AI and automation, project management, product, starting a business, scale-up, finance, BI and soft "
     "skills. He works from Paris, Zurich and Tangier, in French and English."
 )
 
@@ -102,7 +102,7 @@ HOME = {
   </div>
 </section>
 
-{ticker(['Project management', 'Product', 'Starting a business', 'Scale-up', 'Finance', 'BI and dashboards', 'Lead generation', 'Soft skills', 'Coaching', 'Leadership'], 'Topics')}
+{ticker(['AI and automation', 'AI agents', 'Project management', 'Product', 'Starting a business', 'Scale-up', 'Finance', 'BI and dashboards', 'Lead generation', 'Soft skills', 'Coaching', 'Leadership'], 'Topics')}
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
     <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa, with multicultural teams.</p></div>
@@ -121,7 +121,7 @@ HOME = {
       <article class="offer-row">
         <div><h3>Training</h3><p class="who">Companies, training centres, schools and universities</p></div>
         <p class="problem">Topics that do you good. Training you use on Monday.</p>
-        <div><ul><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
+        <div><ul><li>AI and automation</li><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
       </article>
       <article class="offer-row">
         <div><h3>Coaching</h3><p class="who">Executives, managers, project leads, graduates</p></div>
@@ -131,7 +131,7 @@ HOME = {
       <article class="offer-row">
         <div><h3>Startup support</h3><p class="who">Founders, entrepreneurs, project owners</p></div>
         <p class="problem">An idea is good. Customers are better.</p>
-        <div><ul><li>Launch programme, 3 months</li><li>Business development and sales support</li><li>Project and product processes</li><li>Mentoring for entrepreneurs</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
+        <div><ul><li>Launch programme, 3 months</li><li>Business development and sales support</li><li>Project and product processes</li><li>AI transition, agents and automation</li><li>Mentoring for entrepreneurs</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
       </article>
     </div>
   </div>
@@ -187,6 +187,16 @@ HOME = {
 }
 
 CATALOG = [
+    ("AI and automation", [
+        {"id": "ai-every-day", "name": "AI in everyday work",
+         "hook": "Save hours every week, without being an expert.",
+         "topics": ["What AI can do, and what it can't", "Writing good requests", "Concrete use cases for your job", "Good practice: data, security, reliability"],
+         "for": "All teams, managers, leaders"},
+        {"id": "ai-agents", "name": "AI agents and task automation",
+         "hook": "Hand repetitive tasks over to AI.",
+         "topics": ["Spot the tasks to automate", "Build tailored AI agents", "Automate workflows end to end", "Measure the time saved"],
+         "for": "Leaders, operations teams, SMEs and startups"},
+    ]),
     ("Run your projects", [
         {"id": "project-management", "name": "Agile and hybrid project management",
          "hook": "Deliver on time. Without burning out the team.",
@@ -253,13 +263,13 @@ def catalog_html():
 TRAINING = {
     "key": "training",
     "slug": SLUGS["training"],
-    "title": "Project management, product, business creation, finance and BI training | Nacim Touenti",
-    "description": "Tailored training in project management, product, starting a business, scale-up, finance, BI and soft skills. Hours or days, in companies and schools, by Nacim Touenti.",
+    "title": "AI, project management, product, business creation, finance and BI training | Nacim Touenti",
+    "description": "Tailored training in AI and automation, project management, product, starting a business, scale-up, finance, BI and soft skills. Hours or days, in companies and schools, by Nacim Touenti.",
     "schema": [course_schema(c["name"], c["hook"], "en", f"{BASE}/en/{SLUGS['training']}#{c['id']}") for c in COURSES],
     "body": page_hero(
         '<a href="/en/">Home</a> / Training',
         "Training that does you good.",
-        "Project management, product, starting a business, scale-up, finance, BI. Tailored, hands-on, usable on Monday.",
+        "AI, project management, product, starting a business, scale-up, finance, BI. Tailored, hands-on, usable on Monday.",
         "formation.webp",
         "Interactive small-group training session",
         f'<div class="actions"><a class="btn" href="#catalogue">See the catalogue</a><a class="btn btn--ghost" href="{CONTACT}">Request a tailored course</a></div>',
@@ -368,8 +378,8 @@ COACHING = {
 STARTUPS = {
     "key": "startups",
     "slug": SLUGS["startups"],
-    "title": "Startup booster: launch, sales development, processes, profitability | Nacim Touenti",
-    "description": "Support for startups and SMEs: launch, sales processes, lead generation, project and product processes, P&L. 3-month Launch programme, à la carte, mentoring. Example: +50% leads at Humen Recrut.",
+    "title": "Startup booster: launch, sales development, AI transition, profitability | Nacim Touenti",
+    "description": "Support for startups and SMEs: launch, sales processes, lead generation, project and product processes, AI transition and agents, P&L. 3-month Launch programme, à la carte, mentoring. Example: +50% leads at Humen Recrut.",
     "body": page_hero(
         '<a href="/en/">Home</a> / Startups',
         "Startup booster.",
@@ -386,6 +396,7 @@ STARTUPS = {
       <article class="course-card"><h3>Sell</h3><p class="hook">More leads, more meetings, more customers.</p><ul><li>Sales processes</li><li>Lead generation and automation</li><li>Sales policy, team training</li></ul></article>
       <article class="course-card"><h3>Structure</h3><p class="hook">Processes that hold as the team grows.</p><ul><li>Project and product processes</li><li>Roadmap and priorities</li><li>Automating repetitive work</li></ul></article>
       <article class="course-card"><h3>Make it profitable</h3><p class="hook">Grow, yes. And make money doing it.</p><ul><li>Reading and steering the P&amp;L</li><li>Profitability optimisation</li><li>Management dashboards</li></ul></article>
+      <article class="course-card course-card--wide"><h3>Move to AI</h3><p class="hook">Save time, without losing control.</p><ul><li>Review of uses and possible gains</li><li>Tailored AI agents</li><li>AI automation of repetitive tasks</li><li>Training and support for your teams</li></ul></article>
     </div>
   </div>
 </section>
@@ -484,7 +495,7 @@ CENTRES = {
   <div class="wrap two-col">
     <div>
       <h2>Subjects</h2>
-      <ul class="chips chips--big"><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li><li>Finance</li><li>BI and dashboards</li><li>Market research</li><li>Soft skills</li><li>Leadership</li></ul>
+      <ul class="chips chips--big"><li>AI and automation</li><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li><li>Finance</li><li>BI and dashboards</li><li>Market research</li><li>Soft skills</li><li>Leadership</li></ul>
       <p style="margin-top:24px"><a class="more" href="{u('training')}">See the full catalogue</a></p>
     </div>
     <div>
@@ -533,7 +544,7 @@ ABOUT = {
         <p class="lead">Trainer, coach, startup booster. And still an international project manager.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
-          <dt>Training</dt><dd>Project management, product, starting a business, scale-up, finance, BI, soft skills</dd>
+          <dt>Training</dt><dd>AI and automation, project management, product, starting a business, scale-up, finance, BI, soft skills</dd>
           <dt>Coaching</dt><dd>Executives, managers, graduates, teams</dd>
           <dt>Sectors</dt><dd>Banks, fintechs, retailers, online businesses, non-profits</dd>
           <dt>Languages</dt><dd>French, English</dd>

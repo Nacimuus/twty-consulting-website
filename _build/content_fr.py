@@ -57,7 +57,7 @@ BIO_LONG = (
     "personnes. Il s'appuie sur 10 ans de management de projets internationaux, en Europe et en Afrique, "
     "auprès de banques, de fintechs, de retailers, d'entreprises du digital et d'associations, avec des "
     "portefeuilles de projets et d'opportunités de plus de 100 millions d'euros par an. Ses sujets : "
-    "gestion de projet, produit, création d'entreprise, scale-up, finance, BI et soft skills. Il "
+    "IA et automatisation, gestion de projet, produit, création d'entreprise, scale-up, finance, BI et soft skills. Il "
     "intervient depuis Paris, Zurich et Tanger, en français et en anglais."
 )
 
@@ -101,7 +101,7 @@ HOME = {
   </div>
 </section>
 
-{ticker(['Gestion de projet', 'Produit', "Création d'entreprise", 'Scale-up', 'Finance', 'BI et dashboards', 'Lead generation', 'Soft skills', 'Coaching', 'Leadership'], 'Thèmes')}
+{ticker(['IA et automatisation', 'Agents IA', 'Gestion de projet', 'Produit', "Création d'entreprise", 'Scale-up', 'Finance', 'BI et dashboards', 'Lead generation', 'Soft skills', 'Coaching', 'Leadership'], 'Thèmes')}
 <section class="proof" aria-label="En bref">
   <div class="wrap proof-grid">
     <div class="proof-item">
@@ -134,6 +134,7 @@ HOME = {
         <p class="problem">Les sujets qui vous feront du bien. Des formations qu'on applique dès le lundi.</p>
         <div>
           <ul>
+            <li>IA et automatisation</li>
             <li>Gestion de projet</li>
             <li>Produit</li>
             <li>Création d'entreprise</li>
@@ -168,6 +169,7 @@ HOME = {
             <li>Programme Launch, 3 mois</li>
             <li>Développement et accompagnement commercial</li>
             <li>Process de gestion de projet et produit</li>
+            <li>Transition IA, agents et automatisation</li>
             <li>Mentorat d'entrepreneurs</li>
           </ul>
           <a class="more" href="/{SLUGS['startups']}">Voir l'accompagnement</a>
@@ -251,6 +253,16 @@ HOME = {
 
 # ---------------------------------------------------------------- Formations
 CATALOG = [
+    ("IA et automatisation", [
+        {"id": "ia-au-quotidien", "name": "L'IA au quotidien",
+         "hook": "Gagner des heures chaque semaine, sans être expert.",
+         "topics": ["Ce que l'IA sait faire, et ce qu'elle ne sait pas faire", "Bien formuler ses demandes", "Des cas d'usage concrets pour votre métier", "Bonnes pratiques : données, sécurité, fiabilité"],
+         "for": "Toutes les équipes, managers, dirigeants"},
+        {"id": "agents-ia", "name": "Agents IA et automatisation des tâches",
+         "hook": "Confier les tâches répétitives à l'IA.",
+         "topics": ["Repérer les tâches à automatiser", "Créer des agents IA sur mesure", "Automatiser des flux de travail de bout en bout", "Mesurer le temps gagné"],
+         "for": "Dirigeants, équipes opérationnelles, PME et startups"},
+    ]),
     ("Piloter vos projets", [
         {"id": "gestion-de-projet", "name": "Gestion de projet agile et hybride",
          "hook": "Livrer à l'heure. Sans épuiser l'équipe.",
@@ -317,13 +329,13 @@ def catalog_html():
 TRAINING = {
     "key": "training",
     "slug": SLUGS["training"],
-    "title": "Formations gestion de projet, produit, création d'entreprise, finance, BI | Nacim Touenti",
-    "description": "Formations sur mesure en gestion de projet, produit, création d'entreprise, scale-up, finance, BI et soft skills. En heures ou en jours, en entreprise et en école, par Nacim Touenti.",
+    "title": "Formations IA, gestion de projet, produit, création d'entreprise, finance, BI | Nacim Touenti",
+    "description": "Formations sur mesure en IA et automatisation, gestion de projet, produit, création d'entreprise, scale-up, finance, BI et soft skills. En heures ou en jours, en entreprise et en école, par Nacim Touenti.",
     "schema": [course_schema(c["name"], c["hook"], "fr", f"{BASE}/{SLUGS['training']}#{c['id']}") for c in COURSES],
     "body": page_hero(
         '<a href="/">Accueil</a> / Formations',
         "Des formations qui vous font du bien.",
-        "Gestion de projet, produit, création d'entreprise, scale-up, finance, BI. Sur mesure, concrètes, applicables dès le lundi.",
+        "IA, gestion de projet, produit, création d'entreprise, scale-up, finance, BI. Sur mesure, concrètes, applicables dès le lundi.",
         "formation.webp",
         "Session de formation interactive en petit groupe",
         f'<div class="actions"><a class="btn" href="#catalogue">Voir le catalogue</a><a class="btn btn--ghost" href="{CONTACT}">Demander une formation sur mesure</a></div>',
@@ -447,8 +459,8 @@ COACHING = {
 STARTUPS = {
     "key": "startups",
     "slug": SLUGS["startups"],
-    "title": "Boosteur de startups : lancement, développement commercial, process, rentabilité | Nacim Touenti",
-    "description": "Accompagnement de startups et de PME : lancement, process commerciaux, lead generation, process projet et produit, P&L. Programme Launch sur 3 mois, à la carte, mentorat. Exemple : +50 % de leads chez Humen Recrut.",
+    "title": "Boosteur de startups : lancement, développement commercial, transition IA, rentabilité | Nacim Touenti",
+    "description": "Accompagnement de startups et de PME : lancement, process commerciaux, lead generation, process projet et produit, transition IA et agents, P&L. Programme Launch sur 3 mois, à la carte, mentorat. Exemple : +50 % de leads chez Humen Recrut.",
     "body": page_hero(
         '<a href="/">Accueil</a> / Startups',
         "Boosteur de startups.",
@@ -467,6 +479,7 @@ STARTUPS = {
       <article class="course-card"><h3>Vendre</h3><p class="hook">Plus de leads, plus de rendez-vous, plus de clients.</p><ul><li>Process commerciaux</li><li>Lead generation et automatisation</li><li>Politique commerciale, formation des équipes</li></ul></article>
       <article class="course-card"><h3>Structurer</h3><p class="hook">Des process qui tiennent quand l'équipe grandit.</p><ul><li>Process projet et produit</li><li>Roadmap et priorités</li><li>Automatisation des tâches répétitives</li></ul></article>
       <article class="course-card"><h3>Rentabiliser</h3><p class="hook">Grandir, oui. En gagnant de l'argent.</p><ul><li>Lecture et pilotage du P&amp;L</li><li>Optimisation de la rentabilité</li><li>Tableaux de bord de pilotage</li></ul></article>
+      <article class="course-card course-card--wide"><h3>Passer à l'IA</h3><p class="hook">Gagner du temps, sans perdre la main.</p><ul><li>Diagnostic des usages et des gains possibles</li><li>Création d'agents IA sur mesure</li><li>Automatisation IA des tâches répétitives</li><li>Formation et accompagnement des équipes</li></ul></article>
     </div>
   </div>
 </section>
@@ -583,7 +596,7 @@ CENTRES = {
     <div>
       <h2>Sujets</h2>
       <ul class="chips chips--big">
-        <li>Gestion de projet</li><li>Produit</li><li>Création d'entreprise</li><li>Scale-up</li><li>Finance</li><li>BI et dashboards</li><li>Étude de marché</li><li>Soft skills</li><li>Leadership</li>
+        <li>IA et automatisation</li><li>Gestion de projet</li><li>Produit</li><li>Création d'entreprise</li><li>Scale-up</li><li>Finance</li><li>BI et dashboards</li><li>Étude de marché</li><li>Soft skills</li><li>Leadership</li>
       </ul>
       <p style="margin-top:24px"><a class="more" href="/{SLUGS['training']}">Voir le catalogue complet</a></p>
     </div>
@@ -636,7 +649,7 @@ ABOUT = {
         <p class="lead">Formateur, coach, boosteur de startups. Et toujours manager de projets internationaux.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
-          <dt>Formation</dt><dd>Gestion de projet, produit, création d'entreprise, scale-up, finance, BI, soft skills</dd>
+          <dt>Formation</dt><dd>IA et automatisation, gestion de projet, produit, création d'entreprise, scale-up, finance, BI, soft skills</dd>
           <dt>Coaching</dt><dd>Dirigeants, managers, jeunes diplômés, équipes</dd>
           <dt>Secteurs</dt><dd>Banques, fintechs, retailers, digital, associations</dd>
           <dt>Langues</dt><dd>Français, anglais</dd>
@@ -794,9 +807,9 @@ LLMS_TXT = f"""
 {BIO_LONG}
 
 ## Offres
-- [Formations]({BASE}/formations.html) : gestion de projet agile et hybride, produit et roadmap, création d'entreprise, scale-up (process commerciaux, lead generation, P&L), finance pour non-financiers, BI et tableaux de bord, soft skills et posture, fondamentaux du paiement électronique. En modules d'heures ou de jours.
+- [Formations]({BASE}/formations.html) : IA au quotidien, agents IA et automatisation des tâches, gestion de projet agile et hybride, produit et roadmap, création d'entreprise, scale-up (process commerciaux, lead generation, P&L), finance pour non-financiers, BI et tableaux de bord, soft skills et posture, fondamentaux du paiement électronique. En modules d'heures ou de jours.
 - [Coaching]({BASE}/coaching.html) : prise de parole, leadership, confiance en soi, créativité, gestion du stress, création ou restructuration d'entreprise. Pour dirigeants, managers, jeunes diplômés et équipes. 1 h découverte offerte, puis accompagnement sur mesure en packs de 5 ou 10 séances.
-- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : lancement, développement commercial (process, lead generation, politique commerciale), process projet et produit, rentabilité (P&L). Programme Launch sur 3 mois (1 à 2 séances par semaine), à la carte, mentorat, ateliers. Références : Humen Recrut (+50 % de leads, +3 rendez-vous clients par semaine en moyenne sur 3 mois), AWA (formation stratégie et politique commerciale).
+- [Accompagnement de startups]({BASE}/accompagnement-startup.html) : lancement, développement commercial (process, lead generation, politique commerciale), process projet et produit, transition IA (agents IA sur mesure, automatisation des tâches), rentabilité (P&L). Programme Launch sur 3 mois (1 à 2 séances par semaine), à la carte, mentorat, ateliers. Références : Humen Recrut (+50 % de leads, +3 rendez-vous clients par semaine en moyenne sur 3 mois), AWA (formation stratégie et politique commerciale).
 - [Centres de formation et écoles]({BASE}/centres-de-formation.html) : interventions, ingénierie pédagogique en présentiel et en ligne, modules clés en main, examens et jurys. Plus de 15 établissements (dont IUT Paris Descartes, ISG, XP School, Sorbonne, IUT Sénart, PSB), plus de 1000 personnes formées, plus de 20 modules créés.
 
 ## Personne
