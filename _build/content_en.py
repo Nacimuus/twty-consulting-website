@@ -49,14 +49,14 @@ UI = {
 }
 
 BIO_SHORT = (
-    "Nacim Touenti is a trainer, coach and university lecturer, and the founder of Twty Consulting. "
+    "Nacim Touenti is a corporate trainer, coach, university guest lecturer and startup booster, and the founder of Twty Consulting. "
     "He supports companies, training centres, startups and entrepreneurs, drawing on more than ten years "
     "of international project management."
 )
 
 BIO_LONG = (
-    "Nacim Touenti is a trainer, coach and university lecturer. He founded Twty Consulting to train teams, "
-    "coach managers and support startups. His edge: he practises what he teaches. For more than ten years "
+    "Nacim Touenti is a trainer, coach and university guest lecturer. He founded Twty Consulting to train teams, "
+    "coach managers and support startups. His edge: he practises what he passes on. For more than ten years "
     "he has run international projects in fintech and electronic payments, across Europe and Africa. "
     "Today he leads project management across EMEA for a global player in the sector. He created the "
     "Softies method for soft skills and runs Entrepreneur Week workshops with universities and companies. "
@@ -84,30 +84,30 @@ HOME_FAQ = [
 HOME = {
     "key": "home",
     "slug": SLUGS["home"],
-    "title": "Nacim Touenti — Trainer, coach and lecturer | Twty Consulting",
-    "description": "Trainer, coach and university lecturer. Nacim Touenti trains your teams, coaches your managers and supports your startup. 10+ years of international projects.",
+    "title": "Nacim Touenti — Trainer, coach, startup booster | Twty Consulting",
+    "description": "Trainer, coach and startup booster. Learn, grow and perform, with a smile. 10 years of international projects, 6 years of training in companies and universities.",
     "schema": [faq_schema(HOME_FAQ, "en")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>People learn best from someone who does it every day.</h1>
-      <p class="lead">I'm Nacim Touenti. Trainer, coach, university lecturer. And an international project manager for 10+ years. What I teach you, I apply every week.</p>
+      <h1>Trainer, coach, startup booster.</h1>
+      <p class="lead">Learn, grow and perform, with a smile. 10 years of international projects. 6 years of training on the topics that matter to you and your business.</p>
       <div class="actions">
         <a class="btn" href="{CONTACT}">Let's talk</a>
         <a class="btn btn--ghost" href="{u('training')}">See training courses</a>
       </div>
     </div>
-    {hero_portrait("Portrait of Nacim Touenti (photo coming soon)", ["Trainer", "Coach", "University lecturer"], "Paris, Zurich, Tangier")}
+    {hero_portrait("Portrait of Nacim Touenti (photo coming soon)", ["Trainer", "Coach", "Startup booster"], "Paris, Zurich, Tangier")}
   </div>
 </section>
 
 {ticker(['Leadership', 'Project management', 'Soft skills', 'Public speaking', 'Market research', 'Entrepreneurship', 'Coaching', 'Agile methods', 'Negotiation', 'Pitching'], 'Topics')}
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
-    <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa. Fintech and payments.</p></div>
-    <div class="proof-item"><h4>University lecturer</h4><p>I design and teach courses, case studies and exams.</p></div>
-    <div class="proof-item"><h4>Creator of the Softies method</h4><p>Soft skills you can see. Rolled out in several countries.</p></div>
+    <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa, with multicultural teams.</p></div>
+    <div class="proof-item"><h4>University guest lecturer</h4><p>And corporate trainer for 6 years.</p></div>
+    <div class="proof-item"><h4>Instructional designer</h4><p>I create tailored courses and methods.</p></div>
   </div>
 </section>
 
@@ -120,8 +120,8 @@ HOME = {
     <div class="offer-rows">
       <article class="offer-row">
         <div><h3>Training</h3><p class="who">Companies, training centres, schools and universities</p></div>
-        <p class="problem">Training people remember. And use on Monday.</p>
-        <div><ul><li>Soft skills and leadership</li><li>Project management</li><li>Market research, entrepreneurship</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
+        <p class="problem">Topics that do you good. Training you use on Monday.</p>
+        <div><ul><li>Project management</li><li>Product</li><li>Starting a business</li><li>Scale-up</li></ul><a class="more" href="{u('training')}">See the catalogue</a></div>
       </article>
       <article class="offer-row">
         <div><h3>Coaching</h3><p class="who">Executives, managers, project leads, graduates</p></div>
@@ -131,7 +131,7 @@ HOME = {
       <article class="offer-row">
         <div><h3>Startup support</h3><p class="who">Founders, entrepreneurs, project owners</p></div>
         <p class="problem">An idea is good. Customers are better.</p>
-        <div><ul><li>Launch programme, 3 months</li><li>Mentoring for entrepreneurs</li><li>Project turnaround</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
+        <div><ul><li>Launch programme, 3 months</li><li>Business development and sales support</li><li>Project and product processes</li><li>Mentoring for entrepreneurs</li></ul><a class="more" href="{u('startups')}">See startup support</a></div>
       </article>
     </div>
   </div>
@@ -142,7 +142,7 @@ HOME = {
     <div class="section-head"><h2>Why me?</h2></div>
     <div class="reasons">
       <div class="reason"><h3>I practise what I teach</h3><p>I run projects across EMEA. My advice comes from the field. It has been tested.</p></div>
-      <div class="reason"><h3>I can hold a room</h3><p>I lecture at university. In my sessions, everyone takes part. We debate, we play, we get involved.</p></div>
+      <div class="reason"><h3>I can hold a room</h3><p>I speak at universities and train in companies. In my sessions, everyone takes part. We debate, we play, we get involved.</p></div>
       <div class="reason"><h3>I speak to everyone</h3><p>Students, managers, executives. Europe and Africa. I adapt the tone, never the standard.</p></div>
     </div>
   </div>
@@ -481,8 +481,8 @@ ABOUT = {
     "key": "about",
     "slug": SLUGS["about"],
     "page_type": "ProfilePage",
-    "title": "Nacim Touenti — Trainer, coach, lecturer and founder of Twty Consulting",
-    "description": "Who is Nacim Touenti? Trainer, coach and university lecturer, founder of Twty Consulting, with 10+ years of international project management.",
+    "title": "Nacim Touenti — Trainer, coach, startup booster and founder of Twty Consulting",
+    "description": "Who is Nacim Touenti? Trainer, coach, university guest lecturer and startup booster, founder of Twty Consulting, with 10+ years of international project management.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -491,7 +491,7 @@ ABOUT = {
       <div class="portrait" role="img" aria-label="Portrait of Nacim Touenti (photo coming soon)">NT</div>
       <div>
         <h1>Nacim Touenti</h1>
-        <p class="lead">Trainer, coach, lecturer. And still an international project manager.</p>
+        <p class="lead">Trainer, coach, startup booster. And still an international project manager.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
           <dt>Training</dt><dd>Project management, leadership, soft skills, market research, entrepreneurship</dd>
@@ -510,7 +510,7 @@ ABOUT = {
   <div class="wrap">
     <div class="section-head"><h2>Three hats, one obsession</h2><p>That people really improve.</p></div>
     <div class="reasons">
-      <div class="reason"><h3>Trainer and lecturer</h3><p>At university and in companies. I design and I teach.</p></div>
+      <div class="reason"><h3>Trainer and guest lecturer</h3><p>At university and in companies. I design and I teach.</p></div>
       <div class="reason"><h3>Coach and mentor</h3><p>I created the Softies method. I coach managers and executives. I mentor entrepreneurs.</p></div>
       <div class="reason"><h3>Hands-on manager</h3><p>I run projects across EMEA. Several countries, several cultures, tight deadlines.</p></div>
     </div>

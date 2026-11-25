@@ -10,7 +10,7 @@ SITE = {
     # Lien de prise de rendez-vous (Calendly, Cal.com…). Laisser vide tant qu'il n'existe pas :
     # les boutons renvoient alors vers la page contact.
     "booking_url": "",
-    "job_title_fr": "Formateur, coach et enseignant, fondateur de Twty Consulting",
+    "job_title_fr": "Formateur, coach et boosteur de startups, fondateur de Twty Consulting",
     "knows_about": [
         "Formation professionnelle", "Ingénierie pédagogique", "Coaching", "Leadership", "Soft skills",
         "Gestion de projet", "Méthodes agiles", "Étude de marché", "Entrepreneuriat",

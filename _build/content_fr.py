@@ -45,15 +45,15 @@ UI = {
 
 # Bio de référence : à recopier à l'identique sur LinkedIn, Malt, pages universités…
 BIO_SHORT = (
-    "Nacim Touenti est formateur, coach et enseignant à l'université, fondateur de Twty Consulting. "
+    "Nacim Touenti est formateur en entreprise, coach, intervenant à l'université et boosteur de startups, fondateur de Twty Consulting. "
     "Il accompagne entreprises, centres de formation, startups et entrepreneurs, en s'appuyant sur plus "
     "de dix ans de management de projets internationaux."
 )
 
 BIO_LONG = (
-    "Nacim Touenti est formateur, coach et enseignant à l'université. Il a fondé Twty Consulting pour "
+    "Nacim Touenti est formateur, coach et intervenant à l'université. Il a fondé Twty Consulting pour "
     "former les équipes, coacher les managers et accompagner les startups. Son atout : il pratique ce "
-    "qu'il enseigne. Depuis plus de dix ans, il pilote des projets internationaux dans la fintech et le "
+    "qu'il transmet. Depuis plus de dix ans, il pilote des projets internationaux dans la fintech et le "
     "paiement électronique, en Europe et en Afrique. Il dirige aujourd'hui la gestion de projets EMEA "
     "pour un acteur mondial du secteur. Il a créé la méthode Softies pour développer les soft skills et "
     "organise des ateliers Entrepreneur Week avec universités et entreprises. Il intervient depuis Paris, "
@@ -84,21 +84,21 @@ HOME_FAQ = [
 HOME = {
     "key": "home",
     "slug": SLUGS["home"],
-    "title": "Nacim Touenti — Formateur, coach et enseignant | Twty Consulting",
-    "description": "Formateur, coach et enseignant à l'université. Nacim Touenti forme vos équipes, coache vos managers et accompagne votre startup. Plus de 10 ans de projets internationaux.",
+    "title": "Nacim Touenti — Formateur, coach, boosteur de startups | Twty Consulting",
+    "description": "Formateur, coach et boosteur de startups. Apprendre, grandir et performer avec le sourire. 10 ans de projets internationaux, 6 ans de formation en entreprise et à l'université.",
     "schema": [faq_schema(HOME_FAQ, "fr")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>On apprend mieux avec quelqu'un qui le fait tous les jours.</h1>
-      <p class="lead">Je suis Nacim Touenti. Formateur, coach, enseignant à l'université. Et manager de projets internationaux depuis plus de 10 ans. Ce que je vous transmets, je l'applique chaque semaine.</p>
+      <h1>Formateur, coach, boosteur de startups.</h1>
+      <p class="lead">Apprendre, grandir et performer, avec le sourire. 10 ans de projets internationaux. 6 ans de formation sur les sujets qui comptent pour vous et votre business.</p>
       <div class="actions">
         <a class="btn" href="{CONTACT}">Parlons-en</a>
         <a class="btn btn--ghost" href="/{SLUGS['training']}">Voir les formations</a>
       </div>
     </div>
-    {hero_portrait("Portrait de Nacim Touenti (photo à venir)", ["Formateur", "Coach", "Enseignant à l'université"], "Paris, Zurich, Tanger")}
+    {hero_portrait("Portrait de Nacim Touenti (photo à venir)", ["Formateur", "Coach", "Boosteur de startups"], "Paris, Zurich, Tanger")}
   </div>
 </section>
 
@@ -107,15 +107,15 @@ HOME = {
   <div class="wrap proof-grid">
     <div class="proof-item">
       <h4>10 ans de projets internationaux</h4>
-      <p>Europe et Afrique. Fintech et paiement électronique.</p>
+      <p>Europe et Afrique, en équipes multiculturelles.</p>
     </div>
     <div class="proof-item">
-      <h4>Enseignant à l'université</h4>
-      <p>Je conçois et j'anime cours, cas pratiques et examens.</p>
+      <h4>Intervenant à l'université</h4>
+      <p>Et formateur en entreprise depuis 6 ans.</p>
     </div>
     <div class="proof-item">
-      <h4>Créateur de la méthode Softies</h4>
-      <p>Des soft skills qui se voient. Déployée dans plusieurs pays.</p>
+      <h4>Ingénieur pédagogique</h4>
+      <p>Je crée des formations et des méthodes sur mesure.</p>
     </div>
   </div>
 </section>
@@ -132,12 +132,13 @@ HOME = {
           <h3>Formation</h3>
           <p class="who">Entreprises, centres de formation, écoles et universités</p>
         </div>
-        <p class="problem">Des formations dont on se souvient. Et qu'on applique dès le lundi.</p>
+        <p class="problem">Les sujets qui vous feront du bien. Des formations qu'on applique dès le lundi.</p>
         <div>
           <ul>
-            <li>Soft skills et leadership</li>
             <li>Gestion de projet</li>
-            <li>Étude de marché, entrepreneuriat</li>
+            <li>Produit</li>
+            <li>Création d'entreprise</li>
+            <li>Scale-up</li>
           </ul>
           <a class="more" href="/{SLUGS['training']}">Voir le catalogue</a>
         </div>
@@ -166,8 +167,9 @@ HOME = {
         <div>
           <ul>
             <li>Programme Launch, 3 mois</li>
+            <li>Développement et accompagnement commercial</li>
+            <li>Process de gestion de projet et produit</li>
             <li>Mentorat d'entrepreneurs</li>
-            <li>Projet à redresser</li>
           </ul>
           <a class="more" href="/{SLUGS['startups']}">Voir l'accompagnement</a>
         </div>
@@ -188,7 +190,7 @@ HOME = {
       </div>
       <div class="reason">
         <h3>Je sais tenir une salle</h3>
-        <p>J'enseigne à l'université. Chez moi, on participe. On débat, on joue, on s'implique.</p>
+        <p>J'interviens à l'université et en entreprise. Chez moi, on participe. On débat, on joue, on s'implique.</p>
       </div>
       <div class="reason">
         <h3>Je parle à tout le monde</h3>
@@ -577,8 +579,8 @@ ABOUT = {
     "key": "about",
     "slug": SLUGS["about"],
     "page_type": "ProfilePage",
-    "title": "Nacim Touenti — Formateur, coach, enseignant et fondateur de Twty Consulting",
-    "description": "Qui est Nacim Touenti ? Formateur, coach et enseignant à l'université, fondateur de Twty Consulting, avec plus de 10 ans de management de projets internationaux.",
+    "title": "Nacim Touenti — Formateur, coach, boosteur de startups et fondateur de Twty Consulting",
+    "description": "Qui est Nacim Touenti ? Formateur, coach, intervenant à l'université et boosteur de startups, fondateur de Twty Consulting, avec plus de 10 ans de management de projets internationaux.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -587,7 +589,7 @@ ABOUT = {
       <div class="portrait" role="img" aria-label="Portrait de Nacim Touenti (photo à venir)">NT</div>
       <div>
         <h1>Nacim Touenti</h1>
-        <p class="lead">Formateur, coach, enseignant. Et toujours manager de projets internationaux.</p>
+        <p class="lead">Formateur, coach, boosteur de startups. Et toujours manager de projets internationaux.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
           <dt>Formation</dt><dd>Gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat</dd>
@@ -609,7 +611,7 @@ ABOUT = {
       <p>Que les gens progressent. Pour de vrai.</p>
     </div>
     <div class="reasons">
-      <div class="reason"><h3>Formateur et enseignant</h3><p>À l'université comme en entreprise. Je conçois et j'anime.</p></div>
+      <div class="reason"><h3>Formateur et intervenant</h3><p>À l'université comme en entreprise. Je conçois et j'anime.</p></div>
       <div class="reason"><h3>Coach et mentor</h3><p>J'ai créé la méthode Softies. Je coache managers et dirigeants. Je mentore des entrepreneurs.</p></div>
       <div class="reason"><h3>Manager de terrain</h3><p>Je pilote des projets dans toute la zone EMEA. Plusieurs pays, plusieurs cultures, des délais serrés.</p></div>
     </div>
