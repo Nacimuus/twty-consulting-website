@@ -47,9 +47,14 @@ html[data-lang="en"] .nfc-lang [data-set-lang="en"] { background: var(--gold-gra
 
 /* ---------- Identité ---------- */
 .nfc-hero { text-align: center; padding-top: 8px; }
-.nfc-visual { position: relative; width: min(232px, 62vw); aspect-ratio: 1; margin: 10px auto 6px; }
+.nfc-visual { position: relative; width: min(270px, 72vw); aspect-ratio: 1; margin: 10px auto 6px; }
 .nfc-visual .portrait--hero { font-size: clamp(2.1rem, 9vw, 2.7rem); }
-.nfc-visual img.portrait { position: absolute; inset: 24%; width: 52%; height: 52%; border-radius: 50%; }
+/* Photo plus grande que sur le site : on voit le geste, pas seulement le visage */
+.nfc-visual .orbit--2 { inset: 9%; }
+.nfc-visual img.portrait--hero {
+  position: absolute; inset: 14%; width: 72%; height: 72%; border-radius: 50%;
+  object-fit: cover; object-position: 50% 45%; background: #e9ecea;
+}
 .nfc-name {
   font-size: clamp(1.9rem, 8.4vw, 2.5rem); margin: 0 0 14px;
   background: linear-gradient(100deg, #fff 0%, #fff 45%, #c4ecf1 75%, var(--gold-2) 100%);
