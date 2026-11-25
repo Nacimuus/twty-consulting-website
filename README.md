@@ -22,7 +22,7 @@ pour les anciennes URL (`services.html`, `payment-systems.html`, `training.html`
 
 ## Structure
 
-- `assets/css/site.css` : styles (palette Twty : bleu canard `#0e4b5d`, or `#b89838`)
-- `assets/js/site.js` : menu mobile et formulaire de contact (ouvre la messagerie du visiteur)
+- `assets/css/site.css` : styles (thème sombre bleu canard et or, polices Unbounded et Manrope)
+- `assets/js/site.js` : fond animé, étincelles des boutons, apparitions au défilement, menu mobile, formulaire de contact
 - `assets/img/` : images WebP optimisées, logo, image de partage `og-twty.jpg`
 - `Nacim.html` : page de profil NFC (non indexée), indépendante du reste du site

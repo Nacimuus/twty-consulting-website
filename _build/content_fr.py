@@ -3,7 +3,7 @@
 Positionnement : formation, coaching et accompagnement. L'expérience de management de projets
 internationaux (fintech, paiement électronique) sert de preuve de légitimité, pas d'offre principale.
 """
-from parts import hero_portrait, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
+from parts import hero_portrait, ticker, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
 from site_config import SITE
 
 BASE = SITE["base_url"]
@@ -102,6 +102,7 @@ HOME = {
   </div>
 </section>
 
+{ticker(['Leadership', 'Gestion de projet', 'Soft skills', 'Prise de parole', 'Étude de marché', 'Entrepreneuriat', 'Coaching', 'Méthodes agiles', 'Négociation', 'Pitch'], 'Thèmes')}
 <section class="proof" aria-label="En bref">
   <div class="wrap proof-grid">
     <div class="proof-item">

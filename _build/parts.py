@@ -2,19 +2,29 @@
 from site_config import SITE
 
 def hero_portrait(alt, roles, caption):
-    """Portrait de Nacim (initiales tant que la photo n'est pas fournie) + ses trois métiers.
+    """Portrait de Nacim au centre d'un système orbital, avec ses trois métiers.
 
-    Pour passer à la photo : déposer assets/img/nacim-touenti.webp et remplacer le bloc
-    <div class="portrait"> par <img class="portrait" src="/assets/img/nacim-touenti.webp" alt="...">.
+    Pour passer à la photo : déposer assets/img/nacim-touenti.webp et remplacer
+    <div class="portrait portrait--hero" ...>NT</div> par
+    <img class="portrait portrait--hero" src="/assets/img/nacim-touenti.webp" alt="...">.
     """
     items = "".join(f"<li>{r}</li>" for r in roles)
     return f"""<div class="hero-visual">
+  <div class="orbit orbit--3" aria-hidden="true"></div>
+  <div class="orbit orbit--1" aria-hidden="true"><span class="sat"></span></div>
+  <div class="orbit orbit--2" aria-hidden="true"><span class="sat"></span></div>
   <div class="portrait portrait--hero" role="img" aria-label="{alt}">NT</div>
-  <div class="role-note">
-    <ul>{items}</ul>
-    <p>{caption}</p>
-  </div>
+  <ul class="role-tags">{items}</ul>
+  <p class="role-place">{caption}</p>
 </div>"""
+
+
+def ticker(words, label):
+    items = "".join(f"<span>{w}</span>" for w in words)
+    return f"""<div class="ticker" role="region" aria-label="{label}">
+  <div class="ticker__track"><div style="display:flex">{items}</div><div style="display:flex" aria-hidden="true">{items}</div></div>
+</div>
+"""
 
 
 def page_hero(crumbs, h1, lead, img=None, alt="", actions=""):

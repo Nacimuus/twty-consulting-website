@@ -3,7 +3,7 @@
 Positioning: training, coaching and startup support. International project management experience
 (fintech, electronic payments) is the proof of credibility, not the main offer.
 """
-from parts import hero_portrait, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
+from parts import hero_portrait, ticker, page_hero, cta_band, mailto, faq_schema, faq_html, course_schema
 from site_config import SITE
 
 BASE = SITE["base_url"]
@@ -102,6 +102,7 @@ HOME = {
   </div>
 </section>
 
+{ticker(['Leadership', 'Project management', 'Soft skills', 'Public speaking', 'Market research', 'Entrepreneurship', 'Coaching', 'Agile methods', 'Negotiation', 'Pitching'], 'Topics')}
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
     <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa. Fintech and payments.</p></div>
