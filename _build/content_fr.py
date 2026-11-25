@@ -45,19 +45,20 @@ UI = {
 
 # Bio de référence : à recopier à l'identique sur LinkedIn, Malt, pages universités…
 BIO_SHORT = (
-    "Nacim Touenti est formateur en entreprise, coach, intervenant à l'université et boosteur de startups, fondateur de Twty Consulting. "
-    "Il accompagne entreprises, centres de formation, startups et entrepreneurs, en s'appuyant sur plus "
-    "de dix ans de management de projets internationaux."
+    "Nacim Touenti est formateur, coach et boosteur de startups, fondateur de Twty Consulting. "
+    "Intervenant à l'université et formateur en entreprise, il s'appuie sur 10 ans de management "
+    "de projets internationaux."
 )
 
 BIO_LONG = (
-    "Nacim Touenti est formateur, coach et intervenant à l'université. Il a fondé Twty Consulting pour "
-    "former les équipes, coacher les managers et accompagner les startups. Son atout : il pratique ce "
-    "qu'il transmet. Depuis plus de dix ans, il pilote des projets internationaux dans la fintech et le "
-    "paiement électronique, en Europe et en Afrique. Il dirige aujourd'hui la gestion de projets EMEA "
-    "pour un acteur mondial du secteur. Il a créé la méthode Softies pour développer les soft skills et "
-    "organise des ateliers Entrepreneur Week avec universités et entreprises. Il intervient depuis Paris, "
-    "Zurich et Tanger, en français et en anglais."
+    "Nacim Touenti est formateur, coach et boosteur de startups, fondateur de Twty Consulting. "
+    "Intervenant à l'université et formateur en entreprise depuis 6 ans, il a travaillé avec plus de "
+    "15 établissements, dont l'IUT Paris Descartes, l'ISG, la Sorbonne et PSB, et formé plus de 1000 "
+    "personnes. Il s'appuie sur 10 ans de management de projets internationaux, en Europe et en Afrique, "
+    "auprès de banques, de fintechs, de retailers, d'entreprises du digital et d'associations, avec des "
+    "portefeuilles de projets et d'opportunités de plus de 100 millions d'euros par an. Ses sujets : "
+    "gestion de projet, produit, création d'entreprise, scale-up, finance, BI et soft skills. Il "
+    "intervient depuis Paris, Zurich et Tanger, en français et en anglais."
 )
 
 ORG_DESCRIPTION = (
@@ -604,12 +605,14 @@ CENTRES = {
 }
 
 # ---------------------------------------------------------------- À propos
+LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">LADR</a>' if SITE["ladr_url"] else "LADR")
+
 ABOUT = {
     "key": "about",
     "slug": SLUGS["about"],
     "page_type": "ProfilePage",
     "title": "Nacim Touenti — Formateur, coach, boosteur de startups et fondateur de Twty Consulting",
-    "description": "Qui est Nacim Touenti ? Formateur, coach, intervenant à l'université et boosteur de startups, fondateur de Twty Consulting, avec plus de 10 ans de management de projets internationaux.",
+    "description": "Qui est Nacim Touenti ? Formateur, coach et boosteur de startups. 15+ établissements, 1000+ personnes formées, 10 ans de projets internationaux, portefeuilles de plus de 100 M€ par an.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -621,28 +624,38 @@ ABOUT = {
         <p class="lead">Formateur, coach, boosteur de startups. Et toujours manager de projets internationaux.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
-          <dt>Formation</dt><dd>Gestion de projet, leadership, soft skills, étude de marché, entrepreneuriat</dd>
-          <dt>Coaching</dt><dd>Dirigeants, managers, chefs de projet, jeunes diplômés</dd>
-          <dt>Expérience</dt><dd>Plus de 10 ans de management de projets internationaux (fintech, paiement)</dd>
+          <dt>Formation</dt><dd>Gestion de projet, produit, création d'entreprise, scale-up, finance, BI, soft skills</dd>
+          <dt>Coaching</dt><dd>Dirigeants, managers, jeunes diplômés, équipes</dd>
+          <dt>Secteurs</dt><dd>Banques, fintechs, retailers, digital, associations</dd>
           <dt>Langues</dt><dd>Français, anglais</dd>
           <dt>Présence</dt><dd>Paris – La Défense, Zurich, Tanger</dd>
           <dt>Profil</dt><dd><a href="{SITE['linkedin_url']}" rel="me noopener">LinkedIn</a></dd>
+          <dt>Engagement</dt><dd>Fondateur de {LADR}</dd>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
+<section class="proof" aria-label="En chiffres">
+  <div class="wrap proof-grid">
+    <div class="proof-item"><b class="num">10 ans</b><h4>de projets internationaux</h4><p>Europe et Afrique.</p></div>
+    <div class="proof-item"><b class="num">100 M€+</b><h4>par an</h4><p>Portefeuilles de projets et d'opportunités.</p></div>
+    <div class="proof-item"><b class="num">15+</b><h4>établissements</h4><p>Écoles, universités, centres de formation.</p></div>
+    <div class="proof-item"><b class="num">1000+</b><h4>personnes formées</h4><p>Étudiants, salariés, entrepreneurs.</p></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Trois casquettes, une obsession</h2>
-      <p>Que les gens progressent. Pour de vrai.</p>
+      <h2>Trois casquettes, un même socle</h2>
+      <p>Le terrain. Ce que je transmets, je l'ai fait.</p>
     </div>
     <div class="reasons">
-      <div class="reason"><h3>Formateur et intervenant</h3><p>À l'université comme en entreprise. Je conçois et j'anime.</p></div>
-      <div class="reason"><h3>Coach et mentor</h3><p>J'ai créé la méthode Softies. Je coache managers et dirigeants. Je mentore des entrepreneurs.</p></div>
-      <div class="reason"><h3>Manager de terrain</h3><p>Je pilote des projets dans toute la zone EMEA. Plusieurs pays, plusieurs cultures, des délais serrés.</p></div>
+      <div class="reason"><h3>Formateur et intervenant</h3><p>À l'université comme en entreprise, en salle ou en ligne.</p></div>
+      <div class="reason"><h3>Coach</h3><p>Prise de parole, leadership, confiance en soi. Pour avancer, avec le sourire.</p></div>
+      <div class="reason"><h3>Boosteur de startups</h3><p>Lancer, vendre, structurer, rentabiliser. Des résultats mesurables.</p></div>
     </div>
   </div>
 </section>
@@ -650,10 +663,11 @@ ABOUT = {
 <section class="section section--mist">
   <div class="wrap measure">
     <h2>Twty Consulting</h2>
-    <p>{ORG_DESCRIPTION} Le cabinet intervient en France, en Suisse, au Maroc et plus largement en Europe et en Afrique, en français et en anglais.</p>
-    <div class="actions"><a class="btn" href="{CONTACT}">Prendre contact</a><a class="btn btn--ghost" href="{SITE['linkedin_url']}" rel="me noopener">Suivre sur LinkedIn</a></div>
+    <p>Mon cabinet de formation, de coaching et d'accompagnement. Il intervient en France, en Suisse, au Maroc et plus largement en Europe et en Afrique, en français et en anglais.</p>
   </div>
 </section>
+
+{cta_band("On travaille ensemble ?", "30 minutes pour faire connaissance et parler de votre projet. Offert.", "Prendre contact", CONTACT, "Suivre sur LinkedIn", SITE["linkedin_url"])}
 """,
 }
 

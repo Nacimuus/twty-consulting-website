@@ -10,6 +10,8 @@ SITE = {
     # Lien de prise de rendez-vous (Calendly, Cal.com…). Laisser vide tant qu'il n'existe pas :
     # les boutons renvoient alors vers la page contact.
     "booking_url": "",
+    # Association fondée par Nacim (mention discrète sur la page À propos). Mettre l'adresse du site quand elle existe.
+    "ladr_url": "",
     "job_title_fr": "Formateur, coach et boosteur de startups, fondateur de Twty Consulting",
     "knows_about": [
         "Formation professionnelle", "Ingénierie pédagogique", "Coaching", "Leadership", "Soft skills",

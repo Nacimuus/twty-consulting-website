@@ -49,18 +49,18 @@ UI = {
 }
 
 BIO_SHORT = (
-    "Nacim Touenti is a corporate trainer, coach, university guest lecturer and startup booster, and the founder of Twty Consulting. "
-    "He supports companies, training centres, startups and entrepreneurs, drawing on more than ten years "
-    "of international project management."
+    "Nacim Touenti is a trainer, coach and startup booster, and the founder of Twty Consulting. "
+    "A university guest lecturer and corporate trainer, he draws on 10 years of international project management."
 )
 
 BIO_LONG = (
-    "Nacim Touenti is a trainer, coach and university guest lecturer. He founded Twty Consulting to train teams, "
-    "coach managers and support startups. His edge: he practises what he passes on. For more than ten years "
-    "he has run international projects in fintech and electronic payments, across Europe and Africa. "
-    "Today he leads project management across EMEA for a global player in the sector. He created the "
-    "Softies method for soft skills and runs Entrepreneur Week workshops with universities and companies. "
-    "He works from Paris, Zurich and Tangier, in French and English."
+    "Nacim Touenti is a trainer, coach and startup booster, and the founder of Twty Consulting. A university "
+    "guest lecturer and corporate trainer for 6 years, he has worked with more than 15 institutions, including "
+    "IUT Paris Descartes, ISG, the Sorbonne and PSB, and trained more than 1,000 people. He draws on 10 years "
+    "of managing international projects across Europe and Africa, for banks, fintechs, retailers, online "
+    "businesses and non-profits, with project and opportunity portfolios worth more than 100 million euros a "
+    "year. His subjects: project management, product, starting a business, scale-up, finance, BI and soft "
+    "skills. He works from Paris, Zurich and Tangier, in French and English."
 )
 
 ORG_DESCRIPTION = (
@@ -502,12 +502,14 @@ CENTRES = {
 """,
 }
 
+LADR = (f'<a href="{SITE["ladr_url"]}" rel="noopener">LADR</a>' if SITE["ladr_url"] else "LADR")
+
 ABOUT = {
     "key": "about",
     "slug": SLUGS["about"],
     "page_type": "ProfilePage",
     "title": "Nacim Touenti — Trainer, coach, startup booster and founder of Twty Consulting",
-    "description": "Who is Nacim Touenti? Trainer, coach, university guest lecturer and startup booster, founder of Twty Consulting, with 10+ years of international project management.",
+    "description": "Who is Nacim Touenti? Trainer, coach and startup booster. 15+ institutions, 1,000+ people trained, 10 years of international projects, portfolios worth over €100M a year.",
     "body": f"""
 <section class="page-hero">
   <div class="wrap">
@@ -519,25 +521,35 @@ ABOUT = {
         <p class="lead">Trainer, coach, startup booster. And still an international project manager.</p>
         <p class="measure">{BIO_LONG}</p>
         <dl class="facts">
-          <dt>Training</dt><dd>Project management, leadership, soft skills, market research, entrepreneurship</dd>
-          <dt>Coaching</dt><dd>Executives, managers, project leads, graduates</dd>
-          <dt>Experience</dt><dd>10+ years managing international projects (fintech, payments)</dd>
+          <dt>Training</dt><dd>Project management, product, starting a business, scale-up, finance, BI, soft skills</dd>
+          <dt>Coaching</dt><dd>Executives, managers, graduates, teams</dd>
+          <dt>Sectors</dt><dd>Banks, fintechs, retailers, online businesses, non-profits</dd>
           <dt>Languages</dt><dd>French, English</dd>
           <dt>Locations</dt><dd>Paris – La Défense, Zurich, Tangier</dd>
           <dt>Profile</dt><dd><a href="{SITE['linkedin_url']}" rel="me noopener">LinkedIn</a></dd>
+          <dt>Involvement</dt><dd>Founder of {LADR}</dd>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
+<section class="proof" aria-label="In figures">
+  <div class="wrap proof-grid">
+    <div class="proof-item"><b class="num">10 yrs</b><h4>of international projects</h4><p>Europe and Africa.</p></div>
+    <div class="proof-item"><b class="num">€100M+</b><h4>a year</h4><p>Project and opportunity portfolios.</p></div>
+    <div class="proof-item"><b class="num">15+</b><h4>institutions</h4><p>Schools, universities, training centres.</p></div>
+    <div class="proof-item"><b class="num">1,000+</b><h4>people trained</h4><p>Students, employees, entrepreneurs.</p></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Three hats, one obsession</h2><p>That people really improve.</p></div>
+    <div class="section-head"><h2>Three hats, one foundation</h2><p>The field. What I pass on, I have done.</p></div>
     <div class="reasons">
-      <div class="reason"><h3>Trainer and guest lecturer</h3><p>At university and in companies. I design and I teach.</p></div>
-      <div class="reason"><h3>Coach and mentor</h3><p>I created the Softies method. I coach managers and executives. I mentor entrepreneurs.</p></div>
-      <div class="reason"><h3>Hands-on manager</h3><p>I run projects across EMEA. Several countries, several cultures, tight deadlines.</p></div>
+      <div class="reason"><h3>Trainer and guest lecturer</h3><p>At university and in companies, in the classroom or online.</p></div>
+      <div class="reason"><h3>Coach</h3><p>Public speaking, leadership, self-confidence. Moving forward, with a smile.</p></div>
+      <div class="reason"><h3>Startup booster</h3><p>Launch, sell, structure, make it profitable. Measurable results.</p></div>
     </div>
   </div>
 </section>
@@ -545,10 +557,11 @@ ABOUT = {
 <section class="section section--mist">
   <div class="wrap measure">
     <h2>Twty Consulting</h2>
-    <p>{ORG_DESCRIPTION} The practice works in France, Switzerland, Morocco and more broadly across Europe and Africa, in French and English.</p>
-    <div class="actions"><a class="btn" href="{CONTACT}">Get in touch</a><a class="btn btn--ghost" href="{SITE['linkedin_url']}" rel="me noopener">Follow on LinkedIn</a></div>
+    <p>My training, coaching and startup support practice. It works in France, Switzerland, Morocco and more broadly across Europe and Africa, in French and English.</p>
   </div>
 </section>
+
+{cta_band("Shall we work together?", "30 minutes to get to know each other and talk about your project. Free.", "Get in touch", CONTACT, "Follow on LinkedIn", SITE["linkedin_url"])}
 """,
 }
 
