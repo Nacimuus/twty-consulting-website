@@ -55,7 +55,7 @@ BIO_SHORT = (
 
 BIO_LONG = (
     "Nacim Touenti is a trainer, coach and startup booster, and the founder of Twty Consulting. A university "
-    "guest lecturer and corporate trainer for 6 years, he has worked with more than 15 institutions, including "
+    "guest lecturer and corporate trainer for 10 years, he has worked with more than 15 institutions, including "
     "IUT Paris Descartes, ISG, the Sorbonne and PSB, and trained more than 1,000 people. He draws on 10 years "
     "of managing international projects across Europe and Africa, for banks, fintechs, retailers, online "
     "businesses and non-profits, with project and opportunity portfolios worth more than 100 million euros a "
@@ -85,14 +85,14 @@ HOME = {
     "key": "home",
     "slug": SLUGS["home"],
     "title": "Nacim Touenti — Trainer, coach, startup booster | Twty Consulting",
-    "description": "Trainer, coach and startup booster. Learn, grow and perform, with a smile. 10 years of international projects, 6 years of training in companies and universities.",
+    "description": "Trainer, coach and startup booster. Learn, grow and perform, with a smile. 10 years of international projects, 10 years of training in companies and universities.",
     "schema": [faq_schema(HOME_FAQ, "en")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <h1>Trainer, coach, startup booster.</h1>
-      <p class="lead">Learn, grow and perform, with a smile. 10 years of international projects. 6 years of training on the topics that matter to you and your business.</p>
+      <p class="lead">Learn, grow and perform, with a smile. 10 years of international projects. 10 years of training on the topics that matter to you and your business.</p>
       <div class="actions">
         <a class="btn" href="{CONTACT}">Let's talk</a>
         <a class="btn btn--ghost" href="{u('training')}">See training courses</a>
@@ -106,7 +106,7 @@ HOME = {
 <section class="proof" aria-label="At a glance">
   <div class="wrap proof-grid">
     <div class="proof-item"><h4>10 years of international projects</h4><p>Europe and Africa, with multicultural teams.</p></div>
-    <div class="proof-item"><h4>University guest lecturer</h4><p>And corporate trainer for 6 years.</p></div>
+    <div class="proof-item"><h4>University guest lecturer</h4><p>And corporate trainer for 10 years.</p></div>
     <div class="proof-item"><h4>Instructional designer</h4><p>I create tailored courses and methods.</p></div>
   </div>
 </section>
@@ -451,7 +451,7 @@ CENTRES = {
     "body": page_hero(
         '<a href="/en/">Home</a> / Training centres',
         "Your modules, designed and delivered end to end.",
-        "Schools, universities, training centres. A university guest lecturer and corporate trainer for 6 years, I design and deliver hands-on, tailored modules, on site and online.",
+        "Schools, universities, training centres. A university guest lecturer and corporate trainer for 10 years, I design and deliver hands-on, tailored modules, on site and online.",
         "centres.webp",
         "Trainer running a participatory workshop",
         f'<div class="actions"><a class="btn" href="{mailto("Teaching proposal")}">Propose a session</a></div>',

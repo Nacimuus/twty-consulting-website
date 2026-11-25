@@ -52,7 +52,7 @@ BIO_SHORT = (
 
 BIO_LONG = (
     "Nacim Touenti est formateur, coach et boosteur de startups, fondateur de Twty Consulting. "
-    "Intervenant à l'université et formateur en entreprise depuis 6 ans, il a travaillé avec plus de "
+    "Intervenant à l'université et formateur en entreprise depuis 10 ans, il a travaillé avec plus de "
     "15 établissements, dont l'IUT Paris Descartes, l'ISG, la Sorbonne et PSB, et formé plus de 1000 "
     "personnes. Il s'appuie sur 10 ans de management de projets internationaux, en Europe et en Afrique, "
     "auprès de banques, de fintechs, de retailers, d'entreprises du digital et d'associations, avec des "
@@ -84,14 +84,14 @@ HOME = {
     "key": "home",
     "slug": SLUGS["home"],
     "title": "Nacim Touenti — Formateur, coach, boosteur de startups | Twty Consulting",
-    "description": "Formateur, coach et boosteur de startups. Apprendre, grandir et performer avec le sourire. 10 ans de projets internationaux, 6 ans de formation en entreprise et à l'université.",
+    "description": "Formateur, coach et boosteur de startups. Apprendre, grandir et performer avec le sourire. 10 ans de projets internationaux, 10 ans de formation en entreprise et à l'université.",
     "schema": [faq_schema(HOME_FAQ, "fr")],
     "body": f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <h1>Formateur, coach, boosteur de startups.</h1>
-      <p class="lead">Apprendre, grandir et performer, avec le sourire. 10 ans de projets internationaux. 6 ans de formation sur les sujets qui comptent pour vous et votre business.</p>
+      <p class="lead">Apprendre, grandir et performer, avec le sourire. 10 ans de projets internationaux. 10 ans de formation sur les sujets qui comptent pour vous et votre business.</p>
       <div class="actions">
         <a class="btn" href="{CONTACT}">Parlons-en</a>
         <a class="btn btn--ghost" href="/{SLUGS['training']}">Voir les formations</a>
@@ -110,7 +110,7 @@ HOME = {
     </div>
     <div class="proof-item">
       <h4>Intervenant à l'université</h4>
-      <p>Et formateur en entreprise depuis 6 ans.</p>
+      <p>Et formateur en entreprise depuis 10 ans.</p>
     </div>
     <div class="proof-item">
       <h4>Ingénieur pédagogique</h4>
@@ -547,7 +547,7 @@ CENTRES = {
     "body": page_hero(
         '<a href="/">Accueil</a> / Centres de formation',
         "Vos modules, conçus et animés de A à Z.",
-        "Écoles, universités, centres de formation. Intervenant à l'université et formateur en entreprise depuis 6 ans, je conçois et j'anime des modules concrets, sur mesure, en présentiel et en ligne.",
+        "Écoles, universités, centres de formation. Intervenant à l'université et formateur en entreprise depuis 10 ans, je conçois et j'anime des modules concrets, sur mesure, en présentiel et en ligne.",
         "centres.webp",
         "Formateur animant un atelier participatif",
         f'<div class="actions"><a class="btn" href="{mailto("Proposition d intervention")}">Proposer une intervention</a></div>',
