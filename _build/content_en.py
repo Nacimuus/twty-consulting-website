@@ -139,11 +139,12 @@ HOME = {
 
 <section class="section section--dark">
   <div class="wrap">
-    <div class="section-head"><h2>Why me?</h2></div>
-    <div class="reasons">
-      <div class="reason"><h3>I practise what I teach</h3><p>I run projects across EMEA. My advice comes from the field. It has been tested.</p></div>
-      <div class="reason"><h3>I can hold a room</h3><p>I speak at universities and train in companies. In my sessions, everyone takes part. We debate, we play, we get involved.</p></div>
-      <div class="reason"><h3>I speak to everyone</h3><p>Students, managers, executives. Europe and Africa. I adapt the tone, never the standard.</p></div>
+    <div class="section-head"><h2>Why it works</h2><p>Everything is tailor-made. Every course and every coaching starts from your needs and your real cases. No standard content, no generic copy-paste or AI-generated approach.</p></div>
+    <div class="reasons reasons--four">
+      <div class="reason"><h3>Hands-on from Monday</h3><p>Tools tested on real projects, not theory.</p></div>
+      <div class="reason"><h3>Teams that get involved</h3><p>Role play, games, debate. Nobody switches off.</p></div>
+      <div class="reason"><h3>With a smile</h3><p>People learn better when they enjoy it. That's my method.</p></div>
+      <div class="reason"><h3>Visible results</h3><p>You see the difference in your teams, not just on an attendance sheet.</p></div>
     </div>
   </div>
 </section>

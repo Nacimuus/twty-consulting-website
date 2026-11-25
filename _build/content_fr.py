@@ -181,20 +181,25 @@ HOME = {
 <section class="section section--dark">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pourquoi moi ?</h2>
+      <h2>Pourquoi ça marche</h2>
+      <p>Tout est sur mesure. Chaque formation, chaque coaching part de vos besoins et de vos cas réels. Pas de contenu standard, pas d'approche générique copiée-collée ou produite par une IA.</p>
     </div>
-    <div class="reasons">
+    <div class="reasons reasons--four">
       <div class="reason">
-        <h3>Je pratique ce que j'enseigne</h3>
-        <p>Je pilote des projets dans toute la zone EMEA. Mes conseils sortent du terrain. Ils ont été testés.</p>
+        <h3>Du concret dès le lundi</h3>
+        <p>Des outils testés sur de vrais projets, pas de la théorie.</p>
       </div>
       <div class="reason">
-        <h3>Je sais tenir une salle</h3>
-        <p>J'interviens à l'université et en entreprise. Chez moi, on participe. On débat, on joue, on s'implique.</p>
+        <h3>Des équipes qui s'impliquent</h3>
+        <p>Mises en situation, jeux, débats. Personne ne décroche.</p>
       </div>
       <div class="reason">
-        <h3>Je parle à tout le monde</h3>
-        <p>Étudiants, managers, dirigeants. Europe et Afrique. J'adapte le ton, jamais l'exigence.</p>
+        <h3>Le sourire en plus</h3>
+        <p>On apprend mieux quand on prend du plaisir. C'est ma méthode.</p>
+      </div>
+      <div class="reason">
+        <h3>Des résultats visibles</h3>
+        <p>Vous voyez la différence dans vos équipes, pas seulement sur une feuille de présence.</p>
       </div>
     </div>
   </div>
